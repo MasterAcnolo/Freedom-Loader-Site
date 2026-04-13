@@ -1,4 +1,10 @@
+import { useEffect } from 'react';
+
 export default function About() {
+    useEffect(() => {
+        document.title = "About - Freedom Loader";
+    }, []);
+
     const technologies = [
         { name: "Electron", img: "/assets/languages/electron.png", desc: "Desktop app framework using Chromium and Node.js." },
         { name: "Node.js", img: "/assets/languages/nodejs.png", desc: "Powering all background processes and filesystem tasks." },

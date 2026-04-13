@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Wiki() {
+    useEffect(() => {
+        document.title = "Wiki - Freedom Loader";
+    }, []);
+
     const [activeTab, setActiveTab] = useState("Installation");
 
     const wikiSections = {

@@ -1,4 +1,10 @@
+import { useEffect } from 'react';
+
 export default function Privacy() {
+    useEffect(() => {
+        document.title = "Privacy - Freedom Loader";
+    }, []);
+
     return (
         <>
             <style>{`

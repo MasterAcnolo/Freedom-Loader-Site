@@ -1,4 +1,10 @@
+import { useEffect } from 'react';
+
 export default function Terms() {
+    useEffect(() => {
+        document.title = "Terms - Freedom Loader";
+    }, []);
+
     return (
         <>
             <style>{`

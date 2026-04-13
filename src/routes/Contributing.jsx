@@ -1,4 +1,10 @@
+import { useEffect } from 'react';
+
 export default function Contributing() {
+    useEffect(() => {
+        document.title = "Contributing - Freedom Loader";
+    }, []);
+
     return (
         <>
             <style>{`

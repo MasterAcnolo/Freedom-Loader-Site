@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 
 export default function Download() {
+    useEffect(() => {
+        document.title = "Download - Freedom Loader";
+    }, []);
+
     const [latestVersion, setLatestVersion] = useState("");
     const [downloadLink, setDownloadLink] = useState("");
     const [loading, setLoading] = useState(true);

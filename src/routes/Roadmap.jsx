@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Roadmap() {
+    useEffect(() => {
+        document.title = "Roadmap - Freedom Loader";
+    }, []);
+
     const [expanded, setExpanded] = useState(null);
 
     const roadmapItems = {

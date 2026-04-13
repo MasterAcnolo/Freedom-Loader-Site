@@ -56,6 +56,10 @@ export default function Home() {
         };
     }, []);
 
+    useEffect(() => {
+        document.title = "Freedom Loader";
+    }, []);
+
     return (
         <>
             <style>{`
