@@ -12,13 +12,12 @@ export default function Header() {
             .header {
                 display: flex;
                 align-items: center;
-                padding: 22px 70px;
-                background: #0f0f0f;
-                border-bottom: 1px solid #222;
+                padding: 12px 70px;
+                background: #121212;
             }
 
             .logo img {
-                height: 60px; 
+                height: 70px; 
             }
 
             .nav {
