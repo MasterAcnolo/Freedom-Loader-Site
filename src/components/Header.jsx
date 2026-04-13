@@ -246,7 +246,7 @@ export default function Header() {
                 >
                     <div className="trigger">Contribute <span className="arrow">▾</span></div>
                     <div className="dropdown">
-                        <a href="https://github.com/tonrepo">GitHub</a>
+                        <a href="https://github.com/MasterAcnolo/Freedom-Loader">GitHub</a>
                         <Link to="/contributing">Guide</Link>
                         <Link to="/issues">Issues</Link>
                     </div>

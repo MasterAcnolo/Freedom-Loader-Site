@@ -134,7 +134,7 @@ export default function MobileMenu({ open, onClose }) {
 
             <div className="section">
                 <div className="title">Contribute</div>
-                <a className="link" href="https://github.com/tonrepo">GitHub</a>
+                <a className="link" href="https://github.com/MasterAcnolo/Freedom-Loader">GitHub</a>
                 <Link className="link" to="/contributing" onClick={onClose}>Guide</Link>
                 <Link className="link" to="/issues" onClick={onClose}>Issues</Link>
             </div>
@@ -145,7 +145,7 @@ export default function MobileMenu({ open, onClose }) {
 
             <div className="social">
                 <div className="title">Social</div>
-                <a href="https://github.com/tonrepo">GitHub</a>
+                <a href="https://github.com/MasterAcnolo/Freedom-Loader">GitHub</a>
                 <a href="https://twitter.com">Twitter</a>
             </div>
 
