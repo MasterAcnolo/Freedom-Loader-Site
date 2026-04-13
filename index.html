@@ -21,99 +21,25 @@
     <meta name="twitter:description" content="Freedom Loader – Download videos and audio easily and privately.">
     <meta name="twitter:image" content="https://masteracnolo.github.io/No-Sense/FreedomLoader/assets/icon/Freedom%20Loader.png">
 
-
     <link rel="icon" href="assets/icon/freedomLoader.png" />
 
     <link rel="stylesheet" href="styles/styles.css">
-
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
 
   </head>
   
   <body>
 
-    <div id="loader">
-        <div class="spinner"></div>
+    <div class="loader" id="loader">
+          <div class="spinner"></div>
+          <p class="loader-text">Loading...</p>
     </div>
 
+    <div id="root"></div>
 
-    <header data-aos="fade-down">
-      <a href="#" id="logo">
-        <img src="assets/icon/Freedom Loader.png"/>
-      </a>
 
-      <nav>
-        <a href="pages/about.html">About</a>
-        <a href="pages/wiki.html">Wiki</a>
-        <a href="pages/faq.html">FAQ</a>
-      </nav>
-
-      <div class="right">
-        <a href="pages/download.html" id="download-btn">Download</a>
-      </div>
-    </header>
-
-    <section class="hero">
-      <div class="hero-content" data-aos="fade-right">
-        <h1>Freedom Loader</h1>
-        <p>Put <span>Freedom</span> in your <span>Downloads</span>.</p>
-        <div class="hero- buttons">
-          <a href="pages/download.html" class="btn primary">Download</a>
-          <a href="pages/about.html" class="btn secondary">Learn More</a>
-        </div>
-      </div>
-      <img src="assets/pictures/apercu1.2.4.png" alt="Freedom Loader illustration" class="hero-img" data-aos="fade-left">
-    </section>
-
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-column">
-          <h3>Freedom Loader</h3>
-          <p>Put Freedom in your Downloads.</p>
-        </div>
-
-        <div class="footer-column">
-          <h4>Site</h4>
-          <a href="#">Home</a>
-          <a href="pages/about.html">About</a>
-          <a href="pages/download.html">Download</a>
-          <a href="pages/wiki.html">Wiki</a>
-          <a href="pages/faq.html">FAQ</a>
-        </div>
-
-        <div class="footer-column">
-          <h4>Legal</h4>
-          <a href="pages/legal/contact.html">Contact</a>
-          <a href="pages/legal/privacy.html">Privacy</a>
-          <a href="pages/legal/terms.html">Terms</a>
-        </div>
-
-        <div class="footer-column">
-          <h4>Follow us</h4>
-          <div class="footer-socials">
-            <a href="https://masteracnolo.github.io/No-Sense" target="_blank"><i class="fa-solid fa-globe"></i></a>
-            <a href="https://x.com/MasterAcnolo" target="_blank" ><i class="fab fa-x-twitter"></i></a>
-            <a href="https://github.com/MasterAcnolo" target="_blank" ><i class="fab fa-github"></i></a>
-            <a href="https://www.youtube.com/channel/UCS55e2-ZslXqGzznB_7N4Sg" target="_blank"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2025 Freedom Loader — All rights reserved.</p>
-      </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script/loader.js"></script>
-
-    <script>
-      AOS.init();
-    </script>
-
+    
+    <!-- React -->
+    <script type="module" src="/src/App.jsx"></script>
   </body>
 </html>
