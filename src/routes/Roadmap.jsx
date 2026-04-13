@@ -26,9 +26,9 @@ export default function Roadmap() {
     };
 
     const colors = {
-        "Coming Soon": "#00ff88",
+        "Coming Soon": "#ff3300",
         "Working On": "#4da6ff",
-        "Future Ideas": "#ff6b9d"
+        "Future Ideas": "#0dd606"
     };
 
     return (
@@ -94,7 +94,7 @@ export default function Roadmap() {
                 }
 
                 .roadmap-section.coming-soon::before {
-                    background: #00ff88;
+                    background: #ff3300;
                 }
 
                 .roadmap-section.in-dev::before {
@@ -102,7 +102,7 @@ export default function Roadmap() {
                 }
 
                 .roadmap-section.future::before {
-                    background: #ff6b9d;
+                    background: #0dd606;
                 }
 
                 .section-header {
@@ -150,7 +150,7 @@ export default function Roadmap() {
                 }
 
                 .roadmap-item.coming-soon::before {
-                    background: #00ff88;
+                    background: #ff3300;
                 }
 
                 .roadmap-item.in-dev::before {
@@ -158,7 +158,7 @@ export default function Roadmap() {
                 }
 
                 .roadmap-item.future::before {
-                    background: #ff6b9d;
+                    background: #0dd606;
                 }
 
                 .roadmap-item:hover {
