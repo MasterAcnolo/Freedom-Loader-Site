@@ -409,7 +409,7 @@ export default function Home() {
                 <section className="hero">
                     <div className="hero-content">
                         <h1>Put Freedom in Your Downloads</h1>
-                        <p>The fastest, simplest, and most powerful media downloader on the planet</p>
+                        <p>Fast, simple, powerful media downloads. <br></br> Not the best in the world - just the safest.</p>
                         <div className="tagline">
                             <div className="tagline-item">
                                 <i className="fas fa-bolt"></i>
