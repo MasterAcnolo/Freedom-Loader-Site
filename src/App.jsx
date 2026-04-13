@@ -6,6 +6,9 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./utils/ScrollToTop";
 import Download from "./routes/Download";
 import About from "./routes/About";
+import Terms from "./routes/Terms";
+import Privacy from "./routes/Privacy";
+import Contact from "./routes/Contact";
 
 function App(){
     return  (
@@ -15,6 +18,9 @@ function App(){
             <Routes>
                 <Route path="/about" element={<About />} />
                 <Route path="/download" element={<Download />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/contact" element={<Contact />} />
             </Routes>
             <Footer/>
         </>
