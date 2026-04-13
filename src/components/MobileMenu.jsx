@@ -136,7 +136,6 @@ export default function MobileMenu({ open, onClose }) {
                 <div className="title">Contribute</div>
                 <a className="link" href="https://github.com/MasterAcnolo/Freedom-Loader">GitHub</a>
                 <Link className="link" to="/contributing" onClick={onClose}>Guide</Link>
-                <Link className="link" to="/issues" onClick={onClose}>Issues</Link>
             </div>
 
             <Link to="/download" className="header-btn" onClick={onClose}>
