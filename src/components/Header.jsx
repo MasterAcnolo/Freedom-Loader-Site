@@ -160,7 +160,7 @@ export default function Header() {
                 left: 0;
                 width: 100%;
                 height: 2px;
-                background: white;
+                background: var(--text-primary);
                 border-radius: 2px;
                 transition: 0.25s ease;
             }
