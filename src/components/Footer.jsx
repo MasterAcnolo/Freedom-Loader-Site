@@ -232,8 +232,8 @@ export default function Footer() {
                     {/* Workshop Links */}
                     <div className="footer-column">
                         <h4>Workshop</h4>
-                        <Link to="/workshop">Browse Themes</Link>
-                        <Link to="/workshop/create">Create Theme</Link>
+                        <Link to="https://masteracnolo.github.io/Freedom&20Loader&20Workshop/">Browse Themes</Link>
+                        <Link to="https://masteracnolo.github.io/Freedom&20Loader&20Workshop/create.html">Create Theme</Link>
                     </div>
 
                     {/* Legal Links */}

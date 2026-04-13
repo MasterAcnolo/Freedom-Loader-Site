@@ -254,8 +254,8 @@ export default function Header() {
                 >
                     <div className="trigger">Workshop <span className="arrow">▾</span></div>
                     <div className="dropdown">
-                        <Link to="/workshop">Browse Themes</Link>
-                        <Link to="/workshop/create">Create</Link>
+                        <Link to="https://masteracnolo.github.io/Freedom&20Loader&20Workshop/">Browse Themes</Link>
+                        <Link to="https://masteracnolo.github.io/Freedom&20Loader&20Workshop/create.html">Create Theme</Link>
                     </div>
                 </div>
 
