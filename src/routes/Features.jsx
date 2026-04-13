@@ -305,7 +305,7 @@ export default function Features() {
 
                 .stat-number {
                     font-size: 2.5rem;
-                    font-weight: 900;
+                    font-weight: 700;
                     color: var(--accent-primary);
                     margin-bottom: 10px;
                 }
@@ -418,7 +418,7 @@ export default function Features() {
                             <div className="stat-label">Categories</div>
                         </div>
                         <div className="stat-box">
-                            <div className="stat-number">∞</div>
+                            <div className="stat-number"><i class="fa-solid fa-infinity"></i></div>
                             <div className="stat-label">Possibilities</div>
                         </div>
                     </div>
