@@ -152,9 +152,11 @@ export default function Header() {
                 display: none; 
                 width: 30px;
                 height: 22px;
-                position: relative;
+                position: fixed;
+                top: 36px;
+                right: 40px;
                 cursor: pointer;
-                z-index: 200;
+                z-index: 1000;
                 margin-left: auto;
             }
 
@@ -165,7 +167,6 @@ export default function Header() {
                 height: 2px;
                 background: var(--text-primary);
                 border-radius: 2px;
-                z-index: 200;
                 transition: 0.25s ease;
             }
 
