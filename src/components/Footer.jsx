@@ -227,8 +227,6 @@ export default function Footer() {
                         <Link to="/features">Features</Link>
                         <Link to="/roadmap">Roadmap</Link>
                         <Link to="/download">Download</Link>
-                        <Link to="/wiki">Wiki</Link>
-                        <Link to="/faq">FAQ</Link>
                     </div>
 
                     {/* Workshop Links */}
@@ -249,6 +247,8 @@ export default function Footer() {
                     {/* Community Links */}
                     <div className="footer-column">
                         <h4>Community</h4>
+                        <Link to="/faq">FAQ</Link>
+                        <Link to="/wiki">Wiki</Link>
                         <Link to="/contributing">Contributing</Link>
                         <a href="https://github.com/MasterAcnolo/Freedom-Loader/discussions" target="_blank" rel="noopener noreferrer">Discussions</a>
                     </div>
