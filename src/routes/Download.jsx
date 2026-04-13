@@ -174,10 +174,6 @@ export default function Download() {
                         align-items: flex-start;
                         gap: 10px;
                     }
-
-                    .download .btn {
-                        width: 100%;
-                    }
                 }
 
                 @media (max-width: 500px) {

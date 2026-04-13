@@ -113,11 +113,21 @@ export default function Header() {
             .header-btn {
                 background: white;
                 color: black;
-                padding: 9px 18px;
+                padding: 10px 20px;
                 border-radius: 6px;
                 font-weight: 600;
                 font-size: 14px;
                 text-decoration: none;
+                transition: all 0.2s ease;
+            }
+
+            .header-btn:hover {
+                background: #c5c5c5;
+                transform: translateY(-1px);
+            }
+
+            .header-btn:active {
+                transform: translateY(0);
             }
 
            .hamburger {

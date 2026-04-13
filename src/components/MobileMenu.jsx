@@ -75,7 +75,6 @@ export default function MobileMenu({ open, onClose }) {
             }
 
             .header-btn {
-                margin-top: 10px;
                 background: white;
                 color: black;
                 padding: 12px;
