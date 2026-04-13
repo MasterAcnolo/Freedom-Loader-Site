@@ -1,4 +1,4 @@
-# Freedom Loader
+# Freedom Loader Site
 
 A customizable Discord bot loader with theme support.
 
@@ -23,7 +23,7 @@ The Theme Workshop allows you to create and manage custom themes for Freedom Loa
 
 ### Creating a Theme
 
-1. Open the theme editor at `https://github.com/MasterAcnolo/Freedom&20Loader&20Workshop/create.html`
+1. Open the theme editor at https://masteracnolo.github.io/Freedom&20Loader&20Workshop/create.html
 2. Customize colors, fonts, and layout using the visual editor
 3. Preview changes in real-time on the left panel
 4. Click "Export .zip" to download your theme
