@@ -509,7 +509,7 @@ export default function Features() {
                     <div className="features-stats">
                         <div className="stat-box">
                             <div className="stat-number">{filteredFeatures.length}</div>
-                            <div className="stat-label">{selectedCategory && selectedCategory !== "All" ? selectedCategory : "Features"}</div>
+                            <div className="stat-label">{selectedCategory && selectedCategory !== "All" ? selectedCategory : "Total Features"}</div>
                         </div>
                         <div className="stat-box">
                             <div className="stat-number"><i class="fa-solid fa-infinity"></i></div>
