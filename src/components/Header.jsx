@@ -17,10 +17,13 @@ export default function Header() {
                 background: var(--header-bg);
                 border-bottom: 1px solid var(--header-border);
                 transition: all 0.3s ease;
+                position: sticky;
+                top: 0;
+                z-index: 101;
             }
 
             .logo img {
-                height: 70px;
+                height: 65px;
                 transition: transform 0.3s ease, filter 0.3s ease;
                 cursor: pointer;
                 filter: invert(0);
@@ -162,6 +165,7 @@ export default function Header() {
                 height: 2px;
                 background: var(--text-primary);
                 border-radius: 2px;
+                z-index: 200;
                 transition: 0.25s ease;
             }
 

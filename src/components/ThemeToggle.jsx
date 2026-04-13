@@ -49,6 +49,8 @@ export default function ThemeToggle() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                width: "36px",
+                height: "36px",
                 transition: "all 0.2s ease",
             }}
             onMouseEnter={(e) => (e.target.style.opacity = "0.7")}

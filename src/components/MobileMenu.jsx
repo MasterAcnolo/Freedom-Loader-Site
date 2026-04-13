@@ -34,7 +34,7 @@ export default function MobileMenu({ open, onClose }) {
 
                 transform: translateX(100%);
                 transition: 0.25s ease;
-                z-index: 20;
+                z-index: 101;
 
                 display: flex;
                 flex-direction: column;
