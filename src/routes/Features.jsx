@@ -273,7 +273,6 @@ export default function Features() {
                     color: var(--text-tertiary);
                     font-weight: 500;
                     letter-spacing: 0.5px;
-                    display: none; /* A REMETTRE PLUS TARD: TODO*/
                 }
 
                 .feature-desc {
