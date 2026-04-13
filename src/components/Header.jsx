@@ -17,7 +17,19 @@ export default function Header() {
             }
 
             .logo img {
-                height: 70px; 
+                height: 70px;
+                transition: transform 0.3s ease, filter 0.3s ease;
+                cursor: pointer;
+            }
+
+            .logo img:hover {
+                transform: scale(1.1);
+                filter: brightness(0.8);
+            }
+
+            .logo img.active {
+                transform: scale(0.85);
+                filter: brightness(1.2);
             }
 
             .nav {
