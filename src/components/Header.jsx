@@ -110,7 +110,7 @@ export default function Header() {
                 color: white;
             }
 
-            .download {
+            .header-btn {
                 background: white;
                 color: black;
                 padding: 9px 18px;
@@ -242,7 +242,7 @@ export default function Header() {
                     </div>
                 </div>
 
-                <Link to="/download" className="download">
+                <Link to="/download" className="header-btn">
                     Download
                 </Link>
 

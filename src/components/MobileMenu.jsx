@@ -74,7 +74,7 @@ export default function MobileMenu({ open, onClose }) {
                 background: #222;
             }
 
-            .download {
+            .header-btn {
                 margin-top: 10px;
                 background: white;
                 color: black;
@@ -140,7 +140,7 @@ export default function MobileMenu({ open, onClose }) {
                 <Link className="link" to="/issues" onClick={onClose}>Issues</Link>
             </div>
 
-            <Link to="/download" className="download" onClick={onClose}>
+            <Link to="/download" className="header-btn" onClick={onClose}>
                 Download
             </Link>
 

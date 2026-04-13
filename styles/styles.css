@@ -35,6 +35,10 @@ html{
     scroll-behavior: smooth;  
 }
 
+main{
+    background: var(--background-color);
+}
+
 
 /* Loader overlay */
 #loader {
