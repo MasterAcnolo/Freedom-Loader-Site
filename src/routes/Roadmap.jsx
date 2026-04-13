@@ -12,6 +12,7 @@ export default function Roadmap() {
         ],
         "Working On": [
             { title: "Spotify Support", desc: "Supporting Spotify medias" },        
+            { title: "Automatic Update Launch", desc: "Add CI/CD Pipeline for faster version" },        
             { title: "Chrome Cookie Support", desc: "Support All Browser Cookies" },        
             { title: "Custom Commands Injection", desc: "Add other arguments in download process" },        
         ],
