@@ -1,0 +1,280 @@
+import { Link } from "react-router-dom";
+
+export default function Footer() {
+    const currentYear = new Date().getFullYear();
+
+    return (
+        <>
+            <style>{`
+                footer {
+                    background: #131313;
+                    color: var(--text-color);
+                    padding: 50px 10% 20px;
+                    font-family: Poppins;
+                    margin-top: 60px;
+                }
+
+                .footer-container {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 40px;
+                    margin-bottom: 30px;
+                    max-width: 1400px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .footer-brand {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    min-width: 200px;
+                }
+
+                .footer-brand img {
+                    height: 60px;
+                    width: auto;
+                    transition: transform 0.3s ease, filter 0.3s ease;
+                }
+
+                .footer-brand p {
+                    opacity: 0.7;
+                    font-size: 0.95rem;
+                    margin: 0;
+                }
+
+                .footer-column {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                .footer-column h4 {
+                    margin: 0 0 10px 0;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                    color: #919191;
+                }
+
+                .footer-column a {
+                    color: var(--text-color);
+                    text-decoration: none;
+                    opacity: 0.8;
+                    transition: all 0.2s ease;
+                    font-size: 0.9rem;
+                }
+
+                .footer-column a:hover {
+                    opacity: 1;
+                }
+
+                .footer-socials {
+                    display: flex;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                }
+
+                .footer-socials a {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(145, 145, 145, 0.1);
+                    border: 1px solid #2c2c2c;
+                    border-radius: 6px;
+                    color: var(--text-color);
+                    opacity: 0.8;
+                    transition: all 0.3s ease;
+                    font-size: 1.2rem;
+                }
+
+                .footer-socials svg {
+                    width: 20px;
+                    height: 20px;
+                    stroke: currentColor;
+                    fill: none;
+                }
+
+                .footer-socials img {
+                    width: 20px;
+                    height: 20px;
+                    filter: brightness(1);
+                    filter: invert();
+                    transition: all 0.3s ease;
+                }
+
+                .footer-socials svg {
+                    width: 20px;
+                    height: 20px;
+                    stroke: currentColor;
+                    fill: none;
+                }
+
+                .footer-socials a:hover {
+                    opacity: 1;
+                    background: #919191;
+                    color: black;
+                    transform: translateY(-3px);
+                }
+
+                .footer-socials a:hover img {
+                    filter: brightness(0) invert(1);
+                }
+
+                .footer-socials a:hover svg {
+                    stroke: black;
+                    fill: black;
+                }
+
+                .footer-bottom {
+                    border-top: 1px solid #2c2c2c;
+                    padding-top: 20px;
+                    text-align: center;
+                    font-size: 0.85rem;
+                    opacity: 0.7;
+                    max-width: 1400px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                /* Responsive */
+                @media (max-width: 900px) {
+                    .footer-container {
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                        gap: 30px;
+                    }
+
+                    .footer-brand {
+                        align-items: center;
+                    }
+
+                    .footer-column {
+                        align-items: center;
+                    }
+
+                    .footer-column a {
+                        transition: all 0.2s ease;
+                    }
+
+                    .footer-column a:hover {
+                        transform: none;
+                        opacity: 1;
+                    }
+
+                    .footer-socials {
+                        justify-content: center;
+                    }
+                }
+
+                @media (max-width: 500px) {
+                    footer {
+                        padding: 30px 5% 15px;
+                    }
+
+                    .footer-container {
+                        gap: 20px;
+                    }
+
+                    .footer-column h4 {
+                        font-size: 0.9rem;
+                    }
+
+                    .footer-column a {
+                        font-size: 0.85rem;
+                    }
+
+                    .footer-bottom {
+                        font-size: 0.75rem;
+                    }
+                }
+            `}</style>
+
+            <footer>
+                <div className="footer-container">
+                    {/* Brand Section */}
+                    <div className="footer-brand">
+                        <Link to="/">
+                            <img src="/assets/icon/Freedom_Loader.png" alt="Freedom Loader" />
+                        </Link>
+                        <p>Put Freedom in your Downloads.</p>
+                    </div>
+
+                    {/* Site Links */}
+                    <div className="footer-column">
+                        <h4>Site</h4>
+                        <Link to="/">Home</Link>
+                        <Link to="/about">About</Link>
+                        <Link to="/download">Download</Link>
+                        <Link to="/wiki">Wiki</Link>
+                        <Link to="/faq">FAQ</Link>
+                    </div>
+
+                    {/* Workshop Links */}
+                    <div className="footer-column">
+                        <h4>Workshop</h4>
+                        <Link to="/workshop">Browse Themes</Link>
+                        <Link to="/workshop/create">Create Theme</Link>
+                    </div>
+
+                    {/* Legal Links */}
+                    <div className="footer-column">
+                        <h4>Legal</h4>
+                        <Link to="/contact">Contact</Link>
+                        <Link to="/privacy">Privacy</Link>
+                        <Link to="/terms">Terms</Link>
+                    </div>
+
+                    {/* Social Links */}
+                    <div className="footer-column">
+                        <h4>Follow Us</h4>
+                        <div className="footer-socials">
+                            <a 
+                                href="https://masteracnolo.github.io/No-Sense" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                title="Website"
+                            >
+                                <img src="/assets/icon/globe-solid-full.svg" alt="Website" />
+                            </a>
+                            <a 
+                                href="https://x.com/MasterAcnolo" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                title="Twitter/X"
+                            >
+                                <img src="/assets/icon/x-twitter-brands-solid-full.svg" alt="Twitter/X" />
+                            </a>
+                            <a 
+                                href="https://github.com/MasterAcnolo" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                title="GitHub"
+                            >
+                                <img src="/assets/icon/github-brands-solid-full.svg" alt="GitHub" />
+                            </a>
+                            <a 
+                                href="https://www.youtube.com/channel/UCS55e2-ZslXqGzznB_7N4Sg" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                title="YouTube"
+                            >
+                                <img src="/assets/icon/youtube-brands-solid-full.svg" alt="YouTube" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Copyright */}
+                <div className="footer-bottom">
+                    <p>© {currentYear} Freedom Loader — All rights reserved.</p>
+                </div>
+            </footer>
+        </>
+    );
+}
