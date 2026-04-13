@@ -246,6 +246,13 @@ export default function Footer() {
                         <Link to="/terms">Terms</Link>
                     </div>
 
+                    {/* Community Links */}
+                    <div className="footer-column">
+                        <h4>Community</h4>
+                        <Link to="/contributing">Contributing</Link>
+                        <a href="https://github.com/MasterAcnolo/Freedom-Loader/discussions" target="_blank" rel="noopener noreferrer">Discussions</a>
+                    </div>
+
                     {/* Social Links */}
                     <div className="footer-column">
                         <h4>Follow Us</h4>

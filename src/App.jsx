@@ -10,6 +10,7 @@ import About from "./routes/About";
 import Features from "./routes/Features";
 import FAQ from "./routes/FAQ";
 import Wiki from "./routes/Wiki";
+import Contributing from "./routes/Contributing";
 import Roadmap from "./routes/Roadmap";
 import Terms from "./routes/Terms";
 import Privacy from "./routes/Privacy";
@@ -25,7 +26,8 @@ function App(){
                 <Route path="/about" element={<About />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/features" element={<Features />} />                
-                <Route path="/wiki" element={<Wiki />} />          
+                <Route path="/wiki" element={<Wiki />} />
+                <Route path="/contributing" element={<Contributing />} />
                 <Route path="/roadmap" element={<Roadmap />} />      
                 <Route path="/download" element={<Download />} />
                 <Route path="/terms" element={<Terms />} />
