@@ -12,7 +12,7 @@ export default function Header() {
             .header {
                 display: flex;
                 align-items: center;
-                padding: 12px 70px;
+                padding: 12px 40px;
                 background: #121212;
             }
 
