@@ -11,7 +11,7 @@ Visit the live site: https://masteracnolo.github.io/FreedomLoader/
 This repository contains the main website and theme workshop for Freedom Loader. The site includes:
 
 - Project homepage and documentation
-- Feature showcase (65+ features)
+- Feature showcase
 - FAQ section
 - Theme Workshop for creating custom themes
 - Contributing guidelines
