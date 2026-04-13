@@ -7,6 +7,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import Home from "./routes/Home";
 import Download from "./routes/Download";
 import About from "./routes/About";
+import Features from "./routes/Features";
 import Terms from "./routes/Terms";
 import Privacy from "./routes/Privacy";
 import Contact from "./routes/Contact";
@@ -19,6 +20,7 @@ function App(){
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/features" element={<Features />} />
                 <Route path="/download" element={<Download />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/privacy" element={<Privacy />} />

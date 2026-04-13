@@ -224,6 +224,7 @@ export default function Footer() {
                         <h4>Site</h4>
                         <Link to="/">Home</Link>
                         <Link to="/about">About</Link>
+                        <Link to="/features">Features</Link>
                         <Link to="/download">Download</Link>
                         <Link to="/wiki">Wiki</Link>
                         <Link to="/faq">FAQ</Link>
