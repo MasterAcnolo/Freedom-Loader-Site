@@ -5,32 +5,28 @@ export default function Roadmap() {
 
     const roadmapItems = {
         "Coming Soon": [
-            { title: "Import/Export Settings", desc: "Easy backup and restore of all application settings and preferences" },
             { title: "Batch Processing", desc: "Download multiple videos in parallel with queue management" },
-            { title: "Advanced Scheduling", desc: "Schedule downloads for specific times or intervals" },
-            { title: "History & Stats", desc: "Track download history and view detailed statistics" },
+            { title: "Head Less Version", desc: "Expose a Full Api to use Freedom Loader in other Apps" },
+            { title: "History & Stats", desc: "Track download history and view detailed statistics (Locally)" },
             { title: "Multi-Language Support", desc: "Full internationalization with multiple language support" }
         ],
-        "In Development": [
-            { title: "Mobile App", desc: "Native mobile application for iOS and Android platforms" },
-            { title: "Cloud Sync", desc: "Synchronize settings and preferences across devices" },
-            { title: "Advanced Filters", desc: "More granular control over video filtering and selection" },
-            { title: "API Integration", desc: "Public API for third-party integrations and extensions" },
-            { title: "Premium Features", desc: "Advanced features for power users" }
+        "Working On": [
+            { title: "Spotify Support", desc: "Supporting Spotify medias" },        
+            { title: "Chrome Cookie Support", desc: "Support All Browser Cookies" },        
+            { title: "Custom Commands Injection", desc: "Add other arguments in download process" },        
         ],
         "Future Ideas": [
+            { title: "Mobile App", desc: "Native mobile application for iOS and Android platforms" },
+            { title: "Linux Version", desc: "Support Ubuntu or other Linux Distro (Because Linus)" },
             { title: "Browser Extension", desc: "Direct integration with web browsers for one-click downloading" },
-            { title: "AI-Powered Recommendations", desc: "Smart suggestions based on your download history" },
-            { title: "Marketplace", desc: "Community marketplace for themes, plugins, and tools" },
-            { title: "Real-time Collaboration", desc: "Share and manage downloads with team members" },
+            { title: "Better Workshop", desc: "Community marketplace for themes, plugins, and tools" },
             { title: "Web Version", desc: "Web-based interface accessible from anywhere" },
-            { title: "Hardware Acceleration", desc: "GPU-accelerated video processing for faster conversions" }
         ]
     };
 
     const colors = {
         "Coming Soon": "#00ff88",
-        "In Development": "#4da6ff",
+        "Working On": "#4da6ff",
         "Future Ideas": "#ff6b9d"
     };
 
@@ -301,7 +297,7 @@ export default function Roadmap() {
                                 key={stage} 
                                 className={`roadmap-section ${
                                     stage === "Coming Soon" ? "coming-soon" :
-                                    stage === "In Development" ? "in-dev" : "future"
+                                    stage === "Working On" ? "in-dev" : "future"
                                 }`}
                             >
                                 <div className="section-header">
@@ -315,7 +311,7 @@ export default function Roadmap() {
                                             key={itemIdx}
                                             className={`roadmap-item ${expanded === `${stage}-${itemIdx}` ? "expanded" : ""} ${
                                                 stage === "Coming Soon" ? "coming-soon" :
-                                                stage === "In Development" ? "in-dev" : "future"
+                                                stage === "Working On" ? "in-dev" : "future"
                                             }`}
                                             onClick={() => setExpanded(expanded === `${stage}-${itemIdx}` ? null : `${stage}-${itemIdx}`)}
                                         >
