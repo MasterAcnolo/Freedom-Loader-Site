@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Features() {
     const [selectedCategory, setSelectedCategory] = useState(null);
@@ -384,6 +385,104 @@ export default function Features() {
                         width: 100%;
                     }
                 }
+
+                /* Coming Soon Section */
+                .coming-soon-section {
+                    margin-top: 60px;
+                    padding: 40px 30px;
+                    background: linear-gradient(135deg, var(--card-bg), var(--card-hover-bg));
+                    border: 2px solid var(--border-color);
+                    border-radius: 12px;
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+                    left: 50%;
+                    transform: translate(-50%);
+                    width: 70%;
+                }
+
+                .coming-soon-section::before {
+                    content: "";
+                    position: absolute;
+                    top: -50%;
+                    right: -50%;
+                    width: 200px;
+                    height: 200px;
+                    background: radial-gradient(circle, var(--accent-primary) 0%, transparent 70%);
+                    opacity: 0.08;
+                    pointer-events: none;
+                }
+
+                .coming-soon-content {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .coming-soon-icon {
+                    font-size: 2.5rem;
+                    margin-bottom: 12px;
+                    color: var(--accent-primary);
+                }
+
+                .coming-soon-title {
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                    color: var(--text-primary);
+                }
+
+                .coming-soon-desc {
+                    font-size: 1rem;
+                    color: var(--text-secondary);
+                    margin-bottom: 20px;
+                    max-width: 600px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .roadmap-btn {
+                    display: inline-block;
+                    padding: 12px 28px;
+                    background: var(--accent-primary);
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 8px;
+                    font-weight: 600;
+                    font-size: 0.95rem;
+                    transition: all 0.3s ease;
+                    border: 2px solid var(--accent-primary);
+                }
+
+                .roadmap-btn:hover {
+                    background: transparent;
+                    color: var(--accent-primary);
+                    transform: translateY(-2px);
+                    box-shadow: 0 8px 20px rgba(77, 166, 255, 0.2);
+                }
+
+                @media (max-width: 600px) {
+                    .coming-soon-section {
+                        padding: 30px 20px;
+                        margin-top: 50px;
+                    }
+
+                    .coming-soon-icon {
+                        font-size: 2rem;
+                    }
+
+                    .coming-soon-title {
+                        font-size: 1.5rem;
+                    }
+
+                    .coming-soon-desc {
+                        font-size: 0.9rem;
+                    }
+
+                    .roadmap-btn {
+                        padding: 10px 24px;
+                        font-size: 0.9rem;
+                    }
+                }
             `}</style>
 
             <main>
@@ -486,6 +585,23 @@ export default function Features() {
                                 </div>
                             </div>
                         )}
+                    </div>
+
+                    {/* Coming Soon Section */}
+                    <div className="coming-soon-section">
+                        <div className="coming-soon-content">
+                            <div className="coming-soon-icon">
+                                <i className="fas fa-rocket"></i>
+                            </div>
+                            <h2 className="coming-soon-title">And more to come...</h2>
+                            <p className="coming-soon-desc">
+                                These are just the current features. We're constantly working on new features and improvements. 
+                                Check out our roadmap to see what's coming next!
+                            </p>
+                            <Link to="/roadmap" className="roadmap-btn">
+                                <i className="fas fa-map"></i> See our Roadmap
+                            </Link>
+                        </div>
                     </div>
                 </section>
             </main>

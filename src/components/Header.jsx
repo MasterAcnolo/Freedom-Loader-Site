@@ -223,6 +223,7 @@ export default function Header() {
                     <div className="dropdown">
                         <Link to="/about">About</Link>
                         <Link to="/features">Features</Link>
+                        <Link to="/roadmap">Roadmap</Link>
                         <Link to="/wiki">Wiki</Link>
                     </div>
                 </div>

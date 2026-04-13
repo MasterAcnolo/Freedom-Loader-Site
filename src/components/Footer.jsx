@@ -225,6 +225,7 @@ export default function Footer() {
                         <Link to="/">Home</Link>
                         <Link to="/about">About</Link>
                         <Link to="/features">Features</Link>
+                        <Link to="/roadmap">Roadmap</Link>
                         <Link to="/download">Download</Link>
                         <Link to="/wiki">Wiki</Link>
                         <Link to="/faq">FAQ</Link>

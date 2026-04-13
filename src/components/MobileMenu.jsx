@@ -122,6 +122,7 @@ export default function MobileMenu({ open, onClose }) {
                 <div className="title">Project</div>
                 <Link className="link" to="/about" onClick={onClose}>About</Link>
                 <Link className="link" to="/features" onClick={onClose}>Features</Link>
+                <Link className="link" to="/roadmap" onClick={onClose}>Roadmap</Link>
                 <Link className="link" to="/wiki" onClick={onClose}>Wiki</Link>
             </div>
 

@@ -8,6 +8,7 @@ import Home from "./routes/Home";
 import Download from "./routes/Download";
 import About from "./routes/About";
 import Features from "./routes/Features";
+import Roadmap from "./routes/Roadmap";
 import Terms from "./routes/Terms";
 import Privacy from "./routes/Privacy";
 import Contact from "./routes/Contact";
@@ -21,6 +22,7 @@ function App(){
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/features" element={<Features />} />
+                <Route path="/roadmap" element={<Roadmap />} />
                 <Route path="/download" element={<Download />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/privacy" element={<Privacy />} />
