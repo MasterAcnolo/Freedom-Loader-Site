@@ -276,7 +276,6 @@ export default function About() {
                     }
 
                     .btn {
-                        width: 100%;
                         justify-content: center;
                     }
                 }
@@ -389,14 +388,6 @@ export default function About() {
                             className="btn secondary"
                         >
                             Contribute on GitHub
-                        </a>
-                        <a 
-                            href="https://paypal.me/axelnicolas25" 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn primary"
-                        >
-                            💙 Donate via PayPal
                         </a>
                     </div>
                 </section>
