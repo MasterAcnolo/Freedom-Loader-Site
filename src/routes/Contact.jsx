@@ -4,165 +4,167 @@ export default function Contact() {
             <style>{`
                 .contact {
                     color: var(--text-color);
-                    padding: 80px 20%;
+                    padding: 50px 20px;
                     margin-top: 30px;
+                    display: flex;
+                    flex-direction: column;
                 }
 
                 .contact .container {
                     max-width: 900px;
                     margin: 0 auto;
+                    width: 100%;
                 }
 
                 .contact h1 {
                     font-size: 2.5rem;
                     margin-bottom: 20px;
                     font-family: "Marko One", sans-serif;
+                    text-align: center;
+                    font-weight: 700;
+                    color: #fff;
                 }
 
                 .contact > p {
                     font-size: 1.1rem;
-                    line-height: 1.8;
-                    opacity: 0.85;
+                    line-height: 1.6;
+                    opacity: 0.8;
                     margin-bottom: 40px;
+                    text-align: center;
+                    color: #ccc;
                 }
 
                 .contact-methods {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    display: flex;
+                    flex-wrap: wrap;
                     gap: 20px;
+                    justify-content: center;
                     margin-bottom: 50px;
                 }
 
                 .contact-card {
-                    background: #1a1a1a;
-                    border: 1px solid #2a2a2a;
-                    border-radius: 10px;
-                    padding: 25px;
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 12px;
+                    padding: 25px 20px;
+                    width: 250px;
                     text-align: center;
                     transition: all 0.3s ease;
                 }
 
                 .contact-card:hover {
-                    border-color: #444;
-                    background: #222;
-                    transform: translateY(-4px);
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
                 }
 
                 .contact-card i {
-                    font-size: 2.5rem;
+                    font-size: 40px;
+                    color: #1e90ff;
                     margin-bottom: 15px;
-                    color: #ccc;
                 }
 
                 .contact-card h3 {
-                    font-size: 1.3rem;
-                    margin: 15px 0;
+                    font-size: 1.2rem;
+                    margin-bottom: 10px;
+                    color: #fff;
                 }
 
                 .contact-card p {
                     font-size: 0.95rem;
-                    opacity: 0.7;
+                    color: #ccc;
                     margin-bottom: 15px;
                 }
 
                 .contact-card a {
-                    color: #fff;
+                    color: #1e90ff;
                     text-decoration: none;
-                    font-weight: 600;
-                    border-bottom: 2px solid #ccc;
+                    font-weight: 500;
                     transition: all 0.2s ease;
                 }
 
                 .contact-card a:hover {
-                    color: #ccc;
-                    border-bottom: 2px solid #fff;
+                    text-decoration: underline;
                 }
 
                 .contact-form {
-                    background: #1a1a1a;
-                    border: 1px solid #2a2a2a;
-                    border-radius: 10px;
-                    padding: 30px;
+                    background-color: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 12px;
+                    padding: 30px 25px;
+                    max-width: 600px;
+                    margin: 0 auto 50px auto;
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
                 }
 
                 .contact-form label {
-                    font-weight: 600;
-                    font-size: 1rem;
+                    display: block;
                     margin-bottom: 5px;
+                    font-weight: 500;
+                    color: #fff;
                 }
 
                 .contact-form input,
                 .contact-form textarea {
-                    background: #121212;
-                    border: 1px solid #2a2a2a;
-                    border-radius: 6px;
-                    color: #fff;
+                    width: 100%;
                     padding: 12px 15px;
+                    margin-bottom: 20px;
+                    border-radius: 8px;
+                    border: 1px solid rgba(255,255,255,0.2);
+                    background-color: rgba(255,255,255,0.05);
+                    color: #fff;
                     font-size: 1rem;
+                    outline: none;
+                    transition: all 0.3s ease;
                     font-family: inherit;
-                    transition: all 0.2s ease;
+                    box-sizing: border-box;
                 }
 
                 .contact-form input:focus,
                 .contact-form textarea:focus {
-                    outline: none;
-                    border-color: #444;
-                    background: #1a1a1a;
+                    border-color: #1e90ff;
+                    box-shadow: 0 0 8px rgba(30,144,255,0.5);
+                    background-color: rgba(255,255,255,0.08);
                 }
 
                 .contact-form textarea {
-                    resize: vertical;
                     min-height: 120px;
+                    resize: vertical;
                 }
 
                 .contact-form button {
-                    background: white;
-                    color: black;
-                    padding: 12px 30px;
-                    border-radius: 6px;
+                    display: inline-block;
+                    padding: 12px 25px;
+                    background-color: #1e90ff;
+                    color: #fff;
                     font-weight: 600;
                     font-size: 1rem;
                     border: none;
+                    border-radius: 8px;
                     cursor: pointer;
-                    transition: all 0.2s ease;
+                    transition: all 0.3s ease;
+                    align-self: center;
+                    min-width: 150px;
                 }
 
                 .contact-form button:hover {
-                    background: #f0f0f0;
-                    transform: translateY(-1px);
+                    background-color: #0d6ed1;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
                 }
 
-                .contact-form button:active {
-                    transform: translateY(0);
-                }
-
-                .contact a:not(.contact-card a) {
-                    color: #fff;
-                    text-decoration: none;
-                    position: relative;
-                    border-bottom: 2px solid transparent;
-                    transition: all 0.2s ease;
-                }
-
-                .contact a:not(.contact-card a):hover {
-                    border-bottom: 2px solid #fff;
-                    color: #ccc;
-                }
-
-                @media (max-width: 900px) {
-                    .contact {
-                        padding: 60px 5%;
-                    }
-
-                    .contact h1 {
-                        font-size: 2.2rem;
-                    }
-
+                @media (max-width: 768px) {
                     .contact-methods {
-                        grid-template-columns: 1fr;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .contact-card {
+                        width: 80%;
+                    }
+
+                    .contact-form {
+                        width: 90%;
+                        padding: 25px 15px;
                     }
                 }
 
@@ -175,20 +177,27 @@ export default function Contact() {
                         font-size: 1rem;
                     }
 
-                    .contact-form {
-                        padding: 20px;
-                    }
-
                     .contact-card {
-                        padding: 20px;
+                        width: 100%;
                     }
+                }
+
+                .contact a:not(.contact-card a) {
+                    color: #1e90ff;
+                    text-decoration: none;
+                    transition: all 0.2s ease;
+                }
+
+                .contact a:not(.contact-card a):hover {
+                    text-decoration: underline;
+                    color: #0d6ed1;
                 }
             `}</style>
 
             <main>
                 <section className="contact">
                     <div className="container">
-                        <h1>Contact Us</h1>
+                        <h1>Contact Me</h1>
                         <p>
                             If you have any questions, suggestions, or need support, reach out using the methods below or fill out the form.
                         </p>
