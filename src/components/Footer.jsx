@@ -7,11 +7,13 @@ export default function Footer() {
         <>
             <style>{`
                 footer {
-                    background: #131313;
-                    color: var(--text-color);
+                    background: var(--bg-tertiary);
+                    color: var(--text-primary);
                     padding: 50px 10% 20px;
                     font-family: Poppins;
                     margin-top: 60px;
+                    border-top: 1px solid var(--border-color);
+                    transition: all 0.3s ease;
                 }
 
                 .footer-container {
@@ -36,10 +38,15 @@ export default function Footer() {
                     height: 60px;
                     width: auto;
                     transition: transform 0.3s ease, filter 0.3s ease;
+                    filter: invert(0);
+                }
+
+                :root.light-theme .footer-brand img {
+                    filter: invert(1);
                 }
 
                 .footer-brand p {
-                    opacity: 0.7;
+                    color: var(--text-secondary);
                     font-size: 0.95rem;
                     margin: 0;
                 }
@@ -56,19 +63,18 @@ export default function Footer() {
                     font-weight: 600;
                     text-transform: uppercase;
                     letter-spacing: 0.5px;
-                    color: #919191;
+                    color: var(--text-secondary);
                 }
 
                 .footer-column a {
-                    color: var(--text-color);
+                    color: var(--text-secondary);
                     text-decoration: none;
-                    opacity: 0.8;
                     transition: all 0.2s ease;
                     font-size: 0.9rem;
                 }
 
                 .footer-column a:hover {
-                    opacity: 1;
+                    color: var(--text-primary);
                 }
 
                 .footer-socials {
@@ -83,11 +89,10 @@ export default function Footer() {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background: rgba(145, 145, 145, 0.1);
-                    border: 1px solid #2c2c2c;
+                    background: var(--card-bg);
+                    border: 1px solid var(--border-color);
                     border-radius: 6px;
-                    color: var(--text-color);
-                    opacity: 0.8;
+                    color: var(--text-secondary);
                     transition: all 0.3s ease;
                     font-size: 1.2rem;
                 }
@@ -102,9 +107,18 @@ export default function Footer() {
                 .footer-socials img {
                     width: 20px;
                     height: 20px;
-                    filter: brightness(1);
-                    filter: invert();
+                    filter: invert(0);
                     transition: all 0.3s ease;
+                }
+
+                :root.dark-theme .footer-socials img {
+                    filter: invert(1);
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    :root:not(.light-theme) .footer-socials img {
+                        filter: invert(1);
+                    }
                 }
 
                 .footer-socials svg {
@@ -116,8 +130,8 @@ export default function Footer() {
 
                 .footer-socials a:hover {
                     opacity: 1;
-                    background: #919191;
-                    color: black;
+                    background: var(--accent-primary);
+                    color: white;
                     transform: translateY(-3px);
                 }
 
@@ -126,12 +140,12 @@ export default function Footer() {
                 }
 
                 .footer-socials a:hover svg {
-                    stroke: black;
-                    fill: black;
+                    stroke: white;
+                    fill: white;
                 }
 
                 .footer-bottom {
-                    border-top: 1px solid #2c2c2c;
+                    border-top: 1px solid var(--border-color);
                     padding-top: 20px;
                     text-align: center;
                     font-size: 0.85rem;

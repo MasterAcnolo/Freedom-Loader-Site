@@ -3,12 +3,12 @@ export default function Home() {
         <>
             <style>{`
                 .home {
-                    color: var(--text-color);
+                    color: var(--text-primary);
                 }
 
                 /* ===== HERO SECTION ===== */
                 .hero {
-                    background: #121212;
+                    background: var(--bg-primary);
                     padding: 100px 20px;
                     text-align: center;
                     position: relative;
@@ -25,10 +25,10 @@ export default function Home() {
 
                 .hero h1 {
                     font-size: 4rem;
-                    font-weight: 900;
+                    font-weight: 700;
                     margin-bottom: 30px;
-                    font-family: "Marko One", sans-serif;
-                    background: #ffffff;
+                    font-family: "Poppins", sans-serif;
+                    background: var(--text-primary);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
@@ -37,14 +37,14 @@ export default function Home() {
 
                 .hero p {
                     font-size: 1.3rem;
-                    color: #ccc;
+                    color: var(--text-secondary);
                     margin-bottom: 15px;
                     line-height: 1.6;
                 }
 
                 .hero .tagline {
                     font-size: 1.1rem;
-                    color: #fff;
+                    color: var(--text-primary);
                     font-weight: 600;
                     margin-bottom: 50px;
                     letter-spacing: 0.5px;
@@ -62,7 +62,7 @@ export default function Home() {
 
                 .tagline-item i {
                     font-size: 1.2rem;
-                    color: #fff;
+                    color: var(--text-primary);
                 }
 
                 .tagline-item span {
@@ -90,24 +90,24 @@ export default function Home() {
                 }
 
                 .btn-primary {
-                    background: white;
-                    color: black;
+                    background: var(--text-primary);
+                    color: var(--bg-primary);
                 }
 
                 .btn-primary:hover {
-                    background: #f0f0f0;
+                    background: var(--text-secondary);
                     transform: translateY(-1px);
                 }
 
                 .btn-secondary {
                     background: transparent;
-                    color: #fff;
-                    border: 2px solid #ccc;
+                    color: var(--text-primary);
+                    border: 2px solid var(--border-color);
                 }
 
                 .btn-secondary:hover {
-                    background: rgba(255, 255, 255, 0.1);
-                    border-color: #fff;
+                    background: var(--card-bg);
+                    border-color: var(--text-primary);
                     transform: translateY(-1px);
                 }
 
@@ -119,8 +119,8 @@ export default function Home() {
                 }
 
                 .stat {
-                    background: rgba(255, 255, 255, 0.05);
-                    border: 1px solid #2a2a2a;
+                    background: var(--card-bg);
+                    border: 1px solid var(--border-color);
                     border-radius: 10px;
                     padding: 25px;
                     transition: all 0.3s ease;
@@ -128,35 +128,36 @@ export default function Home() {
 
                 .stat:hover {
                     transform: translateY(-3px);
-                    border-color: #444;
-                    background: rgba(255, 255, 255, 0.08);
+                    border-color: var(--text-secondary);
+                    background: var(--card-hover-bg);
                 }
 
                 .stat-number {
                     font-size: 2.5rem;
-                    font-weight: 900;
-                    color: #fff;
+                    font-weight: 700;
+                    color: var(--text-primary);
                     margin-bottom: 10px;
                 }
 
                 .stat-label {
                     font-size: 1rem;
-                    color: #ccc;
+                    color: var(--text-secondary);
                 }
 
                 /* ===== FEATURES SECTION ===== */
                 .features {
                     padding: 100px 20px;
-                    background: #1a1a1a;
+                    background: var(--bg-secondary);
+                    border-top: 1px solid var(--border-color);
                 }
 
                 .section-title {
                     font-size: 3rem;
-                    font-weight: 900;
+                    font-weight: 700;
                     text-align: center;
                     margin-bottom: 70px;
-                    font-family: "Marko One", sans-serif;
-                    color: #fff;
+                    font-family: "Poppins", sans-serif;
+                    color: var(--text-primary);
                 }
 
                 .features-grid {
@@ -168,8 +169,8 @@ export default function Home() {
                 }
 
                 .feature-card {
-                    background: rgba(255, 255, 255, 0.05);
-                    border: 1px solid #2a2a2a;
+                    background: var(--card-bg);
+                    border: 1px solid var(--border-color);
                     border-radius: 10px;
                     padding: 30px;
                     transition: all 0.3s ease;
@@ -177,34 +178,34 @@ export default function Home() {
 
                 .feature-card:hover {
                     transform: translateY(-5px);
-                    border-color: #444;
-                    background: rgba(255, 255, 255, 0.08);
+                    border-color: var(--text-secondary);
+                    background: var(--card-hover-bg);
                 }
 
                 .feature-icon {
                     font-size: 2.5rem;
                     margin-bottom: 15px;
-                    color: #fff;
+                    color: var(--text-primary);
                 }
 
                 .feature-card h3 {
                     font-size: 1.2rem;
                     margin-bottom: 15px;
-                    color: #fff;
+                    color: var(--text-primary);
                     font-weight: 700;
                 }
 
                 .feature-card p {
                     font-size: 0.95rem;
-                    color: #ccc;
+                    color: var(--text-secondary);
                     line-height: 1.6;
                 }
 
                 /* ===== COMMUNITY SECTION ===== */
                 .community {
                     padding: 100px 20px;
-                    background: #121212;
-                    border-top: 1px solid #2a2a2a;
+                    background: var(--bg-primary);
+                    border-top: 1px solid var(--border-color);
                 }
 
                 .community-content {
@@ -215,14 +216,15 @@ export default function Home() {
 
                 .community-title {
                     font-size: 2.5rem;
-                    font-weight: 900;
+                    font-weight: 700;
                     margin-bottom: 30px;
-                    font-family: "Marko One", sans-serif;
+                    font-family: "Poppins", sans-serif;
+                    color: var(--text-primary);
                 }
 
                 .community-text {
                     font-size: 1.1rem;
-                    color: #ccc;
+                    color: var(--text-secondary);
                     margin-bottom: 40px;
                     line-height: 1.8;
                 }
@@ -239,18 +241,18 @@ export default function Home() {
                     align-items: center;
                     gap: 10px;
                     padding: 12px 25px;
-                    background: rgba(255, 255, 255, 0.05);
-                    border: 1px solid #2a2a2a;
+                    background: var(--card-bg);
+                    border: 1px solid var(--border-color);
                     border-radius: 8px;
-                    color: #fff;
+                    color: var(--text-primary);
                     text-decoration: none;
                     font-weight: 600;
                     transition: all 0.2s ease;
                 }
 
                 .community-link:hover {
-                    background: rgba(255, 255, 255, 0.08);
-                    border-color: #444;
+                    background: var(--card-hover-bg);
+                    border-color: var(--text-secondary);
                     transform: translateY(-2px);
                 }
 
@@ -260,19 +262,19 @@ export default function Home() {
 
                 /* ===== CTA SECTION ===== */
                 .cta {
-                    background: #1a1a1a;
+                    background: var(--bg-secondary);
                     padding: 80px 20px;
                     text-align: center;
-                    color: #fff;
-                    border-top: 1px solid #2a2a2a;
+                    color: var(--text-primary);
+                    border-top: 1px solid var(--border-color);
                     margin-bottom: -60px;
                 }
 
                 .cta h2 {
                     font-size: 2.5rem;
-                    font-weight: 900;
+                    font-weight: 700;
                     margin-bottom: 20px;
-                    font-family: "Marko One", sans-serif;
+                    font-family: "Poppins", sans-serif;
                 }
 
                 .cta p {
@@ -281,13 +283,13 @@ export default function Home() {
                     max-width: 600px;
                     margin-left: auto;
                     margin-right: auto;
-                    color: #ccc;
+                    color: var(--text-secondary);
                     line-height: 1.6;
                 }
 
                 .cta a {
-                    background: white;
-                    color: black;
+                    background: var(--text-primary);
+                    color: var(--bg-primary);
                     padding: 12px 40px;
                     border-radius: 6px;
                     text-decoration: none;
@@ -300,7 +302,7 @@ export default function Home() {
                 }
 
                 .cta a:hover {
-                    background: #f0f0f0;
+                    background: var(--text-secondary);
                     transform: translateY(-1px);
                 }
 

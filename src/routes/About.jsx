@@ -36,8 +36,9 @@ export default function About() {
 
                 .about {
                     padding: 80px 20%;
-                    color: var(--text-color);
+                    color: var(--text-primary);
                     margin-top: 30px;
+                    background: var(--bg-primary);
                 }
 
                 .about-container, .history-container, .support-container {
@@ -48,8 +49,9 @@ export default function About() {
                 .about h1 {
                     font-size: 3rem;
                     margin-bottom: 30px;
-                    font-family: "Marko One", sans-serif;
+                    font-family: "Poppins", sans-serif;
                     text-align: center;
+                    color: var(--text-primary);
                 }
 
                 .about p {
@@ -58,22 +60,36 @@ export default function About() {
                     opacity: 0.9;
                     margin-bottom: 20px;
                     text-align: justify;
+                    color: var(--text-secondary);
                 }
 
                 .about strong {
-                    color: #ffffff;
+                    color: var(--text-primary);
                     font-weight: 600;
+                }
+
+                .story-link {
+                    color: var(--accent-primary);
+                    text-decoration: none;
+                    transition: all 0.2s ease;
+                }
+
+                .story-link:hover {
+                    color: var(--accent-secondary);
+                    text-decoration: underline;
                 }
 
                 .history {
                     padding: 60px 20%;
+                    background: var(--bg-secondary);
                 }
 
                 .history h2 {
                     font-size: 2.5rem;
                     margin-bottom: 30px;
                     text-align: center;
-                    font-family: "Marko One", sans-serif;
+                    font-family: "Poppins", sans-serif;
+                    color: var(--text-primary);
                 }
 
                 .history p {
@@ -82,17 +98,21 @@ export default function About() {
                     opacity: 0.9;
                     margin-bottom: 20px;
                     text-align: justify;
+                    color: var(--text-secondary);
                 }
 
                 .features {
                     padding: 60px 20%;
+                    background: var(--bg-primary);
+                    border-top: 1px solid var(--border-color);
                 }
 
                 .features h2 {
                     font-size: 2.5rem;
                     margin-bottom: 40px;
                     text-align: center;
-                    font-family: "Marko One", sans-serif;
+                    font-family: "Poppins", sans-serif;
+                    color: var(--text-primary);
                 }
 
                 .features-grid {
@@ -104,8 +124,8 @@ export default function About() {
 
                 .feature-card {
                     padding: 25px;
-                    background: #1a1a1a;
-                    border: 1px solid #2c2c2c;
+                    background: var(--card-bg);
+                    border: 1px solid var(--border-color);
                     border-radius: 10px;
                     text-align: left;
                     transition: all 0.3s ease;
@@ -115,33 +135,37 @@ export default function About() {
                 }
 
                 .feature-card:hover {
-                    background: #202020;
-                    border-color: #919191;
+                    background: var(--card-hover-bg);
+                    border-color: var(--text-secondary);
                     transform: translateY(-4px);
                 }
 
                 .feature-card h3 {
                     font-size: 1.1rem;
                     margin: 0;
-                    color: #919191;
+                    color: var(--text-primary);
                     font-weight: 600;
                 }
 
                 .feature-card p {
                     font-size: 0.95rem;
                     margin: 0;
+                    color: var(--text-secondary);
                     opacity: 0.8;
                 }
 
                 .technos {
                     padding: 60px 20%;
+                    background: var(--bg-secondary);
+                    border-top: 1px solid var(--border-color);
                 }
 
                 .technos h2 {
                     font-size: 2.5rem;
                     margin-bottom: 40px;
                     text-align: center;
-                    font-family: "Marko One", sans-serif;
+                    font-family: "Poppins", sans-serif;
+                    color: var(--text-primary);
                 }
 
                 .tech-grid {
@@ -156,16 +180,16 @@ export default function About() {
                     align-items: center;
                     gap: 15px;
                     padding: 25px;
-                    background: #1a1a1a;
-                    border: 1px solid #2c2c2c;
+                    background: var(--card-bg);
+                    border: 1px solid var(--border-color);
                     border-radius: 12px;
                     text-align: center;
                     transition: all 0.3s ease;
                 }
 
                 .tech-card:hover {
-                    background: #202020;
-                    border-color: #3a3a3a;
+                    background: var(--card-hover-bg);
+                    border-color: var(--text-secondary);
                     transform: translateY(-5px);
                 }
 
@@ -178,23 +202,28 @@ export default function About() {
                 .tech-card h3 {
                     font-size: 1.3rem;
                     margin: 0;
+                    color: var(--text-primary);
                 }
 
                 .tech-card p {
                     font-size: 0.95rem;
                     opacity: 0.8;
                     margin: 0;
+                    color: var(--text-secondary);
                 }
 
                 .support {
                     padding: 60px 20%;
+                    background: var(--bg-primary);
+                    border-top: 1px solid var(--border-color);
                 }
 
                 .support h2 {
                     font-size: 2.5rem;
                     margin-bottom: 20px;
                     text-align: center;
-                    font-family: "Marko One", sans-serif;
+                    font-family: "Poppins", sans-serif;
+                    color: var(--text-primary);
                 }
 
                 .support > p {
@@ -202,6 +231,7 @@ export default function About() {
                     text-align: center;
                     margin-bottom: 40px;
                     opacity: 0.9;
+                    color: var(--text-secondary);
                 }
 
                 .support-actions {
@@ -228,23 +258,24 @@ export default function About() {
                 }
 
                 .btn.primary {
-                    background-color: #919191;
-                    color: var(--text-color);
+                    background-color: var(--accent-primary);
+                    color: white;
                 }
 
                 .btn.primary:hover {
-                    background-color: #7a7a7a;
+                    background-color: var(--accent-hover);
                     transform: scale(1.05);
                 }
 
                 .btn.secondary {
-                    border: 2px solid #919191;
-                    color: var(--text-color);
+                    border: 2px solid var(--accent-primary);
+                    color: var(--text-primary);
                     background-color: transparent;
                 }
 
                 .btn.secondary:hover {
-                    background-color: #91919133;
+                    background-color: var(--card-bg);
+                    border-color: var(--accent-hover);
                     transform: scale(1.05);
                 }
 
@@ -340,7 +371,7 @@ export default function About() {
                         <p>
                             Over time, it became more than a tool - it's a statement against overcomplication.
                             Built during late nights, Freedom Loader is the kind of app I wish existed
-                            when I was younger: fast, transparent, and free. Full story available <a href="https://masteracnolo.github.io/Blog/pourquoi-freedom-loader/" target="_blank" rel="noopener noreferrer" style={{ color: "#919191", textDecoration: "none" }}>Here</a>
+                            when I was younger: fast, transparent, and free. Full story available <a href="https://masteracnolo.github.io/Blog/pourquoi-freedom-loader/" target="_blank" rel="noopener noreferrer" className="story-link">Here</a>
                         </p>
                     </div>
                 </section>

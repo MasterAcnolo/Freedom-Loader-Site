@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
     const [openMenu, setOpenMenu] = useState(null);
@@ -13,18 +14,25 @@ export default function Header() {
                 display: flex;
                 align-items: center;
                 padding: 12px 40px;
-                background: #121212;
+                background: var(--header-bg);
+                border-bottom: 1px solid var(--header-border);
+                transition: all 0.3s ease;
             }
 
             .logo img {
                 height: 70px;
                 transition: transform 0.3s ease, filter 0.3s ease;
                 cursor: pointer;
+                filter: invert(0);
+            }
+
+            :root.light-theme .logo img {
+                filter: invert(1);
             }
 
             .logo img:hover {
                 transform: scale(1.03);
-                filter: brightness(0.8);
+                filter: brightness(0.8) invert(var(--logo-invert, 0));
             }
 
             .logo img.active {
@@ -77,8 +85,8 @@ export default function Header() {
                 top: calc(100% + 12px);
                 left: 0;
 
-                background: #1a1a1a;
-                border: 1px solid #2a2a2a;
+                background: var(--bg-secondary);
+                border: 1px solid var(--border-color);
                 border-radius: 10px;
 
                 padding: 10px;
@@ -103,15 +111,16 @@ export default function Header() {
             .dropdown a {
                 padding: 9px 10px;
                 border-radius: 6px;
-                color: #ccc;
+                color: var(--text-secondary);
                 font-size: 14px;
                 z-index: 200;
+                text-decoration: none;
 
             }
 
             .dropdown a:hover {
-                background: #2a2a2a;
-                color: white;
+                background: var(--card-bg);
+                color: var(--text-primary);
                 z-index: 200;
 
             }
@@ -128,7 +137,7 @@ export default function Header() {
             }
 
             .header-btn:hover {
-                background: #c5c5c5;
+                background: rgba(255, 255, 255, 0.9);
                 transform: translateY(-1px);
             }
 
@@ -260,6 +269,8 @@ export default function Header() {
                 <Link to="/download" className="header-btn">
                     Download
                 </Link>
+
+                <ThemeToggle />
 
             </nav>
 

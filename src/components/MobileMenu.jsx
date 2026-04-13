@@ -26,8 +26,8 @@ export default function MobileMenu({ open, onClose }) {
                 height: 100dvh;
                 width: min(85vw, 360px);
 
-                background: #0f0f0f;
-                border-left: 1px solid #222;
+                background: var(--bg-secondary);
+                border-left: 1px solid var(--border-color);
 
                 padding: 35px;
                 padding-top: 80px;
@@ -53,36 +53,42 @@ export default function MobileMenu({ open, onClose }) {
 
             .title {
                 font-size: 13px;
-                color: #777;
+                color: var(--text-tertiary);
                 letter-spacing: 1px;
                 text-transform: uppercase;
             }
 
             .link {
-                font-size: 17px; /* 🔥 plus gros */
-                color: #ccc;
+                font-size: 17px;
+                color: var(--text-secondary);
                 text-decoration: none;
                 padding: 6px 0;
+                transition: all 0.2s ease;
             }
 
             .link:hover {
-                color: white;
+                color: var(--text-primary);
             }
 
             .divider {
                 height: 1px;
-                background: #222;
+                background: var(--border-color);
             }
 
             .header-btn {
-                background: white;
-                color: black;
+                background: var(--accent-primary);
+                color: white;
                 padding: 12px;
                 text-align: center;
                 border-radius: 8px;
                 font-weight: 600;
                 font-size: 15px;
                 text-decoration: none;
+                transition: all 0.2s ease;
+            }
+
+            .header-btn:hover {
+                background: var(--accent-hover);
             }
 
             .social {
@@ -93,9 +99,14 @@ export default function MobileMenu({ open, onClose }) {
             }
 
             .social a {
-                color: #888;
+                color: var(--text-tertiary);
                 font-size: 14px;
                 text-decoration: none;
+                transition: all 0.2s ease;
+            }
+
+            .social a:hover {
+                color: var(--text-secondary);
             }
 
             .social a:hover {

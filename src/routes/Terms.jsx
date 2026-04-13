@@ -3,9 +3,10 @@ export default function Terms() {
         <>
             <style>{`
                 .terms {
-                    color: var(--text-color);
+                    color: var(--text-primary);
                     padding: 80px 20%;
                     margin-top: 30px;
+                    background: var(--bg-primary);
                 }
 
                 .terms .container {
@@ -16,7 +17,8 @@ export default function Terms() {
                 .terms h1 {
                     font-size: 2.5rem;
                     margin-bottom: 40px;
-                    font-family: "Marko One", sans-serif;
+                    font-family: "Poppins", sans-serif;
+                    color: var(--text-primary);
                 }
 
                 .terms h2 {
@@ -24,6 +26,7 @@ export default function Terms() {
                     margin-top: 40px;
                     margin-bottom: 15px;
                     font-weight: 600;
+                    color: var(--text-primary);
                 }
 
                 .terms p {
@@ -31,6 +34,7 @@ export default function Terms() {
                     line-height: 1.8;
                     opacity: 0.85;
                     margin-bottom: 15px;
+                    color: var(--text-secondary);
                 }
 
                 .terms ul {
@@ -43,10 +47,11 @@ export default function Terms() {
                     line-height: 1.8;
                     opacity: 0.85;
                     margin-bottom: 10px;
+                    color: var(--text-secondary);
                 }
 
                 .terms strong {
-                    color: var(--text-color);
+                    color: var(--text-primary);
                 }
 
                 .last-updated {
@@ -54,6 +59,7 @@ export default function Terms() {
                     opacity: 0.6;
                     margin-bottom: 30px;
                     font-style: italic;
+                    color: var(--text-secondary);
                 }
 
                 @media (max-width: 900px) {
@@ -86,15 +92,15 @@ export default function Terms() {
                 }
 
                 .terms a {
-                    color: #fff;
+                    color: var(--accent-primary);
                     text-decoration: none;
                     border-bottom: 2px solid transparent;
                     transition: all 0.2s ease;
                 }
 
                 .terms a:hover {
-                    border-bottom: 2px solid #fff;
-                    color: #ccc;
+                    border-bottom: 2px solid var(--accent-primary);
+                    color: var(--accent-secondary);
                 }
             `}</style>
 

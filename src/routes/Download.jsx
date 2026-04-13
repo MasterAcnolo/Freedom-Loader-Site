@@ -32,9 +32,10 @@ export default function Download() {
             <style>{`
 
                 .download {
-                    color: var(--text-color);
+                    color: var(--text-primary);
                     padding: 80px 20%;
                     margin-top: 30px;
+                    background: var(--bg-primary);
                 }
 
                 .download .container {
@@ -45,11 +46,18 @@ export default function Download() {
                 .download h2 {
                     font-size: 2.5rem;
                     margin-bottom: 50px;
-                    font-family: "Marko One", sans-serif;
+                    font-family: "Poppins", sans-serif;
+                    color: var(--text-primary);
                 }
 
                 .download-block {
                     margin-bottom: 50px;
+                    border-bottom: 1px solid var(--border-color);
+                    padding-bottom: 30px;
+                }
+
+                .download-block:last-child {
+                    border-bottom: none;
                 }
 
                 .download .download-header {
@@ -63,6 +71,7 @@ export default function Download() {
                 .download .download-header h3 {
                     font-size: 1.8rem;
                     margin: 0;
+                    color: var(--text-primary);
                 }
 
                 .download .btn {
@@ -88,36 +97,39 @@ export default function Download() {
                     line-height: 1.6;
                     opacity: 0.85;
                     margin: 0;
+                    color: var(--text-secondary);
                 }
 
                 .download .version-text {
-                    color: var(--text-color);
+                    color: var(--text-primary);
                     font-weight: bold;
                 }
 
                 .download .loading {
-                    color: #919191;
+                    color: var(--text-secondary);
                     font-style: italic;
                 }
 
                 .download .btn.primary {
-                    background-color: #919191;
-                    color: var(--text-color);
+                    background-color: var(--accent-primary);
+                    color: white;
                 }
 
                 .download .btn.primary:hover:not(:disabled) {
-                    background-color: #7a7a7a;
+                    background-color: var(--accent-hover);
                     transform: scale(1.03);
                 }
 
                 .download .btn.secondary {
-                    border: 2px solid #919191;
-                    color: var(--text-color);
+                    border: 2px solid var(--accent-primary);
+                    color: var(--text-primary);
                     background-color: transparent;
                 }
 
                 .download .btn.secondary:hover:not(:disabled) {
-                    background-color: #91919133;
+                    background-color: var(--card-bg);
+                    color: var(--accent-hover);
+                    border-color: var(--accent-hover);
                     transform: scale(1.03);
                 }
 

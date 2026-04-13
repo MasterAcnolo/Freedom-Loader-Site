@@ -3,11 +3,12 @@ export default function Contact() {
         <>
             <style>{`
                 .contact {
-                    color: var(--text-color);
+                    color: var(--text-primary);
                     padding: 50px 20px;
                     margin-top: 30px;
                     display: flex;
                     flex-direction: column;
+                    background: var(--bg-primary);
                 }
 
                 .contact .container {
@@ -19,10 +20,10 @@ export default function Contact() {
                 .contact h1 {
                     font-size: 2.5rem;
                     margin-bottom: 20px;
-                    font-family: "Marko One", sans-serif;
+                    font-family: "Poppins", sans-serif;
                     text-align: center;
                     font-weight: 700;
-                    color: #fff;
+                    color: var(--text-primary);
                 }
 
                 .contact > p {
@@ -31,7 +32,7 @@ export default function Contact() {
                     opacity: 0.8;
                     margin-bottom: 40px;
                     text-align: center;
-                    color: #ccc;
+                    color: var(--text-secondary);
                 }
 
                 .contact-methods {
@@ -43,8 +44,8 @@ export default function Contact() {
                 }
 
                 .contact-card {
-                    background-color: rgba(255, 255, 255, 0.05);
-                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    background-color: var(--card-bg);
+                    border: 1px solid var(--border-color);
                     border-radius: 12px;
                     padding: 25px 20px;
                     width: 250px;
@@ -54,29 +55,30 @@ export default function Contact() {
 
                 .contact-card:hover {
                     transform: translateY(-5px);
-                    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+                    box-shadow: 0 8px 20px var(--shadow-hover);
+                    background: var(--card-hover-bg);
                 }
 
                 .contact-card i {
                     font-size: 40px;
-                    color: #1e90ff;
+                    color: var(--accent-primary);
                     margin-bottom: 15px;
                 }
 
                 .contact-card h3 {
                     font-size: 1.2rem;
                     margin-bottom: 10px;
-                    color: #fff;
+                    color: var(--text-primary);
                 }
 
                 .contact-card p {
                     font-size: 0.95rem;
-                    color: #ccc;
+                    color: var(--text-secondary);
                     margin-bottom: 15px;
                 }
 
                 .contact-card a {
-                    color: #1e90ff;
+                    color: var(--accent-primary);
                     text-decoration: none;
                     font-weight: 500;
                     transition: all 0.2s ease;
@@ -84,11 +86,12 @@ export default function Contact() {
 
                 .contact-card a:hover {
                     text-decoration: underline;
+                    color: var(--accent-secondary);
                 }
 
                 .contact-form {
-                    background-color: rgba(255, 255, 255, 0.05);
-                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    background-color: var(--bg-secondary);
+                    border: 1px solid var(--border-color);
                     border-radius: 12px;
                     padding: 30px 25px;
                     max-width: 600px;
@@ -101,7 +104,7 @@ export default function Contact() {
                     display: block;
                     margin-bottom: 5px;
                     font-weight: 500;
-                    color: #fff;
+                    color: var(--text-primary);
                 }
 
                 .contact-form input,
@@ -110,9 +113,9 @@ export default function Contact() {
                     padding: 12px 15px;
                     margin-bottom: 20px;
                     border-radius: 8px;
-                    border: 1px solid rgba(255,255,255,0.2);
-                    background-color: rgba(255,255,255,0.05);
-                    color: #fff;
+                    border: 1px solid var(--border-light);
+                    background-color: var(--card-bg);
+                    color: var(--text-primary);
                     font-size: 1rem;
                     outline: none;
                     transition: all 0.3s ease;
@@ -122,9 +125,9 @@ export default function Contact() {
 
                 .contact-form input:focus,
                 .contact-form textarea:focus {
-                    border-color: #1e90ff;
-                    box-shadow: 0 0 8px rgba(30,144,255,0.5);
-                    background-color: rgba(255,255,255,0.08);
+                    border-color: var(--accent-primary);
+                    box-shadow: 0 0 8px var(--accent-primary);
+                    background-color: var(--card-hover-bg);
                 }
 
                 .contact-form textarea {
@@ -135,8 +138,8 @@ export default function Contact() {
                 .contact-form button {
                     display: inline-block;
                     padding: 12px 25px;
-                    background-color: #1e90ff;
-                    color: #fff;
+                    background-color: var(--accent-primary);
+                    color: white;
                     font-weight: 600;
                     font-size: 1rem;
                     border: none;
@@ -148,8 +151,8 @@ export default function Contact() {
                 }
 
                 .contact-form button:hover {
-                    background-color: #0d6ed1;
-                    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+                    background-color: var(--accent-hover);
+                    box-shadow: 0 5px 15px var(--shadow-hover);
                 }
 
                 @media (max-width: 768px) {
@@ -183,14 +186,14 @@ export default function Contact() {
                 }
 
                 .contact a:not(.contact-card a) {
-                    color: #1e90ff;
+                    color: var(--accent-primary);
                     text-decoration: none;
                     transition: all 0.2s ease;
                 }
 
                 .contact a:not(.contact-card a):hover {
                     text-decoration: underline;
-                    color: #0d6ed1;
+                    color: var(--accent-secondary);
                 }
             `}</style>
 
