@@ -90,6 +90,8 @@ export default function Header() {
                 transform: translateY(8px);
                 pointer-events: none;
                 transition: 0.2s ease;
+                z-index: 200;
+
             }
 
             .item.open .dropdown {
@@ -103,11 +105,15 @@ export default function Header() {
                 border-radius: 6px;
                 color: #ccc;
                 font-size: 14px;
+                z-index: 200;
+
             }
 
             .dropdown a:hover {
                 background: #2a2a2a;
                 color: white;
+                z-index: 200;
+
             }
 
             .header-btn {

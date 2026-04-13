@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./utils/ScrollToTop";
+import Home from "./routes/Home";
 import Download from "./routes/Download";
 import About from "./routes/About";
 import Terms from "./routes/Terms";
@@ -16,6 +17,7 @@ function App(){
            <ScrollToTop/>
             <Header/>
             <Routes>
+                <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/download" element={<Download />} />
                 <Route path="/terms" element={<Terms />} />
