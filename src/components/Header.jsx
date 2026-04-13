@@ -45,7 +45,7 @@ export default function Header() {
                 display: flex;
                 align-items: center;
                 gap: 6px;
-                font-size: 15px;
+                font-size: 18px;
                 font-weight: 500;
             }
 
@@ -64,7 +64,7 @@ export default function Header() {
             }
 
             .arrow {
-                font-size: 14px;
+                font-size: 20px;
                 transition: transform 0.2s;
             }
 
@@ -194,7 +194,7 @@ export default function Header() {
                     onMouseEnter={() => setOpenMenu("project")}
                     onMouseLeave={() => setOpenMenu(null)}
                 >
-                    <div className="trigger">Project ▾</div>
+                    <div className="trigger">Project <span className="arrow">▾</span></div>
                     <div className="dropdown">
                         <Link to="/about">About</Link>
                         <Link to="/features">Features</Link>
@@ -208,7 +208,7 @@ export default function Header() {
                     onMouseEnter={() => setOpenMenu("explore")}
                     onMouseLeave={() => setOpenMenu(null)}
                 >
-                    <div className="trigger">Explore ▾</div>
+                    <div className="trigger">Explore <span className="arrow">▾</span></div>
                     <div className="dropdown">
                         <Link to="/faq">FAQ</Link>
                         <Link to="/contact">Contact</Link>
@@ -221,7 +221,7 @@ export default function Header() {
                     onMouseEnter={() => setOpenMenu("workshop")}
                     onMouseLeave={() => setOpenMenu(null)}
                 >
-                    <div className="trigger">Workshop ▾</div>
+                    <div className="trigger">Workshop <span className="arrow">▾</span></div>
                     <div className="dropdown">
                         <Link to="/workshop">Browse Themes</Link>
                         <Link to="/workshop/create">Create</Link>
@@ -234,7 +234,7 @@ export default function Header() {
                     onMouseEnter={() => setOpenMenu("contribute")}
                     onMouseLeave={() => setOpenMenu(null)}
                 >
-                    <div className="trigger">Contribute ▾</div>
+                    <div className="trigger">Contribute <span className="arrow">▾</span></div>
                     <div className="dropdown">
                         <a href="https://github.com/tonrepo">GitHub</a>
                         <Link to="/contributing">Guide</Link>
