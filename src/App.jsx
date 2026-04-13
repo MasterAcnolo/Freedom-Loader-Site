@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import ScrollToTop from "./utils/ScrollToTop";
 import Download from "./routes/Download";
+import About from "./routes/About";
 
 function App(){
     return  (
@@ -11,6 +12,7 @@ function App(){
            <ScrollToTop/>
             <Header/>
             <Routes>
+                <Route path="/about" element={<About />} />
                 <Route path="/download" element={<Download />} />
             </Routes>
         </>
