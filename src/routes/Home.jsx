@@ -1,4 +1,61 @@
+import { useEffect, useRef, useState } from 'react';
+
+const easeOutCubic = (t) => 1 - Math.pow(1 - t, 2);
+
+const useCountUp = (start, end, duration, shouldStart) => {
+    const [count, setCount] = useState(start);
+
+    useEffect(() => {
+        if (!shouldStart) return;
+
+        let startTime = null;
+        const animate = (currentTime) => {
+            if (!startTime) startTime = currentTime;
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / (duration * 1000), 1);
+            const easedProgress = easeOutCubic(progress);
+            const value = Math.round(start + (end - start) * easedProgress);
+            setCount(value);
+
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            }
+        };
+
+        requestAnimationFrame(animate);
+    }, [shouldStart, start, end, duration]);
+
+    return count;
+};
+
 export default function Home() {
+    const [startCount, setStartCount] = useState(false);
+    const statsRef = useRef(null);
+    const countOpen = useCountUp(0, 100, 2, startCount);
+    const countData = useCountUp(100, 0, 2, startCount);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setStartCount(true);
+                    observer.unobserve(statsRef.current);
+                }
+            },
+            { threshold: 0.5 }
+        );
+
+        if (statsRef.current) {
+            observer.observe(statsRef.current);
+        }
+
+        return () => {
+            if (statsRef.current) {
+                observer.unobserve(statsRef.current);
+            }
+        };
+    }, []);
+
     return (
         <>
             <style>{`
@@ -430,13 +487,13 @@ export default function Home() {
                             <a href="#features" className="btn-secondary">Learn More</a>
                         </div>
 
-                        <div className="stats">
+                        <div className="stats" ref={statsRef}>
                             <div className="stat">
-                                <div className="stat-number">100%</div>
+                                <div className="stat-number">{countOpen}%</div>
                                 <div className="stat-label">Open Source</div>
                             </div>
                             <div className="stat">
-                                <div className="stat-number">0%</div>
+                                <div className="stat-number">{countData}%</div>
                                 <div className="stat-label">Data Collection</div>
                             </div>
                         </div>
