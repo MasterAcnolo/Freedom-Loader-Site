@@ -490,7 +490,7 @@ export default function Home() {
                     <div className="community-content">
                         <h2 className="community-title">Join Our Community</h2>
                         <p className="community-text">
-                            Freedom Loader thrives because of its vibrant community. Share your experience, contribute ideas, report bugs, or just stay connected with thousands of like-minded users.
+                            Freedom Loader thrives because of its vibrant community. Share your experience, contribute ideas, report bugs, or just stay connected with others like-minded users.
                         </p>
                         <div className="community-links">
                             <a href="https://github.com/MasterAcnolo/Freedom-Loader/discussions" target="_blank" rel="noopener noreferrer" className="community-link">
@@ -512,7 +512,7 @@ export default function Home() {
                 {/* CTA SECTION */}
                 <section className="cta">
                     <h2>Completely Free. Forever Free.</h2>
-                    <p>No premium tier, no subscription, no hidden costs. Freedom Loader is free and will always be free. Download now and join thousands of happy users.</p>
+                    <p>No premium tier, no subscription, no hidden costs. Freedom Loader is free and will always be free. Download now and join all of the happy users.</p>
                     <a href="/download">Get Started Free</a>
                 </section>
             </main>
