@@ -320,6 +320,7 @@ export default function Wiki() {
                     border-radius: 4px;
                     font-family: monospace;
                     font-size: 0.9rem;
+                    word-wrap: break-word;
                 }
 
                 .wiki-content a {

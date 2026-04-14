@@ -24,13 +24,13 @@ export default function MobileMenu({ open, onClose }) {
                 top: 0;
                 right: 0;
                 height: 100dvh;
-                width: min(55vw, 360px);
+                width: min(55vw, 320px);
 
                 background: var(--bg-secondary);
                 border-left: 1px solid var(--border-color);
 
-                padding: 35px;
-                padding-top: 100px;
+                padding: 20px;
+                padding-top: 120px;
 
                 transform: translateX(100%);
                 transition: 0.25s ease;
@@ -38,7 +38,8 @@ export default function MobileMenu({ open, onClose }) {
 
                 display: flex;
                 flex-direction: column;
-                gap: 25px;
+                gap: 15px;
+                overflow-y: auto;
             }
 
             .menu.open {
@@ -48,21 +49,21 @@ export default function MobileMenu({ open, onClose }) {
             .section {
                 display: flex;
                 flex-direction: column;
-                gap: 12px;
+                gap: 8px;
             }
 
             .title {
-                font-size: 13px;
+                font-size: 11px;
                 color: var(--text-tertiary);
                 letter-spacing: 1px;
                 text-transform: uppercase;
             }
 
             .link {
-                font-size: 17px;
+                font-size: 15px;
                 color: var(--text-secondary);
                 text-decoration: none;
-                padding: 6px 0;
+                padding: 4px 0;
                 transition: all 0.2s ease;
             }
 
@@ -73,16 +74,17 @@ export default function MobileMenu({ open, onClose }) {
             .divider {
                 height: 1px;
                 background: var(--border-color);
+                margin: 5px 0;
             }
 
             .header-btn {
                 background: var(--accent-primary);
                 color: white;
-                padding: 12px;
+                padding: 10px;
                 text-align: center;
                 border-radius: 8px;
                 font-weight: 600;
-                font-size: 15px;
+                font-size: 13px;
                 text-decoration: none;
                 transition: all 0.2s ease;
             }

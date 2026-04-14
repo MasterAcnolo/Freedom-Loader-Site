@@ -429,9 +429,6 @@ export default function Home() {
                         flex-direction: column;
                     }
 
-                    .community-link {
-                        width: 100%;
-                    }
 
                     .gallery-grid {
                         grid-template-columns: 1fr;
