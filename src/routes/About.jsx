@@ -6,13 +6,13 @@ export default function About() {
     }, []);
 
     const technologies = [
-        { name: "Electron", img: "/assets/languages/electron.png", desc: "Desktop app framework using Chromium and Node.js." },
-        { name: "Node.js", img: "/assets/languages/nodejs.png", desc: "Powering all background processes and filesystem tasks." },
-        { name: "Express", img: "/assets/languages/express.svg", desc: "Powering the internal API", invert: true },
-        { name: "yt-dlp", img: "/assets/languages/ytDlp.png", desc: "Handles all video and audio extraction operations." },
-        { name: "Deno", img: "/assets/languages/deno.png", desc: "Powering yt-dlp verification.", invert: true },
-        { name: "Winston", img: "/assets/languages/winston.png", desc: "Powering the Logger System" },
-        { name: "JavaScript", img: "/assets/languages/js.png", desc: "Core logic and user interaction within the app." },
+        { name: "Electron", img: "./assets/languages/electron.png", desc: "Desktop app framework using Chromium and Node.js." },
+        { name: "Node.js", img: "./assets/languages/nodejs.png", desc: "Powering all background processes and filesystem tasks." },
+        { name: "Express", img: "./assets/languages/express.svg", desc: "Powering the internal API", invert: true },
+        { name: "yt-dlp", img: "./assets/languages/ytDlp.png", desc: "Handles all video and audio extraction operations." },
+        { name: "Deno", img: "./assets/languages/deno.png", desc: "Powering yt-dlp verification.", invert: true },
+        { name: "Winston", img: "./assets/languages/winston.png", desc: "Powering the Logger System" },
+        { name: "JavaScript", img: "./assets/languages/js.png", desc: "Core logic and user interaction within the app." },
     ];
 
     const features = [
