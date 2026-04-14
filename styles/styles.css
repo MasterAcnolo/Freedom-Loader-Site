@@ -6,10 +6,10 @@
 /* Imports */
 @import url("variables.css");
 
-@import url("layout/header.css");
+/* @import url("layout/header.css");
 @import url("layout/hero.css");
 @import url("layout/container.css");
-@import url("layout/footer.css");
+@import url("layout/footer.css"); */
 
 *{
     /* outline: solid red 2px; */
@@ -21,20 +21,21 @@ body {
     padding: 0;
     box-sizing: border-box;
 
-
-    color: var(--text-color);
+    color: var(--text-primary);
     font-family: Poppins;
-    background: var(--background-color);
+    background: var(--bg-primary);
     overflow-x: hidden;
-
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-
 
 html{
     scroll-behavior: smooth;  
 }
 
+main{
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
 
 /* Loader overlay */
 #loader {
@@ -43,8 +44,9 @@ html{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #131313;
+    background: var(--bg-secondary);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 9999;
@@ -63,13 +65,4 @@ html{
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-.contact-page a, .privacy-policy a{
-    text-decoration: none;
-    color: #1e90ff;
-}
-
-.contact-page a:hover, .privacy-policy a:hover{
-    text-decoration: underline;
 }
