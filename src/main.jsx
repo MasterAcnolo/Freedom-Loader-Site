@@ -1,27 +1,24 @@
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter  } from "react-router-dom";
 import { useEffect } from "react";
 import Loader from "./components/Loader";
 import App from "./App";
 
 function Root() {
     useEffect(() => {
-        // Check if there's a redirect stored in sessionStorage
-        const redirect = sessionStorage.getItem('redirect');
-        if (redirect) {
-            sessionStorage.removeItem('redirect');
-            sessionStorage.removeItem('redirected');
-            // Navigate to the stored path without causing a new 404 lookup
-            window.history.replaceState(null, '', `/Freedom-Loader-Site${redirect}`);
+        const path = window.location.pathname.replace('/Freedom-Loader-Site', '');
+
+        if (path && path !== '/') {
+            window.location.replace(`/Freedom-Loader-Site/#${path}`);
         }
     }, []);
 
     return (
         <>
             <Loader />
-            <BrowserRouter basename="/Freedom-Loader-Site/">
+            <HashRouter  basename="/Freedom-Loader-Site/">
                 <App />
-            </BrowserRouter>
+            </HashRouter>
         </>
     );
 }
