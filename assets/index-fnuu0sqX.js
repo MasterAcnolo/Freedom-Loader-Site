@@ -29,13 +29,13 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
                 top: 0;
                 right: 0;
                 height: 100dvh;
-                width: min(85vw, 360px);
+                width: min(55vw, 360px);
 
                 background: var(--bg-secondary);
                 border-left: 1px solid var(--border-color);
 
                 padding: 35px;
-                padding-top: 80px;
+                padding-top: 100px;
 
                 transform: translateX(100%);
                 transition: 0.25s ease;
@@ -96,28 +96,7 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
                 background: var(--accent-hover);
             }
 
-            .social {
-                margin-top: auto;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .social a {
-                color: var(--text-tertiary);
-                font-size: 14px;
-                text-decoration: none;
-                transition: all 0.2s ease;
-            }
-
-            .social a:hover {
-                color: var(--text-secondary);
-            }
-
-            .social a:hover {
-                color: white;
-            }
-        `}),r.jsx("div",{className:`overlay ${u?"show":""}`,onClick:f}),r.jsxs("div",{className:`menu ${u?"open":""}`,children:[r.jsxs("div",{className:"section",children:[r.jsx("div",{className:"title",children:"Project"}),r.jsx(se,{className:"link",to:"/about",onClick:f,children:"About"}),r.jsx(se,{className:"link",to:"/features",onClick:f,children:"Features"}),r.jsx(se,{className:"link",to:"/roadmap",onClick:f,children:"Roadmap"}),r.jsx(se,{className:"link",to:"/wiki",onClick:f,children:"Wiki"})]}),r.jsx("div",{className:"divider"}),r.jsxs("div",{className:"section",children:[r.jsx("div",{className:"title",children:"Explore"}),r.jsx(se,{className:"link",to:"/faq",onClick:f,children:"FAQ"}),r.jsx(se,{className:"link",to:"/contact",onClick:f,children:"Contact"})]}),r.jsx("div",{className:"divider"}),r.jsxs("div",{className:"section",children:[r.jsx("div",{className:"title",children:"Workshop"}),r.jsx("a",{className:"link",href:"https://masteracnolo.github.io/Freedom-Loader-Workshop/",target:"_blank",rel:"noopener noreferrer",children:"Browse Themes"}),r.jsx("a",{className:"link",href:"https://masteracnolo.github.io/Freedom-Loader-Workshop/create.html",target:"_blank",rel:"noopener noreferrer",children:"Create"})]}),r.jsx("div",{className:"divider"}),r.jsxs("div",{className:"section",children:[r.jsx("div",{className:"title",children:"Contribute"}),r.jsx("a",{className:"link",href:"https://github.com/MasterAcnolo/Freedom-Loader",children:"GitHub"}),r.jsx(se,{className:"link",to:"/contributing",onClick:f,children:"Guide"})]}),r.jsx(se,{to:"/download",className:"header-btn",onClick:f,children:"Download"}),r.jsxs("div",{className:"social",children:[r.jsx("div",{className:"title",children:"Social"}),r.jsx("a",{href:"https://github.com/MasterAcnolo/Freedom-Loader",children:"GitHub"}),r.jsx("a",{href:"https://twitter.com",children:"Twitter"})]})]})]})}function Q0(){const[u,f]=E.useState(null);E.useEffect(()=>{const m=localStorage.getItem("theme");if(m)f(m==="dark"),d(m);else{const p=window.matchMedia("(prefers-color-scheme: dark)").matches;f(p),d(p?"dark":"light")}},[]);const d=m=>{document.documentElement.classList.remove("light-theme","dark-theme"),m==="light"?document.documentElement.classList.add("light-theme"):document.documentElement.classList.add("dark-theme"),localStorage.setItem("theme",m)},c=()=>{const m=u?"light":"dark";f(!u),d(m)};return u===null?null:r.jsx("button",{onClick:c,title:u?"Switch to Light Mode":"Switch to Dark Mode",style:{background:"transparent",border:"none",color:"inherit",cursor:"pointer",fontSize:"1.2rem",padding:"8px",display:"flex",alignItems:"center",justifyContent:"center",width:"36px",height:"36px",transition:"all 0.2s ease"},onMouseEnter:m=>m.target.style.opacity="0.7",onMouseLeave:m=>m.target.style.opacity="1",children:u?r.jsx("i",{className:"fas fa-sun"}):r.jsx("i",{className:"fas fa-moon"})})}function X0(){const[u,f]=E.useState(null),[d,c]=E.useState(!1);return r.jsxs(r.Fragment,{children:[r.jsx("style",{children:`
+        `}),r.jsx("div",{className:`overlay ${u?"show":""}`,onClick:f}),r.jsxs("div",{className:`menu ${u?"open":""}`,children:[r.jsxs("div",{className:"section",children:[r.jsx("div",{className:"title",children:"Project"}),r.jsx(se,{className:"link",to:"/about",onClick:f,children:"About"}),r.jsx(se,{className:"link",to:"/features",onClick:f,children:"Features"}),r.jsx(se,{className:"link",to:"/roadmap",onClick:f,children:"Roadmap"}),r.jsx(se,{className:"link",to:"/wiki",onClick:f,children:"Wiki"})]}),r.jsx("div",{className:"divider"}),r.jsxs("div",{className:"section",children:[r.jsx("div",{className:"title",children:"Explore"}),r.jsx(se,{className:"link",to:"/faq",onClick:f,children:"FAQ"}),r.jsx(se,{className:"link",to:"/contact",onClick:f,children:"Contact"})]}),r.jsx("div",{className:"divider"}),r.jsxs("div",{className:"section",children:[r.jsx("div",{className:"title",children:"Workshop"}),r.jsx("a",{className:"link",href:"https://masteracnolo.github.io/Freedom-Loader-Workshop/",target:"_blank",rel:"noopener noreferrer",children:"Browse Themes"}),r.jsx("a",{className:"link",href:"https://masteracnolo.github.io/Freedom-Loader-Workshop/create.html",target:"_blank",rel:"noopener noreferrer",children:"Create"})]}),r.jsx("div",{className:"divider"}),r.jsxs("div",{className:"section",children:[r.jsx("div",{className:"title",children:"Contribute"}),r.jsx("a",{className:"link",href:"https://github.com/MasterAcnolo/Freedom-Loader",children:"GitHub"}),r.jsx(se,{className:"link",to:"/contributing",onClick:f,children:"Guide"})]}),r.jsx(se,{to:"/download",className:"header-btn",onClick:f,children:"Download"})]})]})}function Q0(){const[u,f]=E.useState(null);E.useEffect(()=>{const m=localStorage.getItem("theme");if(m)f(m==="dark"),d(m);else{const p=window.matchMedia("(prefers-color-scheme: dark)").matches;f(p),d(p?"dark":"light")}},[]);const d=m=>{document.documentElement.classList.remove("light-theme","dark-theme"),m==="light"?document.documentElement.classList.add("light-theme"):document.documentElement.classList.add("dark-theme"),localStorage.setItem("theme",m)},c=()=>{const m=u?"light":"dark";f(!u),d(m)};return u===null?null:r.jsx("button",{onClick:c,title:u?"Switch to Light Mode":"Switch to Dark Mode",style:{background:"transparent",border:"none",color:"inherit",cursor:"pointer",fontSize:"1.2rem",padding:"8px",display:"flex",alignItems:"center",justifyContent:"center",width:"36px",height:"36px",transition:"all 0.2s ease"},onMouseEnter:m=>m.target.style.opacity="0.7",onMouseLeave:m=>m.target.style.opacity="1",children:u?r.jsx("i",{className:"fas fa-sun"}):r.jsx("i",{className:"fas fa-moon"})})}function X0(){const[u,f]=E.useState(null),[d,c]=E.useState(!1);return r.jsxs(r.Fragment,{children:[r.jsx("style",{children:`
             .header {
                 display: flex;
                 align-items: center;
@@ -127,7 +106,7 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
                 transition: all 0.3s ease;
                 position: sticky;
                 top: 0;
-                z-index: 101;
+                z-index: 200;
             }
 
             .logo img {
