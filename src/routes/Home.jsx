@@ -570,7 +570,7 @@ export default function Home() {
                 <section className="cta">
                     <h2>Completely Free. Forever Free.</h2>
                     <p>No premium tier, no subscription, no hidden costs. Freedom Loader is free and will always be free. Download now and join all of the happy users.</p>
-                    <a href="/#/download">Get Started Free</a>
+                    <a href="/Freedom-Loader-Site/#/download">Get Started Free</a>
                 </section>
             </main>
         </>
