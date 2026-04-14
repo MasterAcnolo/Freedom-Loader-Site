@@ -10,8 +10,9 @@ function Root() {
         const redirect = sessionStorage.getItem('redirect');
         if (redirect) {
             sessionStorage.removeItem('redirect');
-            // Force reload with the correct path
-            window.location.href = `/Freedom-Loader-Site${redirect}`;
+            sessionStorage.removeItem('redirected');
+            // Navigate to the stored path without causing a new 404 lookup
+            window.history.replaceState(null, '', `/Freedom-Loader-Site${redirect}`);
         }
     }, []);
 
