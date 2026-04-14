@@ -1,13 +1,27 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { useEffect } from "react";
 import Loader from "./components/Loader";
 import App from "./App";
 
-createRoot(document.getElementById("root")).render(
-    <>
-        <Loader />
-        <BrowserRouter basename="/Freedom-Loader-Site/">
-            <App />
-        </BrowserRouter>
-    </>
-);
+function Root() {
+    useEffect(() => {
+        // Check if there's a redirect stored in sessionStorage
+        const redirect = sessionStorage.getItem('redirect');
+        if (redirect) {
+            sessionStorage.removeItem('redirect');
+            window.history.replaceState(null, '', redirect);
+        }
+    }, []);
+
+    return (
+        <>
+            <Loader />
+            <BrowserRouter basename="/Freedom-Loader-Site/">
+                <App />
+            </BrowserRouter>
+        </>
+    );
+}
+
+createRoot(document.getElementById("root")).render(<Root />);
