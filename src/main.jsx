@@ -10,7 +10,8 @@ function Root() {
         const redirect = sessionStorage.getItem('redirect');
         if (redirect) {
             sessionStorage.removeItem('redirect');
-            window.history.replaceState(null, '', redirect);
+            // Force reload with the correct path
+            window.location.href = `/Freedom-Loader-Site${redirect}`;
         }
     }, []);
 
