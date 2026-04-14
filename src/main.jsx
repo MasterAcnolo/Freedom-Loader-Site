@@ -1,26 +1,26 @@
 import { createRoot } from "react-dom/client";
 import { HashRouter  } from "react-router-dom";
-import { useEffect } from "react";
 import Loader from "./components/Loader";
 import App from "./App";
 
-function Root() {
-    useEffect(() => {
-        const path = window.location.pathname.replace('/Freedom-Loader-Site', '');
+function redirectToHash() {
+    const { pathname, hash } = window.location;
 
-        if (path && path !== '/') {
-            window.location.replace(`/Freedom-Loader-Site/#${path}`);
-        }
-    }, []);
+    if (hash) return;
 
-    return (
-        <>
-            <Loader />
-            <HashRouter>
-                <App />
-            </HashRouter>
-        </>
-    );
+    const base = '/Freedom-Loader-Site';
+    const path = pathname.replace(base, '');
+
+    if (path && path !== '/') {
+        window.location.replace(`${base}/#${path}`);
+    }
 }
 
-createRoot(document.getElementById("root")).render(<Root />);
+redirectToHash();
+
+createRoot(document.getElementById("root")).render(
+    <HashRouter>
+        <Loader />
+        <App />
+    </HashRouter>
+);
