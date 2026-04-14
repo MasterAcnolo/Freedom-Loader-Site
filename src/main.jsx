@@ -6,10 +6,22 @@ import App from "./App";
 function redirectToHash() {
     const { pathname, hash } = window.location;
 
-    if (hash) return;
+    if (hash) {
+        // Hash exists, clear any stored redirect
+        sessionStorage.removeItem('redirect');
+        return;
+    }
 
     const base = '/Freedom-Loader-Site';
-    const path = pathname.replace(base, '');
+    
+    // Check if there's a stored redirect from 404
+    const storedRedirect = sessionStorage.getItem('redirect');
+    const path = storedRedirect || pathname.replace(base, '');
+    
+    if (storedRedirect) {
+        sessionStorage.removeItem('redirect');
+        sessionStorage.removeItem('redirected');
+    }
 
     if (path && path !== '/') {
         window.location.replace(`${base}/#${path}`);
