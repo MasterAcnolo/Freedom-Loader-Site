@@ -31,7 +31,7 @@ The Theme Workshop allows you to create and manage custom themes for Freedom Loa
 ### Installing a Theme
 
 Extract the theme ZIP file and place it in your Freedom Loader themes folder:
-`%AppData%\FreedomLoader\Themes\`
+`%APPDATA%\Freedom Loader\themes`
 
 Then restart Freedom Loader and select your theme from Settings > Appearance. Or use Refresh Button next to theme selector.
 
