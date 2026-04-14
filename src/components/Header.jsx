@@ -19,7 +19,7 @@ export default function Header() {
                 transition: all 0.3s ease;
                 position: sticky;
                 top: 0;
-                z-index: 101;
+                z-index: 200;
             }
 
             .logo img {

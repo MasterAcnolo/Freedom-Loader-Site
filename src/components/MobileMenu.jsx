@@ -24,13 +24,13 @@ export default function MobileMenu({ open, onClose }) {
                 top: 0;
                 right: 0;
                 height: 100dvh;
-                width: min(85vw, 360px);
+                width: min(55vw, 360px);
 
                 background: var(--bg-secondary);
                 border-left: 1px solid var(--border-color);
 
                 padding: 35px;
-                padding-top: 80px;
+                padding-top: 100px;
 
                 transform: translateX(100%);
                 transition: 0.25s ease;
@@ -91,27 +91,6 @@ export default function MobileMenu({ open, onClose }) {
                 background: var(--accent-hover);
             }
 
-            .social {
-                margin-top: auto;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .social a {
-                color: var(--text-tertiary);
-                font-size: 14px;
-                text-decoration: none;
-                transition: all 0.2s ease;
-            }
-
-            .social a:hover {
-                color: var(--text-secondary);
-            }
-
-            .social a:hover {
-                color: white;
-            }
         `}</style>
 
         <div className={`overlay ${open ? "show" : ""}`} onClick={onClose} />
@@ -153,12 +132,6 @@ export default function MobileMenu({ open, onClose }) {
             <Link to="/download" className="header-btn" onClick={onClose}>
                 Download
             </Link>
-
-            <div className="social">
-                <div className="title">Social</div>
-                <a href="https://github.com/MasterAcnolo/Freedom-Loader">GitHub</a>
-                <a href="https://twitter.com">Twitter</a>
-            </div>
 
         </div>
         </>
