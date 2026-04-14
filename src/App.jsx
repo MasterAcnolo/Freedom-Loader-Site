@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -40,7 +40,7 @@ function App(){
 }
 
 createRoot(document.getElementById("root")).render(
-    <BrowserRouter basename="/Freedom-Loader-Site/">
+    <HashRouter>
         <App />
-    </BrowserRouter>
+    </HashRouter>
 );
