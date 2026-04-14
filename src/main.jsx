@@ -16,7 +16,7 @@ function Root() {
     return (
         <>
             <Loader />
-            <HashRouter  basename="/Freedom-Loader-Site/">
+            <HashRouter>
                 <App />
             </HashRouter>
         </>
