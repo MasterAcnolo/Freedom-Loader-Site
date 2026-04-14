@@ -138,8 +138,8 @@ export default function MobileMenu({ open, onClose }) {
 
             <div className="section">
                 <div className="title">Workshop</div>
-                <Link className="link" to="https://masteracnolo.github.io/Freedom&20Loader&20Workshop/" onClick={onClose}>Browse Themes</Link>
-                <Link className="link" to="https://masteracnolo.github.io/Freedom&20Loader&20Workshop/create.html" onClick={onClose}>Create</Link>
+                <Link className="link" to="https://masteracnolo.github.io/Freedom-Loader-Workshop/" onClick={onClose}>Browse Themes</Link>
+                <Link className="link" to="https://masteracnolo.github.io/Freedom-Loader-Workshop/create.html" onClick={onClose}>Create</Link>
             </div>
 
             <div className="divider" />
