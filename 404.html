@@ -4,12 +4,15 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      // Store the requested path in sessionStorage
-      const path = window.location.pathname.replace('/Freedom-Loader-Site', '');
-      if (path !== '/') {
-        sessionStorage.setItem('redirect', path);
+      // Only redirect once to avoid infinite loop
+      if (!sessionStorage.getItem('redirected')) {
+        const path = window.location.pathname.replace('/Freedom-Loader-Site', '');
+        if (path !== '/') {
+          sessionStorage.setItem('redirected', 'true');
+          sessionStorage.setItem('redirect', path);
+        }
       }
-      // Redirect to index.html
+      // Always redirect to root index.html
       window.location.replace('/Freedom-Loader-Site/');
     </script>
   </head>
