@@ -4,7 +4,7 @@ A customizable Discord bot loader with theme support.
 
 This is the official website for [Freedom Loader](https://github.com/MasterAcnolo/Freedom-Loader).
 
-Visit the live site: https://masteracnolo.github.io/FreedomLoader/
+Visit the live site: https://masteracnolo.github.io/Freedom-Loader-Site/
 
 ## Overview
 
@@ -55,6 +55,6 @@ See the wiki section in the website for full documentation.
 ## Project Links
 
 - Main Project: https://github.com/MasterAcnolo/Freedom-Loader
-- Website: https://masteracnolo.github.io/FreedomLoader/
+- Website: https://masteracnolo.github.io/Freedom-Loader-Site/
 - Theme Workshop (Website): https://masteracnolo.github.io/Freedom-Loader-Workshop
 - Theme Workshop (Repo): https://github.com/MasterAcnolo/Freedom-Loader-Workshop
