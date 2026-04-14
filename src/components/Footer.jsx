@@ -214,7 +214,7 @@ export default function Footer() {
                     {/* Brand Section */}
                     <div className="footer-brand">
                         <Link to="/">
-                            <img src="/assets/icon/Freedom_Loader.png" alt="Freedom Loader" />
+                            <img src="./assets/icon/Freedom_Loader.png" alt="Freedom Loader" />
                         </Link>
                         <p>Put Freedom in your Downloads.</p>
                     </div>
@@ -263,7 +263,7 @@ export default function Footer() {
                                 rel="noopener noreferrer"
                                 title="Website"
                             >
-                                <img src="/assets/icon/globe-solid-full.svg" alt="Website" />
+                                <img src="./assets/icon/globe-solid-full.svg" alt="Website" />
                             </a>
                             <a 
                                 href="https://x.com/MasterAcnolo" 
@@ -271,7 +271,7 @@ export default function Footer() {
                                 rel="noopener noreferrer"
                                 title="Twitter/X"
                             >
-                                <img src="/assets/icon/x-twitter-brands-solid-full.svg" alt="Twitter/X" />
+                                <img src="./assets/icon/x-twitter-brands-solid-full.svg" alt="Twitter/X" />
                             </a>
                             <a 
                                 href="https://github.com/MasterAcnolo" 
@@ -279,7 +279,7 @@ export default function Footer() {
                                 rel="noopener noreferrer"
                                 title="GitHub"
                             >
-                                <img src="/assets/icon/github-brands-solid-full.svg" alt="GitHub" />
+                                <img src="./assets/icon/github-brands-solid-full.svg" alt="GitHub" />
                             </a>
                             <a 
                                 href="https://www.youtube.com/channel/UCS55e2-ZslXqGzznB_7N4Sg" 
@@ -287,7 +287,7 @@ export default function Footer() {
                                 rel="noopener noreferrer"
                                 title="YouTube"
                             >
-                                <img src="/assets/icon/youtube-brands-solid-full.svg" alt="YouTube" />
+                                <img src="./assets/icon/youtube-brands-solid-full.svg" alt="YouTube" />
                             </a>
                         </div>
                     </div>

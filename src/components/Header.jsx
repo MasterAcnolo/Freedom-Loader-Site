@@ -213,7 +213,7 @@ export default function Header() {
         <header className="header">
 
             <Link to="/" className="logo">
-                <img src="/assets/icon/Freedom_Loader.png" alt="logo" />
+                <img src="./assets/icon/Freedom_Loader.png" alt="logo" />
             </Link>
 
             <nav className="nav">
