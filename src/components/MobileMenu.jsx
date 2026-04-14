@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 export default function MobileMenu({ open, onClose }) {
     return (
@@ -93,9 +94,37 @@ export default function MobileMenu({ open, onClose }) {
                 background: var(--accent-hover);
             }
 
+            .theme-toggle-wrapper {
+                position: fixed;
+                top: 100px;
+                right: 30px;
+                z-index: 1002;
+                display: none;
+                opacity: 0;
+                pointer-events: none;
+                transition: all 0.25s ease;
+                transform: translateX(100%);
+            }
+
+            .theme-toggle-wrapper.show {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateX(0);
+            }
+
+            @media (max-width: 990px) {
+                .theme-toggle-wrapper {
+                    display: block;
+                }
+            }
+
         `}</style>
 
         <div className={`overlay ${open ? "show" : ""}`} onClick={onClose} />
+
+        <div className={`theme-toggle-wrapper ${open ? "show" : ""}`}>
+            <ThemeToggle />
+        </div>
 
         <div className={`menu ${open ? "open" : ""}`}>
 

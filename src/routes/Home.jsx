@@ -401,7 +401,6 @@ export default function Home() {
                     }
 
                     .btn-primary, .btn-secondary {
-                        width: 100%;
                         max-width: 300px;
                     }
 

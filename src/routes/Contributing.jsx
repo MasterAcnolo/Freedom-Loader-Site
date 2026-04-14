@@ -34,10 +34,6 @@ export default function Contributing() {
                     margin-bottom: 60px;
                 }
 
-                .section {
-                    margin-bottom: 50px;
-                }
-
                 .section h2 {
                     font-size: 1.6rem;
                     font-weight: 700;
@@ -177,9 +173,6 @@ export default function Contributing() {
                         flex-direction: column;
                     }
 
-                    .cta-link {
-                        width: 100%;
-                    }
                 }
             `}</style>
 
