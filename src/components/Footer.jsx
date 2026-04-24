@@ -258,7 +258,7 @@ export default function Footer() {
                         <h4>Follow Us</h4>
                         <div className="footer-socials">
                             <a 
-                                href="https://masteracnolo.github.io/No-Sense" 
+                                href="https://masteracnolo.github.io/" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 title="Website"
