@@ -281,14 +281,14 @@ export default function Footer() {
                             >
                                 <img src="./assets/icon/github-brands-solid-full.svg" alt="GitHub" />
                             </a>
-                            <a 
+                            {/* <a 
                                 href="https://www.youtube.com/channel/UCS55e2-ZslXqGzznB_7N4Sg" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 title="YouTube"
                             >
                                 <img src="./assets/icon/youtube-brands-solid-full.svg" alt="YouTube" />
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                 </div>
