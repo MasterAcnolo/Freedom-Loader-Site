@@ -11,6 +11,7 @@ export default function Roadmap() {
         "Coming Soon": [
             { title: "Batch Processing", desc: "Download multiple videos in parallel with queue management" },
             { title: "Head Less Version", desc: "Expose a Full Api to use Freedom Loader in other Apps" },
+            { title: "Only Download Somes Part", desc: "Be able to only download somes part of a video" },
             { title: "History & Stats", desc: "Track download history and view detailed statistics (Locally)" },
             { title: "Multi-Language Support", desc: "Full internationalization with multiple language support" }
         ],
