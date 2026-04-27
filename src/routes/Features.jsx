@@ -19,7 +19,7 @@ export default function Features() {
         { title: "Thumbnail Embedding", desc: "Optional thumbnail addition to MP3 files", icon: "fa-image", v: "1.1.0", cat: "Download" },
         { title: "Custom Video Codecs", desc: "Support for 8 video codecs: H.264, H.265, AV1, VP9, VP9.2, VP8, H.263, Theora", icon: "fa-cog", v: "1.4.0", cat: "Download" },
         { title: "Custom Output Directory", desc: "Custom download folder selection", icon: "fa-folder-open", v: "1.1.0", cat: "Download" },
-        { title: "Firefox Cookie Integration", desc: "Support Firefox cookies for restricted content", icon: "fa-firefox", v: "1.3.0", cat: "Download" },
+        { title: "Firefox Cookie Integration", desc: "Support Firefox cookies for restricted content", icon: "fa-brands fa-firefox-browser", v: "1.3.0", cat: "Download" },
         { title: "Real-Time Progress Tracking", desc: "Live progress bar with percentage and speed", icon: " fa-solid fa-hourglass", v: "1.3.0", cat: "Download" },
         { title: "Network Speed Indicator", desc: "Display download speed in real-time", icon: "fa-tachometer-alt", v: "1.3.0", cat: "Download" },
         { title: "Download Cancellation", desc: "Stop current download and clear queue", icon: "fa-ban", v: "1.5.0", cat: "Download" },
