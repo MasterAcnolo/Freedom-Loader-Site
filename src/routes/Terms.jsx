@@ -113,54 +113,146 @@ export default function Terms() {
             <main>
                 <section className="terms">
                     <div className="container">
-                        <h1>Terms & Conditions</h1>
+                        <h1>Terms of Use</h1>
                         <p className="last-updated">Last updated: November 13, 2025</p>
+
                         <p>
-                            These terms govern your use of the Freedom Loader desktop application. By using the app, you agree to these terms. If you don't agree, don't use the app—simple as that.
+                            These terms govern your use of the Freedom Loader desktop application.
+                            By installing or using the app, you agree to these terms.
                         </p>
 
-                        <h2>1. Using Freedom Loader</h2>
+                        <h2>1. Purpose of the Application</h2>
                         <p>
-                            Freedom Loader is meant for personal use to download and manage media files. You are responsible for your own actions when using the app. Don't misuse it or distribute illegal content.
+                            Freedom Loader is a <strong>personal, offline media management tool</strong>.
+                            It provides a graphical interface around{' '}
+                            <a href="https://github.com/yt-dlp/yt-dlp" target="_blank">yt-dlp</a>,
+                            allowing users to download publicly accessible media for
+                            <strong> strictly personal and offline use</strong>.
+                        </p>
+                        <p>
+                            It is not a streaming platform, not a distribution service,
+                            and generates no revenue.
                         </p>
 
-                        <h2>2. No Personal Data Collection</h2>
+                        <h2>2. License & Open Source</h2>
                         <p>
-                            We do <strong>not</strong> collect your personal data. All logs, errors, and metadata are stored locally on your device. Any sharing is done manually and explicitly by you (for example via Discord Rich Presence).
+                            Freedom Loader is licensed under the{' '}
+                            <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">
+                                GNU GPL v3
+                            </a>.
+                        </p>
+                        <p>You are allowed to:</p>
+                        <ul>
+                            <li>Use the application for any purpose</li>
+                            <li>Study and modify the code</li>
+                            <li>Redistribute original or modified versions</li>
+                        </ul>
+                        <p>Under these conditions:</p>
+                        <ul>
+                            <li><strong>Credit the original author (MasterAcnolo / Axel NICOLAS)</strong></li>
+                            <li>Keep the GPLv3 license</li>
+                            <li>Provide source code for modifications</li>
+                        </ul>
+
+                        <h2>3. Acceptable Use</h2>
+                        <p>
+                            Freedom Loader is intended for <strong>personal, non-commercial use</strong>.
                         </p>
 
-                        <h2>3. Intellectual Property & Open Source</h2>
+                        <p>Allowed:</p>
+                        <ul>
+                            <li>Downloading publicly accessible content for personal use</li>
+                            <li>Archiving content you legitimately access</li>
+                        </ul>
+
+                        <p>Forbidden:</p>
+                        <ul>
+                            <li><strong>Redistributing downloaded content</strong></li>
+                            <li><strong>Commercial use without rights</strong></li>
+                            <li><strong>Bypassing DRM or paywalls</strong></li>
+                            <li><strong>Downloading pirated content</strong></li>
+                        </ul>
+
                         <p>
-                            Freedom Loader is Open Source and licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU General Public License v3</a>. You are free to copy, modify, and redistribute the app under these terms, <strong>but you must always credit the original author (MasterAcnolo).</strong>
-                        </p>
-                        <p>
-                            All assets, code, and design elements are part of the project. Use them responsibly and respect the license. While Freedom Loader is designed for media management, <strong>we do not condone nor directly provide access to any copyrighted platform content</strong> (like YouTube). Users are solely responsible for how they use the app—so play fair, and keep it legal!
+                            You are solely responsible for how you use the application.
                         </p>
 
-                        <h2>4. Updates and Features</h2>
+                        <h2>4. Legal Framework</h2>
                         <p>
-                            We may release updates or remove features at any time. We aim to improve your experience, but we don't guarantee anything will always work perfectly. Use at your own risk.
+                            Freedom Loader does not grant rights over content.
+                            Downloaded media remains subject to copyright laws.
+                        </p>
+                        <p>
+                            Under French law (Article L122-5), private copies from a
+                            lawful source for personal use are permitted.
+                        </p>
+                        <p>
+                            Some platforms may forbid downloading in their Terms of Service.
+                            This is contractual (account risk), not criminal — but it's on you.
                         </p>
 
-                        <h2>5. Liability</h2>
+                        <h2>5. Privacy</h2>
                         <p>
-                            Freedom Loader is provided as-is. We are not liable for any damages, data loss, or issues caused by the app. Backup your files and use common sense.
+                            <strong>No personal data is collected.</strong>
+                        </p>
+                        <ul>
+                            <li>No tracking, no analytics</li>
+                            <li>No account required</li>
+                            <li>All data stays local</li>
+                        </ul>
+                        <p>
+                            Network requests are only made to fetch media via yt-dlp.
                         </p>
 
-                        <h2>6. Third-Party Links</h2>
+                        <h2>6. Disclaimer</h2>
                         <p>
-                            The app may include links to other websites or services. We are not responsible for their content, privacy policies, or practices.
+                            Freedom Loader is provided <strong>as-is</strong>, without warranty.
+                        </p>
+                        <ul>
+                            <li>No liability for data loss or system damage</li>
+                            <li>No liability for legal misuse</li>
+                            <li>No guarantee of functionality</li>
+                        </ul>
+
+                        <h2>7. Third-Party Tools</h2>
+                        <p>
+                            Freedom Loader depends on:
+                        </p>
+                        <ul>
+                            <li><strong>yt-dlp</strong> (media extraction)</li>
+                            <li><strong>FFmpeg</strong> (processing)</li>
+                            <li><strong>Electron</strong> (runtime)</li>
+                            <li><strong>Deno</strong> (scripting)</li>
+                        </ul>
+                        <p>
+                            Not affiliated with YouTube, Google, Twitch, or others.
                         </p>
 
-                        <h2>7. Changes to These Terms</h2>
+                        <h2>8. Updates</h2>
                         <p>
-                            We may update these terms occasionally. Changes will be posted on this page with a new "Last updated" date. Keep an eye out if you want to stay in the loop.
+                            The app may change at any time. Features can break depending
+                            on external platforms.
+                        </p>
+                        <p>
+                            Continued use means you accept updated terms.
                         </p>
 
-                        <h2>Contact</h2>
+                        <h2>9. Contact</h2>
                         <p>
-                            For questions about these terms, reach out via <a href="https://github.com/MasterAcnolo/Freedom-Loader/discussions" target="_blank">GitHub Discussions</a> or <a href="https://www.linkedin.com/in/axelnicolas25" target="_blank">LinkedIn</a>.
+                            Questions or legal concerns:
                         </p>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/MasterAcnolo/Freedom-Loader/discussions" target="_blank">
+                                    GitHub Discussions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/axelnicolas25" target="_blank">
+                                    LinkedIn
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </section>
             </main>
