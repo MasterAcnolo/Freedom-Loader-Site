@@ -8,32 +8,33 @@ export default function Roadmap() {
     const [expanded, setExpanded] = useState(null);
 
     const roadmapItems = {
-        "Coming Soon": [
+
+        "In Progress": [
+            { title: "Partial Download", desc: "Download only specific segments of a video" },
+            { title: "Browser Cookie Support", desc: "Support cookies from all major browsers" },
+            { title: "Custom CLI Arguments", desc: "Inject additional arguments into the download process" },
+        ],
+        "Planned": [
             { title: "Batch Processing", desc: "Download multiple videos in parallel with queue management" },
-            { title: "Head Less Version", desc: "Expose a Full Api to use Freedom Loader in other Apps" },
-            { title: "Only Download Somes Part", desc: "Be able to only download somes part of a video" },
-            { title: "History & Stats", desc: "Track download history and view detailed statistics (Locally)" },
-            { title: "Multi-Language Support", desc: "Full internationalization with multiple language support" }
+            { title: "Headless Mode", desc: "Expose a full API to use Freedom Loader in third-party apps" },
+            { title: "History & Stats", desc: "Track your download history and statistics locally" },
+            { title: "Multi-Language Support", desc: "Full internationalization with multiple language options" },
+            { title: "CI/CD Pipeline", desc: "Automated pipeline for faster and more reliable releases" },
         ],
-        "Working On": [
-            { title: "Spotify Support", desc: "Supporting Spotify medias" },        
-            { title: "Automatic Update Launch", desc: "Add CI/CD Pipeline for faster version" },        
-            { title: "Chrome Cookie Support", desc: "Support All Browser Cookies" },        
-            { title: "Custom Commands Injection", desc: "Add other arguments in download process" },        
-        ],
-        "Future Ideas": [
-            { title: "Mobile App", desc: "Native mobile application for iOS and Android platforms" },
-            { title: "Linux Version", desc: "Support Ubuntu or other Linux Distro (Because Linus)" },
-            { title: "Browser Extension", desc: "Direct integration with web browsers for one-click downloading" },
-            { title: "Better Workshop", desc: "Community marketplace for themes, plugins, and tools" },
-            { title: "Web Version", desc: "Web-based interface accessible from anywhere" },
+        "Exploring": [
+            { title: "Spotify Integration", desc: "Download and manage Spotify media" },
+            { title: "Mobile App", desc: "Native mobile application for iOS and Android" },
+            { title: "Linux Support", desc: "Support for Ubuntu and other major Linux distributions" },
+            { title: "Browser Extension", desc: "One-click downloading directly from your browser" },
+            { title: "Enhanced Workshop", desc: "Community marketplace for themes, plugins, and tools" },
+            { title: "Web Version", desc: "Browser-based interface accessible from anywhere" },
         ]
     };
 
     const colors = {
-        "Coming Soon": "#ff3300",
-        "Working On": "#4da6ff",
-        "Future Ideas": "#0dd606"
+        "Planned": "#ff3300",
+        "In Progress": "#4da6ff",
+        "Exploring": "#0dd606"
     };
 
     return (
@@ -302,8 +303,8 @@ export default function Roadmap() {
                             <div 
                                 key={stage} 
                                 className={`roadmap-section ${
-                                    stage === "Coming Soon" ? "coming-soon" :
-                                    stage === "Working On" ? "in-dev" : "future"
+                                    stage === "Planned" ? "coming-soon" :
+                                    stage === "In Progress" ? "in-dev" : "future"
                                 }`}
                             >
                                 <div className="section-header">
@@ -316,8 +317,8 @@ export default function Roadmap() {
                                         <div
                                             key={itemIdx}
                                             className={`roadmap-item ${expanded === `${stage}-${itemIdx}` ? "expanded" : ""} ${
-                                                stage === "Coming Soon" ? "coming-soon" :
-                                                stage === "Working On" ? "in-dev" : "future"
+                                                stage === "Planned" ? "coming-soon" :
+                                                stage === "In Progress" ? "in-dev" : "future"
                                             }`}
                                             onClick={() => setExpanded(expanded === `${stage}-${itemIdx}` ? null : `${stage}-${itemIdx}`)}
                                         >
