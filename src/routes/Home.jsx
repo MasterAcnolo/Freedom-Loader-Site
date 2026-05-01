@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from "react-router-dom";
 
 const easeOutCubic = (t) => 1 - Math.pow(1 - t, 2);
 
@@ -483,7 +484,7 @@ export default function Home() {
                         </div>
 
                         <div className="hero-buttons">
-                            <a href="/#/download" className="btn-primary">Download Now</a>
+                            <Link to="/download" className="btn-primary">Download Now</Link>
                             <a href="#features" className="btn-secondary">Learn More</a>
                         </div>
 
@@ -558,10 +559,10 @@ export default function Home() {
                                 <i className="fab fa-github"></i>
                                 Star on GitHub
                             </a>
-                            <a href="/contributing" className="community-link">
+                            <Link to="/contributing" className="community-link">
                                 <i className="fas fa-code-branch"></i>
                                 Contribute
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </section>
@@ -570,7 +571,7 @@ export default function Home() {
                 <section className="cta">
                     <h2>Completely Free. Forever Free.</h2>
                     <p>No premium tier, no subscription, no hidden costs. Freedom Loader is free and will always be free. Download now and join all of the happy users.</p>
-                    <a href="/Freedom-Loader-Site/#/download">Get Started Free</a>
+                    <Link to="/download">Get Started Free</Link>
                 </section>
             </main>
         </>
