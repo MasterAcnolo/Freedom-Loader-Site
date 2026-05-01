@@ -11,8 +11,8 @@ export default function Roadmap() {
 
         "In Progress": [
             { title: "Partial Download", desc: "Download only specific segments of a video" },
-            { title: "Browser Cookie Support", desc: "Support cookies from all major browsers" },
             { title: "Custom CLI Arguments", desc: "Inject additional arguments into the download process" },
+            { title: "Linux Support", desc: "Support for Ubuntu and other major Linux distributions" },
         ],
         "Planned": [
             { title: "Batch Processing", desc: "Download multiple videos in parallel with queue management" },
@@ -22,9 +22,9 @@ export default function Roadmap() {
             { title: "CI/CD Pipeline", desc: "Automated pipeline for faster and more reliable releases" },
         ],
         "Exploring": [
+            { title: "Browser Cookie Support", desc: "Support cookies from all major browsers" },
             { title: "Spotify Integration", desc: "Download and manage Spotify media" },
             { title: "Mobile App", desc: "Native mobile application for iOS and Android" },
-            { title: "Linux Support", desc: "Support for Ubuntu and other major Linux distributions" },
             { title: "Browser Extension", desc: "One-click downloading directly from your browser" },
             { title: "Enhanced Workshop", desc: "Community marketplace for themes, plugins, and tools" },
             { title: "Web Version", desc: "Browser-based interface accessible from anywhere" },
