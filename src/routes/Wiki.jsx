@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Wiki() {
     useEffect(() => {
@@ -146,7 +147,7 @@ export default function Wiki() {
                     <p><strong>Problem:</strong> Downloads are very slow<br/>
                     <strong>Solution:</strong> Check your internet connection and try again. Some videos may be throttled by YouTube</p>
                     
-                    <p>For other issues, check the logs or <a href="/contact">contact support</a></p>
+                    <p>For other issues, check the logs or <Link to="/contact">contact support</Link></p>
                 </>
             )
         },
@@ -179,8 +180,8 @@ export default function Wiki() {
                         <li><strong>Question:</strong> Need help or clarification</li>
                     </ul>
                     <h3>Where to Report</h3>
-                    <p>Report issues on <a href="https://github.com/MasterAcnolo/Freedom-Loader/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a> or use the <a href="/contact">contact form</a></p>
-                    <p>Thanks for helping improve Freedom Loader! 📈</p>
+                    <p>Report issues on <a href="https://github.com/MasterAcnolo/Freedom-Loader/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a> or use the <Link to="/contact">contact form</Link></p>
+                    <p>Thanks for helping improve Freedom Loader! </p>
                 </>
             )
         }

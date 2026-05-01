@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 export default function Privacy() {
     useEffect(() => {
@@ -169,7 +170,7 @@ export default function Privacy() {
 
                         <h2>Contact</h2>
                         <p>
-                            For questions regarding this Privacy Policy, visit our <a href="/contact">contact page</a>.
+                            For questions regarding this Privacy Policy, visit our <Link to="/contact">contact page </Link>.
                         </p>
                     </div>
                 </section>
