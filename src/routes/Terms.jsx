@@ -114,7 +114,7 @@ export default function Terms() {
                 <section className="terms">
                     <div className="container">
                         <h1>Terms of Use</h1>
-                        <p className="last-updated">Last updated: November 13, 2025</p>
+                        <p className="last-updated">Last updated: May 1, 2026</p>
 
                         <p>
                             These terms govern your use of the Freedom Loader desktop application.
