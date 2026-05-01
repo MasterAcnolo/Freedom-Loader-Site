@@ -10,7 +10,7 @@ export default function About() {
         { name: "Node.js", img: "./assets/languages/nodejs.png", desc: "Powering all background processes and filesystem tasks." },
         { name: "Express", img: "./assets/languages/express.svg", desc: "Powering the internal API", invert: true },
         { name: "yt-dlp", img: "./assets/languages/ytDlp.png", desc: "Handles all video and audio extraction operations." },
-        { name: "Deno", img: "./assets/languages/deno.png", desc: "Powering yt-dlp verification.", invert: true },
+        { name: "Deno", img: "./assets/languages/deno.png", desc: "Powering yt-dlp verification.", invert: false },
         { name: "Winston", img: "./assets/languages/winston.png", desc: "Powering the Logger System" },
         { name: "JavaScript", img: "./assets/languages/js.png", desc: "Core logic and user interaction within the app." },
     ];
@@ -317,6 +317,21 @@ export default function About() {
                     }
                 }
 
+                /* Thème sombre (défaut) */
+                .invert-dark {
+                    filter: invert(1);
+                }
+
+                /* Thème clair */
+                :root.light-theme .invert-dark {
+                    filter: invert(0);
+                }
+
+                /* Deno : inverse seulement en light */
+                :root.dark-theme .tech-card img[alt="Deno"] {
+                    filter: invert(1);
+                }
+
                 @media (max-width: 500px) {
                     .about, .history, .features, .technos, .support {
                         padding: 30px 3%;
@@ -400,11 +415,11 @@ export default function About() {
                     <h2>Technologies Used</h2>
                     <div className="tech-grid">
                         {technologies.map((tech, idx) => (
-                            <div key={idx} className="tech-card">
+                            <div key={idx} className="tech-card" id={tech.name}>
                                 <img 
                                     src={tech.img} 
                                     alt={tech.name}
-                                    style={tech.invert ? { filter: "invert()" } : {}}
+                                    className={tech.invert ? "invert-dark" : ""}
                                 />
                                 <h3>{tech.name}</h3>
                                 <p>{tech.desc}</p>
