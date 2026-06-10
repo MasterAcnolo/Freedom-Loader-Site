@@ -13,6 +13,7 @@ export default function Roadmap() {
             { title: "Partial Download", desc: "Download only specific segments of a video" },
             { title: "Custom CLI Arguments", desc: "Inject additional arguments into the download process" },
             { title: "Linux Support", desc: "Support for Ubuntu and other major Linux distributions" },
+            { title: "Migrate to TypeScript", desc: "Migrate the code base (Back End) to TypeScript" },
         ],
         "Planned": [
             { title: "Batch Processing", desc: "Download multiple videos in parallel with queue management" },
