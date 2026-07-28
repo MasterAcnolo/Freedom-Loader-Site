@@ -15,6 +15,7 @@ const LINUX_OPTIONS = [
         tagColor: "#4CAF50",
         description: "Install via DNF — updates are handled automatically by your package manager.",
         type: "code",
+        externalUrl: "https://copr.fedorainfracloud.org/coprs/masteracnolo/freedom-loader/",
         code: `sudo dnf copr enable masteracnolo/freedom-loader\nsudo dnf install freedom-loader`,
     },
     {
