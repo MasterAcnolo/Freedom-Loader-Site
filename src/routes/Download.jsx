@@ -414,12 +414,12 @@ export default function Download() {
                                             )}
                                             {opt.type === "code" && (
                                                 <a
-                                                    href="https://copr.fedorainfracloud.org/coprs/masteracnolo/freedom-loader/"
+                                                    href={opt.externalUrl}
                                                     className="btn secondary"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                 >
-                                                    View on COPR
+                                                    View on {opt.label}
                                                 </a>
                                             )}
                                         </div>
