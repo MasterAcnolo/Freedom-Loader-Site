@@ -18,6 +18,17 @@ const LINUX_OPTIONS = [
         code: `sudo dnf copr enable masteracnolo/freedom-loader\nsudo dnf install freedom-loader`,
     },
     {
+        id: "snap",
+        label: "Snap",
+        tag: "Any distro with snapd",
+        tagColor: "#82BEA0",
+        description: "Install via Snap Store — managed by snapd, updates automatically.",
+        type: "code",
+        code: `sudo snap install freedom-loader`,
+        externalUrl: "https://snapcraft.io/freedom-loader",
+        externalLabel: "View on Snap Store",
+    },
+    {
         id: "rpm",
         label: "RPM",
         tag: "Fedora · RHEL · openSUSE",
@@ -46,16 +57,6 @@ const LINUX_OPTIONS = [
         type: "download",
         assetSuffix: ".AppImage",
         assetPattern: (tag) => `Freedom-Loader-${tag}.AppImage`,
-    },
-    {
-        id: "snap",
-        label: "Snap",
-        tag: "Any distro with snapd",
-        tagColor: "#82BEA0",
-        description: "Install via Snap Store — managed by snapd.",
-        type: "external",
-        url: "https://snapcraft.io/freedom-loader",
-        btnLabel: "Open Snap Store",
     },
 ];
 
