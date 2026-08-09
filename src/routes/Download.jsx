@@ -57,7 +57,7 @@ const LINUX_OPTIONS = [
         description: "No installation needed. Download, chmod +x, and run.",
         type: "download",
         assetSuffix: ".AppImage",
-        assetPattern: (tag) => `Freedom-Loader-${tag}.AppImage`,
+        assetPattern: (tag) => `Freedom.Loader-${tag}.AppImage`,
     },
 ];
 
