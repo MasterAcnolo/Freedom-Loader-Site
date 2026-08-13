@@ -354,23 +354,19 @@ export default function Download() {
                             <div className="dl-block">
                                 <div className="dl-header">
                                     <h3>Windows Installer</h3>
-                                    {exeLink ? (
-                                        <a href={exeLink} className="btn primary" target="_blank" rel="noopener noreferrer">
-                                            Download .exe
-                                        </a>
-                                    ) : (
-                                        <button className="btn primary" disabled>
-                                            {loading ? "Loading..." : "Unavailable"}
-                                        </button>
-                                    )}
+                                    <a 
+                                        href="https://github.com/MasterAcnolo/Freedom-Loader/releases/latest"
+                                        className="btn primary" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                    >
+                                        Download on GitHub
+                                    </a>
                                 </div>
                                 <p>
-                                    Installer (.exe), latest stable version:{" "}
-                                    <span className="dl-version">
-                                        {loading ? <span className="dl-loading">Loading...</span> : latestVersion || "N/A"}
-                                    </span>
+                                    Installer (.exe), latest stable version from the official GitHub Releases page.
                                     <br />
-                                    If Windows Defender shows a warning, click "More info" {'>'} "Run anyway".
+                                    If Windows Defender shows a warning, click "More info" → "Run anyway".
                                 </p>
                             </div>
                         )}
