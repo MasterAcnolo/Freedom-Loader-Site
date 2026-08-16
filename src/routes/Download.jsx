@@ -365,7 +365,7 @@ export default function Download() {
                                 <p>
                                     Installer (.exe), latest stable version from the official GitHub Releases page.
                                     <br />
-                                    If Windows Defender shows a warning, click "More info" &gt "Run anyway".
+                                    If Windows Defender shows a warning, click "More info" &gt; "Run anyway".
                                 </p>
                             </div>
                         )}
