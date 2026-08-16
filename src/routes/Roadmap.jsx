@@ -9,32 +9,36 @@ export default function Roadmap() {
 
     const roadmapItems = {
 
-        "In Progress": [
-            { title: "Partial Download", desc: "Download only specific segments of a video" },
-            { title: "Custom CLI Arguments", desc: "Inject additional arguments into the download process" },
-            { title: "Linux Support", desc: "Support for Ubuntu and other major Linux distributions" },
-            { title: "Migrate to TypeScript", desc: "Migrate the code base (Back End) to TypeScript" },
+        "Working Right Now": [
+            { title: "Local History", desc: "See what you downloaded before" },
+            { title: "Easy Log Submission", desc: "A built-in button to easily send your application logs for faster troubleshooting" },
+            { title: "Enhanced Workshop", desc: "Community marketplace for themes, plugins, and third-party tools" },
+            { title: "Improved UI / UX", desc: "Continuous improvements to the user interface and accessibility" },
+            { title: "CI/CD & Automated Testing", desc: "Automated release pipelines are live! Now focusing on integrating automated Unit and E2E tests for rock-solid stability." },
         ],
-        "Planned": [
-            { title: "Batch Processing", desc: "Download multiple videos in parallel with queue management" },
-            { title: "Headless Mode", desc: "Expose a full API to use Freedom Loader in third-party apps" },
-            { title: "History & Stats", desc: "Track your download history and statistics locally" },
-            { title: "Multi-Language Support", desc: "Full internationalization with multiple language options" },
-            { title: "CI/CD Pipeline", desc: "Automated pipeline for faster and more reliable releases" },
+        "Coming Next (maybe)": [
+            { title: "Extended Cookie Support", desc: "Expand automatic cookie extraction support beyond Mozilla Firefox" },
+            { title: "Skip Sponsored Parts", desc: "SponsorBlock integration to automatically skip sponsored segments" },
+            { title: "Partial Download", desc: "Download only specific segments of a video (timeframes)" },
+            { title: "Batch & Parallel Downloads", desc: "Download multiple videos concurrently with advanced queue management" },
+            // { title: "More Format Options", desc: "Expanded selection of audio/video containers and precise quality controls" },
+            // { title: "Multi-Language Support", desc: "Full internationalization with language selection directly in the UI" },
+            { title: "Migrate to TypeScript", desc: "Migrate the backend code base to TypeScript for better maintainability" },
+            { title: "Spotify Integration", desc: "Dedicated support to download and manage Spotify media" },
         ],
         "Exploring": [
-            { title: "Browser Cookie Support", desc: "Support cookies from all major browsers" },
-            { title: "Spotify Integration", desc: "Download and manage Spotify media" },
-            { title: "Mobile App", desc: "Native mobile application for iOS and Android" },
-            { title: "Browser Extension", desc: "One-click downloading directly from your browser" },
-            { title: "Enhanced Workshop", desc: "Community marketplace for themes, plugins, and tools" },
-            { title: "Web Version", desc: "Browser-based interface accessible from anywhere" },
+            { title: "Browser Extension", desc: "A companion extension to send videos directly to Freedom Loader with a single click." },
+            { title: "Mobile Client App", desc: "Explore a Client/Server architecture to bring Freedom Loader UI to mobile devices" },
+            { title: "Subtitle Support", desc: "Automatically fetch and embed subtitles/captions into downloaded videos" },
+            { title: "Headless Mode", desc: "Expose a full local API to trigger downloads from third-party apps or scripts" },
+            { title: "Parallel Fetching", desc: "Speed up the initial video information retrieval by running requests concurrently." },
+            { title: "File Renaming Options", desc: "Advanced templates to customize output file names automatically" },
         ]
     };
 
     const colors = {
-        "Planned": "#ff3300",
-        "In Progress": "#4da6ff",
+        "Coming Next (maybe)": "#ff3300",
+        "Working Right Now": "#4da6ff",
         "Exploring": "#0dd606"
     };
 
@@ -304,8 +308,8 @@ export default function Roadmap() {
                             <div 
                                 key={stage} 
                                 className={`roadmap-section ${
-                                    stage === "Planned" ? "coming-soon" :
-                                    stage === "In Progress" ? "in-dev" : "future"
+                                    stage === "Coming Next (maybe)" ? "coming-soon" :
+                                    stage === "Working Right Now" ? "in-dev" : "future"
                                 }`}
                             >
                                 <div className="section-header">
@@ -318,8 +322,8 @@ export default function Roadmap() {
                                         <div
                                             key={itemIdx}
                                             className={`roadmap-item ${expanded === `${stage}-${itemIdx}` ? "expanded" : ""} ${
-                                                stage === "Planned" ? "coming-soon" :
-                                                stage === "In Progress" ? "in-dev" : "future"
+                                                stage === "Coming Next (maybe)" ? "coming-soon" :
+                                                stage === "Working Right Now" ? "in-dev" : "future"
                                             }`}
                                             onClick={() => setExpanded(expanded === `${stage}-${itemIdx}` ? null : `${stage}-${itemIdx}`)}
                                         >

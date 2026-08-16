@@ -16,24 +16,25 @@ export default function Wiki() {
                     <h2>Installation</h2>
                     <h3>System Requirements</h3>
                     <ul>
-                        <li>Windows 10 or above</li>
-                        <li>Firefox Browser with YouTube login</li>
-                        <li>Basic computer performance</li>
+                        <li>Windows 10/11 or a modern Linux distribution (Ubuntu, Fedora, Arch, etc.)</li>
+                        <li>Mozilla Firefox Browser (required for secure cookie extraction)</li>
+                        <li>Active internet connection</li>
                     </ul>
-                    <h3>Installation Steps</h3>
+                    
+                    <h3>Windows Installation</h3>
                     <ol>
-                        <li>Download the latest version from the Download page</li>
-                        <li>Run the installer and follow the setup wizard</li>
-                        <li>Launch Freedom Loader from the Start menu or desktop shortcut</li>
-                        <li>Open Firefox and log in to YouTube</li>
-                        <li>Play a video on YouTube to verify the session</li>
-                        <li>Launch Freedom Loader and start downloading!</li>
+                        <li>Download the latest <code>.exe</code> from the <Link to="/download">Download page</Link> or GitHub Releases.</li>
+                        <li>Run the installer (click "More info" → "Run anyway" if Windows SmartScreen warns you).</li>
+                        <li>Follow the setup wizard and launch Freedom Loader.</li>
                     </ol>
-                    <h3>Troubleshooting</h3>
+
+                    <h3>Linux Installation</h3>
+                    <p>We provide multiple ways to install Freedom Loader on Linux:</p>
                     <ul>
-                        <li><strong>Antivirus blocking:</strong> Temporarily disable your antivirus during installation</li>
-                        <li><strong>Update fails:</strong> Try restarting the app or running as Administrator</li>
-                        <li><strong>Cookies not found:</strong> Make sure Firefox is properly installed and you're logged into YouTube</li>
+                        <li><strong>Fedora (Copr):</strong> <code>sudo dnf copr enable masteracnolo/freedom-loader</code> then <code>sudo dnf install freedom-loader</code></li>
+                        <li><strong>Snap Store:</strong> <code>sudo snap install freedom-loader</code></li>
+                        <li><strong>AppImage:</strong> Download the <code>.AppImage</code>, right-click to make it executable (or <code>chmod +x</code>), and run it.</li>
+                        <li><strong>DEB / RPM:</strong> Download the respective packages from our GitHub releases and install via your package manager.</li>
                     </ul>
                 </>
             )
@@ -44,22 +45,74 @@ export default function Wiki() {
                 <>
                     <h2>Usage Guide</h2>
                     <h3>First Launch</h3>
-                    <p>At your first launch, your antivirus might flag the app. This is normal—temporarily disable it to proceed. You may also see a warning about accessing Firefox cookies. This is in line with yt-dlp security.</p>
-                    <h3>Requirements</h3>
-                    <ul>
-                        <li>Be logged into YouTube on Firefox</li>
-                        <li>Have a valid Google account</li>
-                        <li>Have played at least one video on YouTube to establish a session</li>
-                    </ul>
+                    <p>At your first launch, your OS or antivirus might flag the app since it's a new open-source software. This is normal. You may also see terminal windows for yt-dlp binary checks.</p>
+                    
                     <h3>Basic Workflow</h3>
                     <ol>
-                        <li>Paste a YouTube URL into the app</li>
-                        <li>Select quality (Best, Medium, Worst) or specific resolution</li>
-                        <li>Choose format (Video MP4 or Audio MP3)</li>
-                        <li>Select output folder</li>
-                        <li>Click Download and wait for completion</li>
+                        <li>Paste a URL into the app (YouTube, Soundcloud, Twitch, etc.).</li>
+                        <li>Wait a second for the app to fetch the video/playlist metadata (or enable "Auto Fetch Info" in settings).</li>
+                        <li>Select your format: Video (MP4) or Audio (MP3).</li>
+                        <li>Select quality (Best, Medium, Worst) or specific resolution.</li>
+                        <li>Click Download and monitor the real-time progress bar!</li>
                     </ol>
-                    <h3>Advanced Options available in the settings panel</h3>
+
+                    <h3>Settings Panel: Download Options</h3>
+                    <p>Click the gear icon to access these powerful download features:</p>
+                    <ul>
+                        <li><strong>Automation:</strong> 
+                            <ul>
+                                <li><em>Auto Fetch Info:</em> Automatically fetch information for new downloads as soon as you paste a link.</li>
+                                <li><em>Download Playlist automatically:</em> If enabled, playlists will download without confirmation.</li>
+                                <li><em>Create Playlist Folders:</em> Create a dedicated folder for each playlist with its name.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Metadata & Media:</strong>
+                            <ul>
+                                <li><em>Add Metadata / Add Thumbnail:</em> Include metadata and thumbnails directly in downloaded files.</li>
+                                <li><em>Keep Playlist Order:</em> Add an index before the output file to keep the correct order.</li>
+                                <li><em>Custom Codec:</em> Choose your preferred video codec (H264, AV1, AV01, VP9.2, VP9, H265, Theora).</li>
+                            </ul>
+                        </li>
+                        <li><strong>System Controls:</strong>
+                            <ul>
+                                <li><em>Notification at the end:</em> Notify when a download finishes.</li>
+                                <li><em>Auto Update:</em> Enable automatic app updates.</li>
+                                <li><em>Enable Hardware Acceleration:</em> Uses GPU acceleration for rendering when available (requires restart).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </>
+            )
+        },
+        "Customization": {
+            icon: "fa-palette",
+            content: (
+                <>
+                    <h2>Themes & Customization</h2>
+                    <p>Freedom Loader features a powerful, dynamic theme engine. You can change how the app looks without even restarting it!</p>
+                    
+                    <h3>Using the Theme Workshop</h3>
+                    <ol>
+                        <li>Visit the <a href="https://masteracnolo.github.io/Freedom-Loader-Workshop/" target="_blank" rel="noopener noreferrer">Freedom Loader Workshop</a>.</li>
+                        <li>Browse community themes or use the creator tool to make your own.</li>
+                        <li>Download the theme as a <code>.zip</code> file.</li>
+                        <li>Open Freedom Loader, go to Settings, and click <strong>Open Theme Folder</strong> at the bottom.</li>
+                        <li>Drop the <code>.zip</code> file inside, click the Refresh icon next to the theme selector, and choose your new theme!</li>
+                    </ol>
+
+                    <h3>UI & Interface Options</h3>
+                    <ul>
+                        <li><strong>Custom Top bar:</strong> Use this if the OS topbar is missing or you prefer our sleek custom one.</li>
+                        <li><strong>System Tray:</strong> Minimize app on close, hiding it in the System Tray [EXPERIMENTAL].</li>
+                        <li><strong>Discord RPC:</strong> Enable/disable Discord Rich Presence to show off your app activity on Discord.</li>
+                    </ul>
+
+                    <h3>Developer Tools</h3>
+                    <p>At the bottom of the settings panel, you can find advanced tools:</p>
+                    <ul>
+                        <li><strong>Verbose Logs:</strong> Show verbose logs for debugging purposes.</li>
+                        <li><strong>Open JSON Configuration:</strong> Directly open and edit the raw <code>config.json</code> file.</li>
+                    </ul>
                 </>
             )
         },
@@ -68,25 +121,18 @@ export default function Wiki() {
             content: (
                 <>
                     <h2>Setting Up Firefox</h2>
-                    <p>Freedom Loader requires Firefox to access YouTube cookies for bypassing age restrictions and authentication.</p>
-                    <h3>Installation Steps</h3>
+                    <p>Freedom Loader requires Firefox to securely extract cookies. This allows you to download age-restricted or members-only videos without typing your password into our app.</p>
+                    
+                    <h3>How it works</h3>
                     <ol>
-                        <li>Download Firefox from <a href="https://www.mozilla.org/firefox" target="_blank" rel="noopener noreferrer">mozilla.org</a></li>
-                        <li>Install Firefox on your computer</li>
-                        <li>Open Firefox and log in to your YouTube account</li>
-                        <li>Play a video on YouTube to establish the session</li>
-                        <li>Close Firefox completely</li>
-                        <li>Launch Freedom Loader</li>
+                        <li>Install Mozilla Firefox (if you don't have it).</li>
+                        <li>Open Firefox and log in to your YouTube account.</li>
+                        <li>Play any video on YouTube to establish an active session.</li>
+                        <li><strong>Close Firefox completely.</strong></li>
+                        <li>Launch Freedom Loader and download your restricted video.</li>
                     </ol>
-                    <h3>Important Notes</h3>
-                    <ul>
-                        <li>Firefox must be closed when downloading with Freedom Loader</li>
-                        <li>Your YouTube session should be active for cookies to work</li>
-                        <li>Age-restricted videos require valid YouTube authentication</li>
-                        <li>Chrome support is planned for future versions</li>
-                    </ul>
-                    <h3>Troubleshooting</h3>
-                    <p>If cookies aren't found, try logging out and back into YouTube, then repeat the steps above.</p>
+                    
+                    <p><em>Note: If cookies aren't found, try logging out and back into YouTube on Firefox. Chrome/Edge cookie support is currently being explored for future updates.</em></p>
                 </>
             )
         },
@@ -95,30 +141,17 @@ export default function Wiki() {
             content: (
                 <>
                     <h2>Contributing to Freedom Loader</h2>
-                    <p>Thanks for your interest in contributing! All contributions are welcome and appreciated.</p>
-                    <h3>Ways to Contribute</h3>
+                    <p>We love open-source! Whether you are a developer, a designer, or a user finding bugs, your help is welcome.</p>
+                    
+                    <h3>For Developers</h3>
+                    <p>We use a Trunk-Based Development workflow on GitHub. To get started:</p>
                     <ul>
-                        <li><strong>Report bugs:</strong> Open an issue with clear description</li>
-                        <li><strong>Feature requests:</strong> Suggest improvements and new features</li>
-                        <li><strong>Code contributions:</strong> Submit pull requests with improvements</li>
-                        <li><strong>Documentation:</strong> Help improve documentation and guides</li>
+                        <li>Read our <a href="https://github.com/MasterAcnolo/Freedom-Loader/blob/main/DEVELOPMENT.md" target="_blank" rel="noopener noreferrer">DEVELOPMENT.md</a> guide to set up your local environment, Node.js, and native binaries.</li>
+                        <li>Read our <a href="https://github.com/MasterAcnolo/Freedom-Loader/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">CONTRIBUTING.md</a> for PR conventions and code style.</li>
                     </ul>
-                    <h3>Pull Request Process</h3>
-                    <ol>
-                        <li>Fork the repository on GitHub</li>
-                        <li>Create a feature branch: <code>git checkout -b feature/my-feature</code></li>
-                        <li>Make your changes</li>
-                        <li>Add tests or verification steps</li>
-                        <li>Submit a PR to the main branch</li>
-                    </ol>
-                    <h3>Guidelines</h3>
-                    <ul>
-                        <li>Keep PR titles clear and descriptive</li>
-                        <li>Document what you changed and why</li>
-                        <li>Follow existing code style</li>
-                        <li>Be respectful and constructive</li>
-                    </ul>
-                    <p>Thanks for making Freedom Loader better! 💪</p>
+                    
+                    <h3>For Theme Designers</h3>
+                    <p>Created a cool theme in the Workshop? Submit it to the community by opening an issue on the <a href="https://github.com/MasterAcnolo/Freedom-Loader-Workshop" target="_blank" rel="noopener noreferrer">Workshop Repository</a> with your ZIP file and a screenshot!</p>
                 </>
             )
         },
@@ -127,27 +160,18 @@ export default function Wiki() {
             content: (
                 <>
                     <h2>Common Issues & Solutions</h2>
-                    <h3>1. Not logged into YouTube</h3>
-                    <p><strong>Problem:</strong> Cookies not retrieved or access denied<br/>
-                    <strong>Solution:</strong> Log into YouTube on Firefox, play a video, then close and restart Freedom Loader</p>
                     
-                    <h3>2. Antivirus Blocking</h3>
-                    <p><strong>Problem:</strong> App won't launch or triggers warnings<br/>
-                    <strong>Solution:</strong> Temporarily disable antivirus or add Freedom Loader to whitelist</p>
+                    <h3>1. App won't launch (Windows)</h3>
+                    <p><strong>Solution:</strong> Your antivirus might be blocking the executables (yt-dlp, ffmpeg) inside the app. Add the Freedom Loader installation folder to your antivirus whitelist.</p>
                     
-                    <h3>3. Outdated Cookies</h3>
-                    <p><strong>Problem:</strong> Downloads fail after working before<br/>
-                    <strong>Solution:</strong> Log out and back into YouTube to refresh cookies</p>
+                    <h3>2. Downloads fail immediately</h3>
+                    <p><strong>Solution:</strong> Ensure your output folder exists and you have write permissions. You can change the output directory in the Settings panel.</p>
                     
-                    <h3>4. Incomplete Video Information</h3>
-                    <p><strong>Problem:</strong> Some videos fail to load properly<br/>
-                    <strong>Solution:</strong> This may be a YouTube or yt-dlp limitation. Try updating the app</p>
+                    <h3>3. Age-Restricted downloads fail</h3>
+                    <p><strong>Solution:</strong> Log into YouTube on Firefox, play a video, close Firefox completely, and try again.</p>
                     
-                    <h3>5. Download Speed Issues</h3>
-                    <p><strong>Problem:</strong> Downloads are very slow<br/>
-                    <strong>Solution:</strong> Check your internet connection and try again. Some videos may be throttled by YouTube</p>
-                    
-                    <p>For other issues, check the logs or <Link to="/contact">contact support</Link></p>
+                    <h3>4. Linux: Missing Binaries or Permissions</h3>
+                    <p><strong>Solution:</strong> If you installed via AppImage or built from source, ensure the internal binaries (yt-dlp, ffmpeg) have executable permissions (<code>chmod +x</code>).</p>
                 </>
             )
         },
@@ -156,32 +180,22 @@ export default function Wiki() {
             content: (
                 <>
                     <h2>How to Report Issues</h2>
-                    <p>Found a bug or issue? Help us fix it by providing detailed information.</p>
-                    <h3>What to Include in Your Report</h3>
+                    <p>Found a bug? Help us fix it by providing detailed logs.</p>
+                    
+                    <h3>Where to find your logs</h3>
+                    <ul>
+                        <li><strong>Windows:</strong> <code>C:\Users\[USERNAME]\AppData\Local\FreedomLoader\logs\</code></li>
+                        <li><strong>Linux:</strong> <code>~/.local/share/FreedomLoader/logs/</code></li>
+                    </ul>
+                    <p><em>Tip: You can click the "Folder" icon in the app's settings to open this directory instantly!</em></p>
+
+                    <h3>Reporting on GitHub</h3>
                     <ol>
-                        <li><strong>Clear title:</strong> Describe the problem in one sentence</li>
-                        <li><strong>Steps to reproduce:</strong> List exactly what you did</li>
-                        <li><strong>Expected result:</strong> What should have happened</li>
-                        <li><strong>Actual result:</strong> What actually happened</li>
-                        <li><strong>Screenshots/Logs:</strong> Attach logs from <code>C:\Users\[USERNAME]\AppData\Local\FreedomLoader\logs\</code></li>
+                        <li>Go to our <a href="https://github.com/MasterAcnolo/Freedom-Loader/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a> page.</li>
+                        <li>Select the "Bug Report" template.</li>
+                        <li>Attach your log file and describe the steps to reproduce the crash.</li>
+                        <li>Include your OS (Windows 11, Fedora, Ubuntu, etc.) and app version.</li>
                     </ol>
-                    <h3>System Information</h3>
-                    <p>Include:</p>
-                    <ul>
-                        <li>Freedom Loader version (shown in window title)</li>
-                        <li>Windows version</li>
-                        <li>Antivirus software being used</li>
-                        <li>Any other relevant details</li>
-                    </ul>
-                    <h3>Issue Types</h3>
-                    <ul>
-                        <li><strong>Bug:</strong> App crash or unexpected behavior</li>
-                        <li><strong>Feature request:</strong> Idea for new functionality</li>
-                        <li><strong>Question:</strong> Need help or clarification</li>
-                    </ul>
-                    <h3>Where to Report</h3>
-                    <p>Report issues on <a href="https://github.com/MasterAcnolo/Freedom-Loader/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a> or use the <Link to="/contact">contact form</Link></p>
-                    <p>Thanks for helping improve Freedom Loader! </p>
                 </>
             )
         }
@@ -222,7 +236,7 @@ export default function Wiki() {
                 }
 
                 .wiki-container {
-                    max-width: 1000px;
+                    max-width: 1200px;
                     margin: 0 auto;
                 }
 

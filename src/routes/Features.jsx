@@ -30,6 +30,8 @@ export default function Features() {
         { title: "Concurrent Fragment Downloads", desc: "8 fragments downloaded in parallel for acceleration", icon: "fa-network-wired", v: "1.1.0", cat: "Download" },
         { title: "Download Retry Logic", desc: "Automatic retry attempts (10 global retries)", icon: "fa-redo", v: "1.5.0", cat: "Download" },
         { title: "No File Overwrite", desc: "Protection against accidental file overwriting", icon: "fa-shield", v: "1.0.0", cat: "Download" },
+        { title: "Playlist Index Ordering", desc: "Prefix downloaded playlist items with their index number", icon: "fa-list-ol", v: "1.6.1", cat: "Download" },
+        { title: "File Signatures", desc: "Add signatures to downloaded files", icon: "fa-file-signature", v: "1.6.2", cat: "Download" },
 
         // ============= CUSTOMIZATION =============
         { title: "Dynamic Theme System", desc: "Pre-built theme system with dynamic switching", icon: "fa-palette", v: "1.1.0", cat: "Customization" },
@@ -51,9 +53,12 @@ export default function Features() {
         { title: "Firefox Browser Requirement", desc: "Built-in Firefox cookie extraction support", icon: "fa-brands fa-firefox-browser", v: "1.3.0", cat: "System" },
         { title: "Context Isolation", desc: "Electron context isolation for maximum security", icon: "fa-shield", v: "1.5.0", cat: "System" },
         { title: "Splash Screen", desc: "Startup splash screen with progress bar", icon: "fa-spinner", v: "1.5.0", cat: "System" },
+        { title: "System Tray (Background Mode)", desc: "Minimize application to system tray [Experimental]", icon: "fa-minimize", v: "1.6.2", cat: "System" },
+        { title: "Hardware Acceleration Toggle", desc: "Enable or disable hardware acceleration for better performance", icon: "fa-microchip", v: "1.6.2", cat: "System" },
+        { title: "Cross-Platform Support", desc: "Fully supported on Windows and Linux (Snap, AppImage, RPM, DEB)", icon: "fa-linux", v: "1.6.0", cat: "System" },
 
         // ============= TOOLS =============
-        { title: "System Notifications", desc: "Native Windows notifications when download completes", icon: "fa-bell", v: "1.1.1", cat: "Tools" },
+        { title: "System Notifications", desc: "Native OS notifications when download completes", icon: "fa-bell", v: "1.1.1", cat: "Tools" },
         { title: "Logs Folder Access", desc: "Quick button to open logs folder", icon: "fa-folder", v: "1.1.2", cat: "Tools" },
         { title: "Configuration File Editor", desc: "Direct access to config.json from settings", icon: "fa-edit", v: "1.4.0", cat: "Tools" },
         { title: "Theme Folder Access", desc: "Quick access to themes folder for creation", icon: "fa-folder-open", v: "1.5.0", cat: "Tools" },
@@ -65,7 +70,7 @@ export default function Features() {
         { title: "Toast Notifications", desc: "Temporary UI notifications for user feedback", icon: "fa-comment", v: "1.5.0", cat: "Tools" },
 
         // ============= INTEGRATION =============
-        { title: "Discord Rich Presence", desc: "Discord integration showing download activity", icon: "fa-brands fa-discord", v: "1.2.0", cat: "Integration" },
+        { title: "Discord Rich Presence", desc: "Discord integration showing activity", icon: "fa-brands fa-discord", v: "1.2.0", cat: "Integration" },
         { title: "Official Website Link", desc: "Quick access to official website from app", icon: "fa-globe", v: "1.0.0", cat: "Integration" },
         { title: "Wiki Access", desc: "Link to official documentation/wiki", icon: "fa-book", v: "1.0.0", cat: "Integration" },
         { title: "Theme Workshop", desc: "Access to Freedom Loader Theme Workshop", icon: "fa-tools", v: "1.2.0", cat: "Integration" },

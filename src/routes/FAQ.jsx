@@ -8,35 +8,35 @@ export default function FAQ() {
     const [expanded, setExpanded] = useState(null);
 
     const faqData = {
-        "Installation & Usage": [
-            { q: "How do I install Freedom Loader?", a: "Check the download instructions on the Wiki page to get started quickly and easily." },
-            { q: "Which operating systems are supported?", a: "Freedom Loader currently supports Windows 10 and above. Linux support is planned for future releases." },
-            { q: "Where are my downloaded files stored?", a: "Files are stored locally in the folder you select during download. The default folder is your Downloads directory." },
-            { q: "How do I update the application?", a: "Updates are automatically downloaded and applied on launch. You can also manually download the latest version from the Download page." }
-        ],
-        "Features & Limitations": [
-            { q: "What exactly does Freedom Loader do?", a: "Freedom Loader allows you to quickly download video and audio content from the internet with various quality options and formats." },
-            { q: "Can I use Freedom Loader with YouTube or other platforms?", a: "Currently, YouTube is fully supported. More platform compatibility will be added in future releases. The user remains responsible for content usage." },
-            { q: "Are there advanced options or settings?", a: "Yes! You can change the download quality, choose between video or audio-only formats, select output paths, and customize themes." },
-            { q: "Is my personal data collected?", a: "No, all data remains local on your device and is never sent to any server. Your privacy is protected." }
-        ],
-        "Contributions & Open Source": [
-            { q: "Can I contribute to the project?", a: "Absolutely! All contributors are welcome. You can open issues, submit pull requests, or discuss ideas on GitHub." },
-            { q: "How do I report a bug or propose a feature?", a: "Use GitHub Discussions or open an issue on the repository to suggest ideas or report problems." },
-            { q: "What license does Freedom Loader use?", a: "Freedom Loader is open source under the GNU GPL v3 license. You can copy and redistribute the code while crediting the original author." },
-            { q: "Can I use the code in my own projects?", a: "Yes, freely! However, you must keep original credits and respect the GNU GPL v3 license." }
-        ],
-        "Support & Community": [
-            { q: "How can I contact the developer?", a: "You can use the contact form on the Contact page or reach out via GitHub or social media." },
-            { q: "Where can I discuss with the community?", a: "Join the GitHub Discussions community or connect via social media platforms to engage with other users." },
-            { q: "Is there documentation available?", a: "Yes, comprehensive documentation is available on the Wiki page with guides for installation, usage, and troubleshooting." }
-        ],
-        "Security & Privacy": [
-            { q: "Is Freedom Loader safe?", a: "Yes, the app is designed to run locally and does not transmit any personal data. Your downloads remain private." },
-            { q: "How are my files and data protected?", a: "All files remain on your device. Keep your system secure and up-to-date for optimal safety and performance." },
-            { q: "What should I do if I encounter a security issue?", a: "Contact the developer immediately via GitHub or the contact form to report security concerns." }
-        ]
-    };
+            "Installation & Usage": [
+                { q: "How do I install Freedom Loader?", a: "Check the download instructions on the Wiki page to get started quickly. We provide a Windows installer, as well as Snap, AppImage, DEB, and RPM packages for Linux." },
+                { q: "Which operating systems are supported?", a: "Freedom Loader fully supports Windows 10/11 and major Linux distributions (Ubuntu, Debian, Fedora, Arch, etc.)." },
+                { q: "Where are my downloaded files stored?", a: "Files are stored locally in the folder you select during download. The default folder is your Downloads directory." },
+                { q: "How do I update the application?", a: "On Windows and AppImage, updates are downloaded and applied automatically on launch. If you installed via Snap or Fedora Copr on Linux, your system's package manager handles the updates." }
+            ],
+            "Features & Limitations": [
+                { q: "What exactly does Freedom Loader do?", a: "Freedom Loader is a graphical interface that allows you to cleanly download video and audio content from the internet with full metadata and various quality options." },
+                { q: "Can I use Freedom Loader with platforms other than YouTube?", a: "Yes! While heavily optimized for YouTube (playlists, metadata, etc.), the underlying engine supports downloading from hundreds of different websites." },
+                { q: "Why is Mozilla Firefox required?", a: "Freedom Loader can securely extract cookies from your local Firefox installation to allow downloading age-restricted or members-only content without requiring you to log in through the app." },
+                { q: "Are there advanced options or settings?", a: "Yes! You can change video codecs (H.264, AV1, VP9), choose quality thresholds, automate playlist folder creation, and even build custom UI themes." }
+            ],
+            "Contributions & Open Source": [
+                { q: "Can I contribute to the project?", a: "Absolutely! All contributors are welcome. You can open issues, submit pull requests, or discuss ideas on GitHub." },
+                { q: "How do I report a bug or propose a feature?", a: "Use GitHub Discussions or open an issue on the repository using our provided templates to suggest ideas or report problems." },
+                { q: "What license does Freedom Loader use?", a: "Freedom Loader is open source under the GNU GPL v3 license. You can copy and redistribute the code while crediting the original author." },
+                { q: "Can I use the code in my own projects?", a: "Yes, freely! However, you must keep original credits and respect the GNU GPL v3 license." }
+            ],
+            "Support & Community": [
+                { q: "How can I contact the developer?", a: "You can use the contact form on the Contact page or reach out via GitHub or social media." },
+                { q: "Where can I discuss with the community?", a: "Join the GitHub Discussions community or connect via social media platforms to engage with other users." },
+                { q: "Is there documentation available?", a: "Yes, comprehensive documentation is available on the Wiki page with guides for installation, usage, and troubleshooting." }
+            ],
+            "Security & Privacy": [
+                { q: "Is Freedom Loader safe?", a: "Yes, the app is designed to run locally and does not transmit any personal data or download history to any server. Your privacy is guaranteed." },
+                { q: "Is my personal data collected?", a: "No. We have no ads, no trackers, and no analytics. Everything happens on your machine." },
+                { q: "What should I do if I encounter a security issue?", a: "Please refer to our SECURITY.md file on GitHub and contact the maintainer directly to report security concerns." }
+            ]
+        };
 
     const toggleExpand = (category, index) => {
         const key = `${category}-${index}`;
