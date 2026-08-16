@@ -271,7 +271,6 @@ export default function Download() {
                     font-family: "Courier New", monospace;
                     font-size: 0.88rem;
                     color: var(--text-primary);
-                    white-space: pre;
                     overflow-x: auto;
                 }
                 .linux-option-right {
@@ -366,7 +365,7 @@ export default function Download() {
                                 <p>
                                     Installer (.exe), latest stable version from the official GitHub Releases page.
                                     <br />
-                                    If Windows Defender shows a warning, click "More info" → "Run anyway".
+                                    If Windows Defender shows a warning, click "More info" &gt "Run anyway".
                                 </p>
                             </div>
                         )}
