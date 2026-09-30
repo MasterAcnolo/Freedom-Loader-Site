@@ -12,7 +12,7 @@ function redirectToHash() {
         return;
     }
 
-    const base = '/Freedom-Loader-Site';
+    const base = '/';
     
     // Check if there's a stored redirect from 404
     const storedRedirect = sessionStorage.getItem('redirect');

@@ -6,14 +6,14 @@
     <script>
       // Only redirect once to avoid infinite loop
       if (!sessionStorage.getItem('redirected')) {
-        const path = window.location.pathname.replace('/Freedom-Loader-Site', '');
+        const path = window.location.pathname.replace('/', '');
         if (path !== '/') {
           sessionStorage.setItem('redirected', 'true');
           sessionStorage.setItem('redirect', path);
         }
       }
       // Always redirect to root index.html
-      window.location.replace('/Freedom-Loader-Site/');
+      window.location.replace('/');
     </script>
   </head>
   <body>

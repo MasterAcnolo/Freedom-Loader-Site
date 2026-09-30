@@ -55,6 +55,6 @@ See the wiki section in the website for full documentation.
 ## Project Links
 
 - Main Project: https://github.com/MasterAcnolo/Freedom-Loader
-- Website: https://masteracnolo.github.io/Freedom-Loader-Site/
+- Website: https://freedomloader.acnolo.fr
 - Theme Workshop (Website): https://masteracnolo.github.io/Freedom-Loader-Workshop
 - Theme Workshop (Repo): https://github.com/MasterAcnolo/Freedom-Loader-Workshop
