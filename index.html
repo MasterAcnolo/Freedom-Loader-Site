@@ -12,16 +12,36 @@
     <meta property="og:title" content="Freedom Loader">
     <meta property="og:description" content="Freedom Loader – Download videos and audio easily and privately.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://masteracnolo.github.io/No-Sense/">
-    <meta property="og:image" content="https://masteracnolo.github.io/No-Sense/FreedomLoader/assets/icon/Freedom%20Loader.png">
+    <meta property="og:url" content="https://freedomloader.acnolo.fr/">
+    <meta property="og:image" content="https://freedomloader.acnolo.fr/assets/icon/Freedom%20Loader.png">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Freedom Loader">
     <meta name="twitter:description" content="Freedom Loader – Download videos and audio easily and privately.">
-    <meta name="twitter:image" content="https://masteracnolo.github.io/No-Sense/FreedomLoader/assets/icon/Freedom%20Loader.png">
+    <meta name="twitter:image" content="https://freedomloader.acnolo.fr/assets/icon/Freedom%20Loader.png">
 
     <link rel="icon" href="assets/icon/freedomLoader.png" />
+
+    <script>
+      (() => {
+        const legacyHost = 'masteracnolo.github.io';
+        const destination = 'https://freedomloader.acnolo.fr';
+        const legacyBase = '/Freedom-Loader-Site';
+
+        if (window.location.hostname === legacyHost) {
+          const isLegacyBase = window.location.pathname === legacyBase
+            || window.location.pathname.startsWith(`${legacyBase}/`);
+          const path = isLegacyBase
+            ? window.location.pathname.slice(legacyBase.length) || '/'
+            : window.location.pathname;
+
+          window.location.replace(
+            `${destination}${path}${window.location.search}${window.location.hash}`
+          );
+        }
+      })();
+    </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
