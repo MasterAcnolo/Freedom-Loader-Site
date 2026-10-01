@@ -4,16 +4,24 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      // Only redirect once to avoid infinite loop
-      if (!sessionStorage.getItem('redirected')) {
-        const path = window.location.pathname.replace('/', '');
-        if (path !== '/') {
-          sessionStorage.setItem('redirected', 'true');
-          sessionStorage.setItem('redirect', path);
-        }
+      const legacyHost = 'masteracnolo.github.io';
+      const destination = 'https://freedomloader.acnolo.fr';
+      const legacyBase = '/Freedom-Loader-Site';
+      const isLegacyBase = window.location.pathname === legacyBase
+        || window.location.pathname.startsWith(`${legacyBase}/`);
+      const path = isLegacyBase
+        ? window.location.pathname.slice(legacyBase.length) || '/'
+        : window.location.pathname;
+
+      if (window.location.hostname === legacyHost) {
+        window.location.replace(
+          `${destination}${path}${window.location.search}${window.location.hash}`
+        );
+      } else if (path !== '/') {
+        window.location.replace(
+          `/#${path}${window.location.search}${window.location.hash}`
+        );
       }
-      // Always redirect to root index.html
-      window.location.replace('/');
     </script>
   </head>
   <body>
