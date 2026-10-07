@@ -16,7 +16,7 @@ const LINUX_OPTIONS = [
         description: "Install via DNF — updates are handled automatically by your package manager.",
         type: "code",
         externalUrl: "https://copr.fedorainfracloud.org/coprs/masteracnolo/freedom-loader/",
-        code: `sudo dnf copr enable masteracnolo/freedom-loader\nsudo dnf install freedom-loader`,
+        code: `sudo dnf copr enable masteracnolo/freedom-loader && sudo dnf install freedom-loader`,
     },
     {
         id: "snap",
@@ -57,7 +57,7 @@ const LINUX_OPTIONS = [
         description: "No installation needed. Download, chmod +x, and run.",
         type: "download",
         assetSuffix: ".AppImage",
-        assetPattern: (tag) => `Freedom.Loader-${tag}.AppImage`,
+        assetPattern: (tag) => `Freedom-Loader-${tag}.AppImage`,
     },
 ];
 
