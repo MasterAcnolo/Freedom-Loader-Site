@@ -72,7 +72,7 @@ export default function Features() {
         // ============= INTEGRATION =============
         { title: "Discord Rich Presence", desc: "Discord integration showing activity", icon: "fa-brands fa-discord", v: "1.2.0", cat: "Integration" },
         { title: "Official Website Link", desc: "Quick access to official website from app", icon: "fa-globe", v: "1.0.0", cat: "Integration" },
-        { title: "Wiki Access", desc: "Link to official documentation/wiki", icon: "fa-book", v: "1.0.0", cat: "Integration" },
+        { title: "Documentation", desc: "Guides for installing, using, and configuring Freedom Loader", icon: "fa-book", v: "1.0.0", cat: "Integration" },
         { title: "Theme Workshop", desc: "Access to Freedom Loader Theme Workshop", icon: "fa-tools", v: "1.2.0", cat: "Integration" },
         { title: "GitHub Releases Integration", desc: "GitHub releases integration for updates", icon: "fa-brands fa-github", v: "1.0.0", cat: "Integration" },
         { title: "YT-DLP Backend", desc: "Using yt-dlp as download engine", icon: "fa-download", v: "1.0.0", cat: "Integration" },

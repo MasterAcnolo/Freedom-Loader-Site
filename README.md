@@ -1,21 +1,21 @@
-# Freedom Loader Site
+# Freedom Loader website
 
-A customizable Discord bot loader with theme support.
+This repository contains the main Freedom Loader website and its separate Docusaurus documentation site.
 
-This is the official website for [Freedom Loader](https://github.com/MasterAcnolo/Freedom-Loader).
-
-Visit the live site: https://masteracnolo.github.io/Freedom-Loader-Site/
+- Main website: https://freedomloader.acnolo.fr/
+- Documentation: https://docs.freedomloader.acnolo.fr/
 
 ## Overview
 
-This repository contains the main website and theme workshop for Freedom Loader. The site includes:
+The main website includes:
 
-- Project homepage and documentation
+- Project homepage
 - Feature showcase
 - FAQ section
-- Theme Workshop for creating custom themes
 - Contributing guidelines
 - Legal pages (Terms, Privacy)
+
+The English documentation and feature guides are maintained in `docs-site/`.
 
 ## Theme Workshop
 
@@ -42,19 +42,10 @@ Share your theme with the community:
 2. Create a GitHub issue on the [workshop repository](https://github.com/MasterAcnolo/Freedom-Loader-Workshop)
 3. Include your theme ZIP and preview image
 
-## Documentation
-
-- Installation guide
-- Usage and configuration
-- Firefox compatibility
-- Contributing guidelines
-- Issue reporting
-
-See the wiki section in the website for full documentation.
-
 ## Project Links
 
 - Main Project: https://github.com/MasterAcnolo/Freedom-Loader
 - Website: https://freedomloader.acnolo.fr
+- Documentation: https://docs.freedomloader.acnolo.fr/
 - Theme Workshop (Website): https://masteracnolo.github.io/Freedom-Loader-Workshop
 - Theme Workshop (Repo): https://github.com/MasterAcnolo/Freedom-Loader-Workshop

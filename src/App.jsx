@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
@@ -8,12 +9,19 @@ import Download from "./routes/Download";
 import About from "./routes/About";
 import Features from "./routes/Features";
 import FAQ from "./routes/FAQ";
-import Wiki from "./routes/Wiki";
 import Contributing from "./routes/Contributing";
 import Roadmap from "./routes/Roadmap";
 import Terms from "./routes/Terms";
 import Privacy from "./routes/Privacy";
 import Contact from "./routes/Contact";
+
+function LegacyDocsRedirect() {
+    useEffect(() => {
+        window.location.replace("https://docs.freedomloader.acnolo.fr/");
+    }, []);
+
+    return <p>Documentation moved to <a href="https://docs.freedomloader.acnolo.fr/">docs.freedomloader.acnolo.fr</a>.</p>;
+}
 
 function App(){
     return  (
@@ -25,7 +33,7 @@ function App(){
                 <Route path="/about" element={<About />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/features" element={<Features />} />                
-                <Route path="/wiki" element={<Wiki />} />
+                <Route path="/wiki" element={<LegacyDocsRedirect />} />
                 <Route path="/contributing" element={<Contributing />} />
                 <Route path="/roadmap" element={<Roadmap />} />      
                 <Route path="/download" element={<Download />} />

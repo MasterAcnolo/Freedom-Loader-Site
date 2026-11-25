@@ -248,7 +248,7 @@ export default function Footer() {
                     <div className="footer-column">
                         <h4>Community</h4>
                         <Link to="/faq">FAQ</Link>
-                        <Link to="/wiki">Wiki</Link>
+                        <a href="https://docs.freedomloader.acnolo.fr/">Documentation</a>
                         <Link to="/contributing">Contributing</Link>
                         <a href="https://github.com/MasterAcnolo/Freedom-Loader/discussions" target="_blank" rel="noopener noreferrer">Discussions</a>
                     </div>

@@ -9,7 +9,7 @@ export default function FAQ() {
 
     const faqData = {
             "Installation & Usage": [
-                { q: "How do I install Freedom Loader?", a: "Check the download instructions on the Wiki page to get started quickly. We provide a Windows installer, as well as Snap, AppImage, DEB, and RPM packages for Linux." },
+                { q: "How do I install Freedom Loader?", a: "Read the documentation at docs.freedomloader.acnolo.fr for installation instructions. We provide a Windows installer, as well as Snap, AppImage, DEB, and RPM packages for Linux." },
                 { q: "Which operating systems are supported?", a: "Freedom Loader fully supports Windows 10/11 and major Linux distributions (Ubuntu, Debian, Fedora, Arch, etc.)." },
                 { q: "Where are my downloaded files stored?", a: "Files are stored locally in the folder you select during download. The default folder is your Downloads directory." },
                 { q: "How do I update the application?", a: "On Windows and AppImage, updates are downloaded and applied automatically on launch. If you installed via Snap or Fedora Copr on Linux, your system's package manager handles the updates." }
@@ -29,7 +29,7 @@ export default function FAQ() {
             "Support & Community": [
                 { q: "How can I contact the developer?", a: "You can use the contact form on the Contact page or reach out via GitHub or social media." },
                 { q: "Where can I discuss with the community?", a: "Join the GitHub Discussions community or connect via social media platforms to engage with other users." },
-                { q: "Is there documentation available?", a: "Yes, comprehensive documentation is available on the Wiki page with guides for installation, usage, and troubleshooting." }
+                { q: "Is there documentation available?", a: "Yes, visit docs.freedomloader.acnolo.fr for installation, usage, configuration, and troubleshooting guides." }
             ],
             "Security & Privacy": [
                 { q: "Is Freedom Loader safe?", a: "Yes, the app is designed to run locally and does not transmit any personal data or download history to any server. Your privacy is guaranteed." },

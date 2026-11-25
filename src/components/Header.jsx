@@ -229,7 +229,7 @@ export default function Header() {
                         <Link to="/about">About</Link>
                         <Link to="/features">Features</Link>
                         <Link to="/roadmap">Roadmap</Link>
-                        <Link to="/wiki">Wiki</Link>
+                        <a href="https://docs.freedomloader.acnolo.fr/">Documentation</a>
                     </div>
                 </div>
 
