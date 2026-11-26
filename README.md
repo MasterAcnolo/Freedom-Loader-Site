@@ -23,7 +23,7 @@ The Theme Workshop allows you to create and manage custom themes for Freedom Loa
 
 ### Creating a Theme
 
-1. Open the theme editor at https://masteracnolo.github.io/Freedom&20Loader&20Workshop/create.html
+1. Open the theme editor at https://workshop.freedomloader.acnolo.fr/create.html
 2. Customize colors, fonts, and layout using the visual editor
 3. Preview changes in real-time on the left panel
 4. Click "Export .zip" to download your theme
@@ -47,5 +47,5 @@ Share your theme with the community:
 - Main Project: https://github.com/MasterAcnolo/Freedom-Loader
 - Website: https://freedomloader.acnolo.fr
 - Documentation: https://docs.freedomloader.acnolo.fr/
-- Theme Workshop (Website): https://masteracnolo.github.io/Freedom-Loader-Workshop
+- Theme Workshop (Website): https://workshop.freedomloader.acnolo.fr
 - Theme Workshop (Repo): https://github.com/MasterAcnolo/Freedom-Loader-Workshop
