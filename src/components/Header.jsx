@@ -252,8 +252,8 @@ export default function Header() {
                 >
                     <div className="trigger">Workshop <span className="arrow">▾</span></div>
                     <div className="dropdown">
-                        <a href="https://masteracnolo.github.io/Freedom-Loader-Workshop/" target="_blank" rel="noopener noreferrer">Browse Themes</a>
-                        <a href="https://masteracnolo.github.io/Freedom-Loader-Workshop/create.html" target="_blank" rel="noopener noreferrer">Create Theme</a>
+                        <a href="https://workshop.freedomloader.acnolo.fr/" target="_blank" rel="noopener noreferrer">Browse Themes</a>
+                        <a href="https://workshop.freedomloader.acnolo.fr/create.html" target="_blank" rel="noopener noreferrer">Create Theme</a>
                     </div>
                 </div>
 
