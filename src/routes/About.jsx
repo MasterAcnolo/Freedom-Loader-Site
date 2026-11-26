@@ -1,448 +1,467 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
+
+const technologies = [
+    { name: "Electron", img: "./assets/languages/electron.png", desc: "Desktop app foundation" },
+    { name: "Node.js", img: "./assets/languages/nodejs.png", desc: "Background services" },
+    { name: "yt-dlp", img: "./assets/languages/ytDlp.png", desc: "Media extraction" },
+    { name: "FFmpeg", img: "./assets/languages/ffmpeg.png", desc: "Media processing" },
+    { name: "JavaScript", img: "./assets/languages/js.png", desc: "Application logic" },
+    { name: "Express", img: "./assets/languages/express.svg", desc: "Internal API", invert: true },
+];
+
+const principles = [
+    {
+        number: "01",
+        title: "Respect the person using it",
+        description: "A downloader should help you get things done — not distract you with ads, upsells, or unnecessary friction.",
+    },
+    {
+        number: "02",
+        title: "Keep things transparent",
+        description: "Freedom Loader is open source, so anyone can inspect how it works, suggest improvements, and contribute.",
+    },
+    {
+        number: "03",
+        title: "Put you in control",
+        description: "Choose your formats and destination, and keep your media on your own device.",
+    },
+];
 
 export default function About() {
     useEffect(() => {
-        document.title = "About - Freedom Loader";
+        document.title = "About — Freedom Loader";
     }, []);
-
-    const technologies = [
-        { name: "Electron", img: "./assets/languages/electron.png", desc: "Desktop app framework using Chromium and Node.js." },
-        { name: "Node.js", img: "./assets/languages/nodejs.png", desc: "Powering all background processes and filesystem tasks." },
-        { name: "Express", img: "./assets/languages/express.svg", desc: "Powering the internal API", invert: true },
-        { name: "yt-dlp", img: "./assets/languages/ytDlp.png", desc: "Handles all video and audio extraction operations." },
-        { name: "FFmpeg", img: "./assets/languages/ffmpeg.png", desc: "The industry standard for media merging and format conversion." },
-        { name: "Deno", img: "./assets/languages/deno.png", desc: "Powering yt-dlp verification.", invert: false },
-        { name: "Winston", img: "./assets/languages/winston.png", desc: "Powering the Logger System" },
-        { name: "JavaScript", img: "./assets/languages/js.png", desc: "Core logic and user interaction within the app." },
-    ];
-
-    const features = [
-        { title: "Download Media", desc: "Download high-quality video and audio tracks easily." },
-        { title: "Playlist Automation", desc: "Download entire playlists and auto-organize them into folders." },
-        { title: "Cross-Platform", desc: "Fully supported on Windows 10/11 and major Linux distributions." },
-        { title: "Firefox Integration", desc: "Securely use local cookies to bypass age-restricted content." },
-        { title: "Advanced Codecs", desc: "Force H.264, H.265, AV1, or VP9 for perfect hardware compatibility." },
-        { title: "Metadata Injection", desc: "Automatically embed titles, artists, and thumbnails into your files." },
-        { title: "Hardware Acceleration", desc: "GPU-accelerated UI rendering for a smoother experience." },
-        { title: "Dynamic Theme Engine", desc: "Change UI themes on the fly without restarting the app." },
-        { title: "Community Workshop", desc: "Download and share custom themes with other users." },
-        { title: "Discord Rich Presence", desc: "Showcase your current downloads directly on your Discord profile." },
-        { title: "Custom Output", desc: "Flexible download folder settings and file renaming." },
-        { title: "Background Mode", desc: "Minimize to the system tray to let downloads finish quietly." },
-        { title: "Comprehensive Logs", desc: "Detailed local logs for diagnostics and bug reporting." },
-        { title: "Auto Updates", desc: "Automatic app version management on startup." },
-        { title: "Clean & Safe Boot", desc: "Optimized startup system verifying all dependencies safely." },
-        { title: "100% Local & Private", desc: "No ads, no trackers, no analytics. Your data stays yours." },
-    ];
 
     return (
         <>
             <style>{`
-                main {
-                    width: 100%;
-                }
-
-                .about {
-                    padding: 80px 20%;
+                .about-page {
+                    --about-accent: var(--accent-primary);
                     color: var(--text-primary);
-                    margin-top: 30px;
                     background: var(--bg-primary);
                 }
 
-                .about-container, .history-container, .support-container {
-                    max-width: 900px;
+                .about-container {
+                    width: min(1080px, calc(100% - 48px));
                     margin: 0 auto;
                 }
 
-                .about h1 {
-                    font-size: 3rem;
-                    margin-bottom: 30px;
-                    font-family: "Poppins", sans-serif;
-                    text-align: center;
-                    color: var(--text-primary);
-                }
-
-                .about p {
-                    font-size: 1.15rem;
-                    line-height: 1.8;
-                    opacity: 0.9;
-                    margin-bottom: 20px;
-                    text-align: justify;
-                    color: var(--text-secondary);
-                }
-
-                .about strong {
-                    color: var(--text-primary);
-                    font-weight: 600;
-                }
-
-                .story-link {
-                    color: var(--accent-primary);
-                    text-decoration: none;
-                    transition: all 0.2s ease;
-                }
-
-                .story-link:hover {
-                    color: var(--accent-secondary);
-                    text-decoration: underline;
-                }
-
-                .history {
-                    padding: 60px 20%;
-                    background: var(--bg-secondary);
-                }
-
-                .history h2 {
-                    font-size: 2.5rem;
-                    margin-bottom: 30px;
-                    text-align: center;
-                    font-family: "Poppins", sans-serif;
-                    color: var(--text-primary);
-                }
-
-                .history p {
-                    font-size: 1.1rem;
-                    line-height: 1.8;
-                    opacity: 0.9;
-                    margin-bottom: 20px;
-                    text-align: justify;
-                    color: var(--text-secondary);
-                }
-
-                .features {
-                    padding: 60px 20%;
+                .about-hero {
+                    padding: clamp(72px, 10vw, 118px) 0 78px;
                     background: var(--bg-primary);
+                    text-align: center;
+                }
+
+                .about-eyebrow {
+                    margin: 0 0 16px;
+                    color: var(--about-accent);
+                    font-size: 0.98rem;
+                    font-weight: 700;
+                    letter-spacing: 0;
+                }
+
+                .about-hero h1 {
+                    max-width: 800px;
+                    margin: 0 auto;
+                    font-size: clamp(2.8rem, 7vw, 5.4rem);
+                    letter-spacing: 0;
+                    line-height: 1.12;
+                }
+
+                .about-hero h1 span {
+                    color: var(--about-accent);
+                }
+
+                .about-hero > .about-container > p:last-child {
+                    max-width: 650px;
+                    margin: 24px auto 0;
+                    color: var(--text-secondary);
+                    font-size: clamp(1.05rem, 2vw, 1.2rem);
+                    line-height: 1.8;
+                }
+
+                .about-story {
+                    padding: 76px 0 92px;
                     border-top: 1px solid var(--border-color);
                 }
 
-                .features h2 {
-                    font-size: 2.5rem;
-                    margin-bottom: 40px;
-                    text-align: center;
-                    font-family: "Poppins", sans-serif;
-                    color: var(--text-primary);
-                }
-
-                .features-grid {
+                .about-story-grid {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-                    gap: 20px;
-                    margin-bottom: 60px;
+                    grid-template-columns: 0.8fr 1.2fr;
+                    gap: clamp(36px, 8vw, 100px);
                 }
 
-                .feature-card {
-                    padding: 25px;
-                    background: var(--card-bg);
-                    border: 1px solid var(--border-color);
-                    border-radius: 10px;
-                    text-align: left;
-                    transition: all 0.3s ease;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 8px;
-                }
-
-                .feature-card:hover {
-                    background: var(--card-hover-bg);
-                    border-color: var(--text-secondary);
-                    transform: translateY(-4px);
-                }
-
-                .feature-card h3 {
-                    font-size: 1.1rem;
+                .about-story h2,
+                .about-values h2,
+                .about-tech h2,
+                .about-support h2 {
                     margin: 0;
-                    color: var(--text-primary);
-                    font-weight: 600;
+                    font-size: clamp(2rem, 4vw, 3.2rem);
+                    letter-spacing: 0;
+                    line-height: 1.2;
                 }
 
-                .feature-card p {
-                    font-size: 0.95rem;
+                .about-story-copy p {
+                    margin: 0 0 18px;
+                    color: var(--text-secondary);
+                    line-height: 1.85;
+                }
+
+                .about-story-copy p:last-child {
+                    margin-bottom: 0;
+                }
+
+                .about-inline-link {
+                    color: var(--about-accent);
+                    font-weight: 600;
+                    text-decoration: none;
+                }
+
+                .about-inline-link:hover {
+                    text-decoration: underline;
+                    text-underline-offset: 4px;
+                }
+
+                .about-values {
+                    padding: 84px 0 96px;
+                    border-top: 1px solid var(--border-color);
+                    background: var(--bg-secondary);
+                }
+
+                .about-section-heading {
+                    max-width: 650px;
+                    margin-bottom: 40px;
+                }
+
+                .about-section-heading .about-eyebrow {
+                    margin-bottom: 14px;
+                }
+
+                .about-section-heading > p:last-child {
+                    margin: 15px 0 0;
+                    color: var(--text-secondary);
+                    line-height: 1.8;
+                }
+
+                .about-value-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                    gap: 16px;
+                }
+
+                .about-value-card {
+                    padding: 26px;
+                    border: 1px solid var(--border-color);
+                    border-radius: 18px;
+                    background: var(--card-bg);
+                }
+
+                .about-value-number {
+                    color: var(--about-accent);
+                    font-size: 0.82rem;
+                    font-weight: 700;
+                    letter-spacing: 0.04em;
+                }
+
+                .about-value-card h3 {
+                    margin: 28px 0 10px;
+                    font-size: 1.12rem;
+                }
+
+                .about-value-card p {
                     margin: 0;
                     color: var(--text-secondary);
-                    opacity: 0.8;
+                    font-size: 0.92rem;
+                    line-height: 1.75;
                 }
 
-                .technos {
-                    padding: 60px 20%;
-                    background: var(--bg-secondary);
+                .about-tech {
+                    padding: 84px 0 96px;
                     border-top: 1px solid var(--border-color);
                 }
 
-                .technos h2 {
-                    font-size: 2.5rem;
-                    margin-bottom: 40px;
-                    text-align: center;
-                    font-family: "Poppins", sans-serif;
-                    color: var(--text-primary);
-                }
-
-                .tech-grid {
+                .about-tech-grid {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                    gap: 30px;
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                    gap: 12px;
                 }
 
-                .tech-card {
+                .about-tech-card {
                     display: flex;
-                    flex-direction: column;
+                    min-height: 88px;
                     align-items: center;
-                    gap: 15px;
-                    padding: 25px;
-                    background: var(--card-bg);
+                    gap: 16px;
+                    padding: 16px 18px;
                     border: 1px solid var(--border-color);
-                    border-radius: 12px;
-                    text-align: center;
-                    transition: all 0.3s ease;
+                    border-radius: 15px;
+                    background: var(--card-bg);
                 }
 
-                .tech-card:hover {
-                    background: var(--card-hover-bg);
-                    border-color: var(--text-secondary);
-                    transform: translateY(-5px);
-                }
-
-                .tech-card img {
-                    height: 60px;
-                    max-width: 100%;
+                .about-tech-card img {
+                    width: 42px;
+                    height: 42px;
+                    flex: 0 0 42px;
                     object-fit: contain;
                 }
 
-                .tech-card h3 {
-                    font-size: 1.3rem;
-                    margin: 0;
-                    color: var(--text-primary);
+                .about-tech-card img.invert-dark {
+                    filter: invert(1);
                 }
 
-                .tech-card p {
+                :root.light-theme .about-tech-card img.invert-dark {
+                    filter: none;
+                }
+
+                .about-tech-card strong,
+                .about-tech-card span {
+                    display: block;
+                }
+
+                .about-tech-card strong {
                     font-size: 0.95rem;
-                    opacity: 0.8;
-                    margin: 0;
-                    color: var(--text-secondary);
                 }
 
-                .support {
-                    padding: 60px 20%;
-                    background: var(--bg-primary);
+                .about-tech-card span {
+                    margin-top: 4px;
+                    color: var(--text-secondary);
+                    font-size: 0.8rem;
+                }
+
+                .about-support {
+                    padding: 76px 0;
                     border-top: 1px solid var(--border-color);
+                    background: var(--bg-secondary);
                 }
 
-                .support h2 {
-                    font-size: 2.5rem;
-                    margin-bottom: 20px;
-                    text-align: center;
-                    font-family: "Poppins", sans-serif;
-                    color: var(--text-primary);
-                }
-
-                .support > p {
-                    font-size: 1.1rem;
-                    text-align: center;
-                    margin-bottom: 40px;
-                    opacity: 0.9;
-                    color: var(--text-secondary);
-                }
-
-                .support-actions {
-                    display: flex;
-                    gap: 20px;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    max-width: 900px;
-                    margin: 0 auto;
-                }
-
-                .btn {
-                    display: inline-flex;
+                .about-support-inner {
+                    display: grid;
+                    grid-template-columns: minmax(0, 1fr) auto;
                     align-items: center;
+                    gap: 40px;
+                    padding: clamp(28px, 5vw, 52px);
+                    border: 1px solid var(--border-color);
+                    border-radius: 12px;
+                    background: var(--bg-primary);
+                    box-shadow: var(--shadow);
+                }
+
+                .about-support-copy {
+                    max-width: 650px;
+                }
+
+                .about-support-copy .about-eyebrow {
+                    margin-bottom: 12px;
+                }
+
+                .about-support h2 {
+                    font-size: clamp(2rem, 3.8vw, 2.8rem);
+                }
+
+                .about-support-copy > p:last-child {
+                    margin: 12px 0 0;
+                    color: var(--text-secondary);
+                    line-height: 1.75;
+                }
+
+                .about-support-actions {
+                    display: flex;
+                    flex-direction: column;
                     gap: 10px;
-                    padding: 12px 30px;
+                    flex-shrink: 0;
+                }
+
+                .about-button {
+                    display: inline-flex;
+                    min-height: 48px;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 9px;
+                    padding: 0 20px;
+                    border: 1px solid var(--border-color);
                     border-radius: 8px;
-                    text-decoration: none;
-                    font-weight: 600;
-                    font-size: 1rem;
-                    transition: all 0.3s ease;
-                    border: 2px solid transparent;
-                    cursor: pointer;
-                }
-
-                .btn.primary {
-                    background-color: var(--accent-primary);
-                    color: white;
-                }
-
-                .btn.primary:hover {
-                    background-color: var(--accent-hover);
-                    transform: scale(1.05);
-                }
-
-                .btn.secondary {
-                    border: 2px solid var(--accent-primary);
                     color: var(--text-primary);
-                    background-color: transparent;
+                    font-size: 0.92rem;
+                    font-weight: 600;
+                    text-decoration: none;
+                    transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
                 }
 
-                .btn.secondary:hover {
-                    background-color: var(--card-bg);
+                .about-button:hover {
+                    transform: translateY(-2px);
+                    border-color: var(--about-accent);
+                }
+
+                .about-button.primary {
+                    border-color: var(--about-accent);
+                    background: var(--about-accent);
+                    color: #fff;
+                }
+
+                .about-button.primary:hover {
                     border-color: var(--accent-hover);
-                    transform: scale(1.05);
+                    background: var(--accent-hover);
                 }
 
-                /* Responsive */
-                @media (max-width: 900px) {
-                    .about, .history, .features, .technos, .support {
-                        padding: 50px 5%;
+                @media (max-width: 760px) {
+                    .about-story-grid {
+                        grid-template-columns: 1fr;
+                        gap: 28px;
                     }
 
-                    .about h1 {
-                        font-size: 2.3rem;
+                    .about-value-grid,
+                    .about-tech-grid {
+                        grid-template-columns: repeat(2, minmax(0, 1fr));
                     }
 
-                    .history h2, .features h2, .technos h2, .support h2 {
-                        font-size: 2rem;
+                    .about-support-inner {
+                        align-items: flex-start;
+                        grid-template-columns: 1fr;
+                        gap: 24px;
                     }
 
-                    .features-grid {
-                        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    .about-support-actions {
+                        width: 100%;
+                        flex-direction: row;
+                    }
+                }
+
+                @media (max-width: 520px) {
+                    .about-container {
+                        width: min(100% - 32px, 480px);
                     }
 
-                    .tech-grid {
-                        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                        gap: 20px;
+                    .about-hero {
+                        padding: 64px 0;
                     }
 
-                    .support-actions {
+                    .about-story,
+                    .about-values,
+                    .about-tech,
+                    .about-support {
+                        padding: 62px 0;
+                    }
+
+                    .about-value-grid,
+                    .about-tech-grid {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .about-support-actions {
+                        width: 100%;
                         flex-direction: column;
                     }
 
-                    .btn {
-                        justify-content: center;
-                    }
-                }
-
-                /* Thème sombre (défaut) */
-                .invert-dark {
-                    filter: invert(1);
-                }
-
-                /* Thème clair */
-                :root.light-theme .invert-dark {
-                    filter: invert(0);
-                }
-
-                /* Deno : inverse seulement en light */
-                :root.dark-theme .tech-card img[alt="Deno"] {
-                    filter: invert(1);
-                }
-
-                @media (max-width: 500px) {
-                    .about, .history, .features, .technos, .support {
-                        padding: 30px 3%;
-                    }
-
-                    .about h1 {
-                        font-size: 1.8rem;
-                    }
-
-                    .history h2, .features h2, .technos h2, .support h2 {
-                        font-size: 1.5rem;
-                        margin-bottom: 25px;
-                    }
-
-                    .about p, .history p {
-                        font-size: 1rem;
-                    }
-
-                    .features-grid {
-                        grid-template-columns: 1fr;
-                        gap: 15px;
-                    }
-
-                    .tech-grid {
-                        grid-template-columns: 1fr;
+                    .about-button {
+                        width: 100%;
                     }
                 }
             `}</style>
 
-            <main>
-                {/* About Section */}
-                <section className="about">
+            <main className="about-page">
+                <section className="about-hero">
                     <div className="about-container">
-                        <h1>About Freedom Loader</h1>
+                        <p className="about-eyebrow">The project behind the app</p>
+                        <h1>Freedom should be part of <span>the experience.</span></h1>
                         <p>
-                            Freedom Loader is a lightweight desktop app built with <strong>Electron</strong> that uses
-                            <strong> yt-dlp</strong> to download videos and audio from the web easily and privately.
-                            It's made for people who just want control over their media - without ads, limits, or paywalls.
-                        </p>
-                        <p>
-                            I started this project out of frustration with the state of most downloaders.
-                            Too many were filled with ads, shady code, or unnecessary restrictions.
-                            Freedom Loader exists to put <strong>freedom back into your downloads</strong>.
+                            Freedom Loader is a free, open-source desktop app that makes downloading online
+                            video and audio straightforward, while keeping privacy and user choice at its core.
                         </p>
                     </div>
                 </section>
 
-                {/* History Section */}
-                <section className="history">
-                    <div className="history-container">
-                        <h2>The Story Behind It</h2>
-                        <p>
-                            Freedom Loader was born from a simple need: downloading media without hassle.
-                            I wanted a tool that respected privacy, looked clean, and worked - period.
-                            No trackers, no "Pro" version, no weird popups.
-                            Just a reliable, open-source downloader for everyone.
-                        </p>
-                        <p>
-                            Over time, it became more than a tool - it's a statement against overcomplication.
-                            Built during late nights, Freedom Loader is the kind of app I wish existed
-                            when I was younger: fast, transparent, and free. Full story available <a href="https://masteracnolo.github.io/Blog/pourquoi-freedom-loader/" target="_blank" rel="noopener noreferrer" className="story-link">Here</a>
-                        </p>
+                <section className="about-story">
+                    <div className="about-container about-story-grid">
+                        <div>
+                            <p className="about-eyebrow">A small idea, built with purpose</p>
+                            <h2>Why Freedom Loader exists</h2>
+                        </div>
+                        <div className="about-story-copy">
+                            <p>
+                                Freedom Loader started with a simple frustration: many downloaders felt cluttered,
+                                restrictive, or difficult to trust. I wanted something that felt clear and useful —
+                                a tool that helps you get the job done without getting between you and your media.
+                            </p>
+                            <p>
+                                The project has grown over time, but the idea remains the same: keep it approachable,
+                                keep it transparent, and give people more control over how they use their devices.
+                                Read the <a className="about-inline-link" href="https://masteracnolo.github.io/Blog/pourquoi-freedom-loader/" target="_blank" rel="noopener noreferrer">full story</a>.
+                            </p>
+                        </div>
                     </div>
                 </section>
 
-                {/* Features Section */}
-                <section className="features">
-                    <h2>Main Features</h2>
-                    <div className="features-grid">
-                        {features.map((feature, idx) => (
-                            <div key={idx} className="feature-card">
-                                <h3>{feature.title}</h3>
-                                <p>{feature.desc}</p>
-                            </div>
-                        ))}
+                <section className="about-values">
+                    <div className="about-container">
+                        <div className="about-section-heading">
+                            <p className="about-eyebrow">What guides the project</p>
+                            <h2>Built around your choices.</h2>
+                            <p>These principles shape the product, from the interface to the way the project is shared.</p>
+                        </div>
+                        <div className="about-value-grid">
+                            {principles.map((principle) => (
+                                <article className="about-value-card" key={principle.number}>
+                                    <span className="about-value-number">{principle.number}</span>
+                                    <h3>{principle.title}</h3>
+                                    <p>{principle.description}</p>
+                                </article>
+                            ))}
+                        </div>
                     </div>
                 </section>
 
-                {/* Technologies Section */}
-                <section className="technos">
-                    <h2>Technologies Used</h2>
-                    <div className="tech-grid">
-                        {technologies.map((tech, idx) => (
-                            <div key={idx} className="tech-card" id={tech.name}>
-                                <img 
-                                    src={tech.img} 
-                                    alt={tech.name}
-                                    className={tech.invert ? "invert-dark" : ""}
-                                />
-                                <h3>{tech.name}</h3>
-                                <p>{tech.desc}</p>
-                            </div>
-                        ))}
+                <section className="about-tech">
+                    <div className="about-container">
+                        <div className="about-section-heading">
+                            <p className="about-eyebrow">The tools behind it</p>
+                            <h2>Made with proven technology.</h2>
+                            <p>Freedom Loader brings together a focused set of open-source tools for its desktop app and media workflow.</p>
+                        </div>
+                        <div className="about-tech-grid">
+                            {technologies.map((technology) => (
+                                <div className="about-tech-card" key={technology.name}>
+                                    <img
+                                        src={technology.img}
+                                        alt=""
+                                        aria-hidden="true"
+                                        className={technology.invert ? "invert-dark" : ""}
+                                    />
+                                    <div>
+                                        <strong>{technology.name}</strong>
+                                        <span>{technology.desc}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </section>
 
-                {/* Support Section */}
-                <section className="support">
-                    <h2>Support the Project</h2>
-                    <p>If you want to help Freedom Loader grow, you can contribute or support it directly.</p>
-                    <div className="support-actions">
-                        <a 
-                            href="https://github.com/MasterAcnolo/Freedom-Loader" 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn secondary"
-                        >
-                            Contribute on GitHub
-                        </a>
+                <section className="about-support">
+                    <div className="about-container about-support-inner">
+                        <div className="about-support-copy">
+                            <p className="about-eyebrow">Your feedback matters</p>
+                            <h2>Found a bug or have an idea?</h2>
+                            <p>
+                                Open an issue or join the discussion on GitHub. Pull requests are welcome too.
+                            </p>
+                        </div>
+                        <div className="about-support-actions">
+                            <a
+                                href="https://github.com/MasterAcnolo/Freedom-Loader/issues/new/choose"
+                                className="about-button primary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Open an issue <i className="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                            <a
+                                href="https://github.com/MasterAcnolo/Freedom-Loader/discussions"
+                                className="about-button"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Join the discussion <i className="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </div>
                     </div>
                 </section>
             </main>

@@ -227,8 +227,6 @@ export default function Header() {
                     <div className="trigger">Project <span className="arrow">▾</span></div>
                     <div className="dropdown">
                         <Link to="/about">About</Link>
-                        <Link to="/features">Features</Link>
-                        <Link to="/roadmap">Roadmap</Link>
                         <a href="https://docs.freedomloader.acnolo.fr/">Documentation</a>
                     </div>
                 </div>

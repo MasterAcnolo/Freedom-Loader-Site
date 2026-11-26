@@ -131,8 +131,6 @@ export default function MobileMenu({ open, onClose }) {
             <div className="section">
                 <div className="title">Project</div>
                 <Link className="link" to="/about" onClick={onClose}>About</Link>
-                <Link className="link" to="/features" onClick={onClose}>Features</Link>
-                <Link className="link" to="/roadmap" onClick={onClose}>Roadmap</Link>
                 <a className="link" href="https://docs.freedomloader.acnolo.fr/" onClick={onClose}>Documentation</a>
             </div>
 

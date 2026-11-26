@@ -6,14 +6,23 @@
     <script>
       const legacyHost = 'masteracnolo.github.io';
       const destination = 'https://freedomloader.acnolo.fr';
+      const docsDestination = 'https://docs.freedomloader.acnolo.fr';
       const legacyBase = '/Freedom-Loader-Site';
+      const legacyDocsBase = '/Freedom-Loader-Docs';
+      const isLegacyDocsPath = window.location.pathname === legacyDocsBase
+        || window.location.pathname.startsWith(`${legacyDocsBase}/`);
       const isLegacyBase = window.location.pathname === legacyBase
         || window.location.pathname.startsWith(`${legacyBase}/`);
       const path = isLegacyBase
         ? window.location.pathname.slice(legacyBase.length) || '/'
         : window.location.pathname;
 
-      if (window.location.hostname === legacyHost) {
+      if (isLegacyDocsPath) {
+        const docsPath = window.location.pathname.slice(legacyDocsBase.length) || '/';
+        window.location.replace(
+          `${docsDestination}${docsPath}${window.location.search}${window.location.hash}`
+        );
+      } else if (window.location.hostname === legacyHost) {
         window.location.replace(
           `${destination}${path}${window.location.search}${window.location.hash}`
         );

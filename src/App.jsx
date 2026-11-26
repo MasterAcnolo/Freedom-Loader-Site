@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Navigate, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -7,10 +7,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import Home from "./routes/Home";
 import Download from "./routes/Download";
 import About from "./routes/About";
-import Features from "./routes/Features";
 import FAQ from "./routes/FAQ";
-import Contributing from "./routes/Contributing";
-import Roadmap from "./routes/Roadmap";
 import Terms from "./routes/Terms";
 import Privacy from "./routes/Privacy";
 import Contact from "./routes/Contact";
@@ -23,6 +20,12 @@ function LegacyDocsRedirect() {
     return <p>Documentation moved to <a href="https://docs.freedomloader.acnolo.fr/">docs.freedomloader.acnolo.fr</a>.</p>;
 }
 
+function ContributingRedirect() {
+    useEffect(() => {
+        window.location.replace("https://docs.freedomloader.acnolo.fr/contributing/");
+    }, []);
+}
+
 function App(){
     return  (
         <>
@@ -32,10 +35,10 @@ function App(){
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/faq" element={<FAQ />} />
-                <Route path="/features" element={<Features />} />                
+                <Route path="/features" element={<Navigate to="/about" replace />} />
                 <Route path="/wiki" element={<LegacyDocsRedirect />} />
-                <Route path="/contributing" element={<Contributing />} />
-                <Route path="/roadmap" element={<Roadmap />} />      
+                <Route path="/contributing" element={<ContributingRedirect />} />
+                <Route path="/roadmap" element={<Navigate to="/about" replace />} />
                 <Route path="/download" element={<Download />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/privacy" element={<Privacy />} />

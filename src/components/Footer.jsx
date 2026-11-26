@@ -224,8 +224,6 @@ export default function Footer() {
                         <h4>Site</h4>
                         <Link to="/">Home</Link>
                         <Link to="/about">About</Link>
-                        <Link to="/features">Features</Link>
-                        <Link to="/roadmap">Roadmap</Link>
                         <Link to="/download">Download</Link>
                     </div>
 
@@ -258,20 +256,12 @@ export default function Footer() {
                         <h4>Follow Us</h4>
                         <div className="footer-socials">
                             <a 
-                                href="https://masteracnolo.github.io/" 
+                                href="https://acnolo.fr/"
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 title="Website"
                             >
                                 <img src="./assets/icon/globe-solid-full.svg" alt="Website" />
-                            </a>
-                            <a 
-                                href="https://x.com/MasterAcnolo" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                title="Twitter/X"
-                            >
-                                <img src="./assets/icon/x-twitter-brands-solid-full.svg" alt="Twitter/X" />
                             </a>
                             <a 
                                 href="https://github.com/MasterAcnolo" 
@@ -281,14 +271,6 @@ export default function Footer() {
                             >
                                 <img src="./assets/icon/github-brands-solid-full.svg" alt="GitHub" />
                             </a>
-                            {/* <a 
-                                href="https://www.youtube.com/channel/UCS55e2-ZslXqGzznB_7N4Sg" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                title="YouTube"
-                            >
-                                <img src="./assets/icon/youtube-brands-solid-full.svg" alt="YouTube" />
-                            </a> */}
                         </div>
                     </div>
                 </div>

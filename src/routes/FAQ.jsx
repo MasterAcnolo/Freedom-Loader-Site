@@ -1,265 +1,286 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+
+const faqData = {
+    "Installation & updates": [
+        {
+            q: "How do I install Freedom Loader?",
+            a: "Download the Windows installer or choose a Linux package from the Download page. Installation notes and troubleshooting are available in the online documentation.",
+        },
+        {
+            q: "Which operating systems are supported?",
+            a: "Freedom Loader currently provides builds for Windows 10/11 and Linux. Linux downloads include AppImage, DEB, RPM, Snap, and Fedora COPR options. There is no official macOS build at this time.",
+        },
+        {
+            q: "How do I update the application?",
+            a: "Windows and AppImage builds can update through the app. Snap and Fedora COPR installations are updated by their package managers. For other Linux packages, check the Download page for the latest release.",
+        },
+    ],
+    "Downloads & settings": [
+        {
+            q: "Where are my downloaded files saved?",
+            a: "Downloads are saved to the location selected in the app. You can change the output folder in the app settings.",
+        },
+        {
+            q: "What can I download with Freedom Loader?",
+            a: "Freedom Loader uses yt-dlp to retrieve online video and audio. Supported sites and available formats depend on yt-dlp and the source website, and can change over time.",
+        },
+        {
+            q: "Do I need Firefox to use the app?",
+            a: "No. Firefox is only used for the optional local-cookie feature, which can help access content that requires an existing browser session. You can use the app without Firefox.",
+        },
+        {
+            q: "Can I customize downloads and the app?",
+            a: "Yes. Options include output location, playlist handling, media format and codec choices, metadata, and custom themes. Some options depend on the source media.",
+        },
+    ],
+    "Privacy & security": [
+        {
+            q: "Does Freedom Loader collect my personal data?",
+            a: "The app does not include ads, analytics, or tracking. Download history, logs, settings, and media are stored locally. Network requests are still needed to retrieve media and check for releases; optional features such as Discord Rich Presence may share information when enabled.",
+        },
+        {
+            q: "Is Freedom Loader safe to use?",
+            a: "Freedom Loader is open source and designed to process downloads on your device. As with any software, download it from the official site or GitHub releases, and only download media you have the right to access.",
+        },
+        {
+            q: "How do I report a security issue?",
+            a: "Please follow the private reporting instructions in the Security policy on the Freedom Loader GitHub repository.",
+        },
+    ],
+    "Help & community": [
+        {
+            q: "How do I report a bug or suggest an improvement?",
+            a: "Report bugs through GitHub Issues, or share ideas and questions in GitHub Discussions.",
+        },
+        {
+            q: "Can I contribute to Freedom Loader?",
+            a: "Yes. You can contribute code, documentation, bug reports, or ideas through the project repository on GitHub.",
+        },
+        {
+            q: "Where can I find more help?",
+            a: "Visit the online documentation for setup and usage information, or use the Contact page to get in touch.",
+        },
+    ],
+};
 
 export default function FAQ() {
+    const [expanded, setExpanded] = useState(null);
+
     useEffect(() => {
         document.title = "FAQ - Freedom Loader";
     }, []);
 
-    const [expanded, setExpanded] = useState(null);
-
-    const faqData = {
-            "Installation & Usage": [
-                { q: "How do I install Freedom Loader?", a: "Read the documentation at docs.freedomloader.acnolo.fr for installation instructions. We provide a Windows installer, as well as Snap, AppImage, DEB, and RPM packages for Linux." },
-                { q: "Which operating systems are supported?", a: "Freedom Loader fully supports Windows 10/11 and major Linux distributions (Ubuntu, Debian, Fedora, Arch, etc.)." },
-                { q: "Where are my downloaded files stored?", a: "Files are stored locally in the folder you select during download. The default folder is your Downloads directory." },
-                { q: "How do I update the application?", a: "On Windows and AppImage, updates are downloaded and applied automatically on launch. If you installed via Snap or Fedora Copr on Linux, your system's package manager handles the updates." }
-            ],
-            "Features & Limitations": [
-                { q: "What exactly does Freedom Loader do?", a: "Freedom Loader is a graphical interface that allows you to cleanly download video and audio content from the internet with full metadata and various quality options." },
-                { q: "Can I use Freedom Loader with platforms other than YouTube?", a: "Yes! While heavily optimized for YouTube (playlists, metadata, etc.), the underlying engine supports downloading from hundreds of different websites." },
-                { q: "Why is Mozilla Firefox required?", a: "Freedom Loader can securely extract cookies from your local Firefox installation to allow downloading age-restricted or members-only content without requiring you to log in through the app." },
-                { q: "Are there advanced options or settings?", a: "Yes! You can change video codecs (H.264, AV1, VP9), choose quality thresholds, automate playlist folder creation, and even build custom UI themes." }
-            ],
-            "Contributions & Open Source": [
-                { q: "Can I contribute to the project?", a: "Absolutely! All contributors are welcome. You can open issues, submit pull requests, or discuss ideas on GitHub." },
-                { q: "How do I report a bug or propose a feature?", a: "Use GitHub Discussions or open an issue on the repository using our provided templates to suggest ideas or report problems." },
-                { q: "What license does Freedom Loader use?", a: "Freedom Loader is open source under the GNU GPL v3 license. You can copy and redistribute the code while crediting the original author." },
-                { q: "Can I use the code in my own projects?", a: "Yes, freely! However, you must keep original credits and respect the GNU GPL v3 license." }
-            ],
-            "Support & Community": [
-                { q: "How can I contact the developer?", a: "You can use the contact form on the Contact page or reach out via GitHub or social media." },
-                { q: "Where can I discuss with the community?", a: "Join the GitHub Discussions community or connect via social media platforms to engage with other users." },
-                { q: "Is there documentation available?", a: "Yes, visit docs.freedomloader.acnolo.fr for installation, usage, configuration, and troubleshooting guides." }
-            ],
-            "Security & Privacy": [
-                { q: "Is Freedom Loader safe?", a: "Yes, the app is designed to run locally and does not transmit any personal data or download history to any server. Your privacy is guaranteed." },
-                { q: "Is my personal data collected?", a: "No. We have no ads, no trackers, and no analytics. Everything happens on your machine." },
-                { q: "What should I do if I encounter a security issue?", a: "Please refer to our SECURITY.md file on GitHub and contact the maintainer directly to report security concerns." }
-            ]
-        };
-
     const toggleExpand = (category, index) => {
         const key = `${category}-${index}`;
-        setExpanded(expanded === key ? null : key);
+        setExpanded((current) => current === key ? null : key);
     };
 
     return (
         <>
             <style>{`
-                main {
-                    width: 100%;
-                }
-
                 .faq-page {
-                    padding: 80px 5%;
+                    min-height: 70vh;
+                    padding: clamp(56px, 8vw, 88px) 24px;
                     color: var(--text-primary);
-                    margin-top: 30px;
                     background: var(--bg-primary);
-                    min-height: 100vh;
                 }
 
                 .faq-header {
-                    max-width: 1000px;
-                    margin: 0 auto 60px;
+                    max-width: 760px;
+                    margin: 0 auto 52px;
                     text-align: center;
                 }
 
                 .faq-header h1 {
-                    font-size: 3.5rem;
+                    margin: 0;
+                    font-size: clamp(2.2rem, 5vw, 3.5rem);
                     font-weight: 700;
-                    margin-bottom: 20px;
-                    font-family: "Poppins", sans-serif;
-                    color: var(--text-primary);
+                    letter-spacing: 0;
+                    line-height: 1.15;
                 }
 
                 .faq-header p {
-                    font-size: 1.1rem;
-                    color: var(--text-secondary);
                     max-width: 600px;
-                    margin: 0 auto;
-                    line-height: 1.6;
+                    margin: 16px auto 0;
+                    color: var(--text-secondary);
+                    font-size: 1.05rem;
+                    line-height: 1.7;
                 }
 
                 .faq-container {
-                    max-width: 900px;
+                    max-width: 860px;
                     margin: 0 auto;
                 }
 
                 .faq-category {
-                    margin-bottom: 50px;
+                    margin-bottom: 38px;
                 }
 
-                .category-title {
-                    font-size: 1.8rem;
-                    font-weight: 700;
-                    margin-bottom: 25px;
-                    padding-bottom: 15px;
-                    border-bottom: 3px solid var(--accent-primary);
-                    color: var(--text-primary);
+                .faq-category:last-child {
+                    margin-bottom: 0;
+                }
+
+                .faq-category-title {
+                    margin: 0 0 14px;
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid var(--border-color);
+                    font-size: 1.35rem;
+                    font-weight: 600;
                 }
 
                 .faq-item {
-                    background: var(--card-bg);
-                    border: 1px solid var(--border-color);
-                    border-radius: 10px;
-                    margin-bottom: 12px;
+                    margin-bottom: 10px;
                     overflow: hidden;
-                    transition: all 0.3s ease;
+                    border: 1px solid var(--border-color);
+                    border-radius: 9px;
+                    background: var(--card-bg);
+                    transition: border-color 0.2s ease, background-color 0.2s ease;
                 }
 
-                .faq-item:hover {
-                    border-color: var(--text-secondary);
-                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                .faq-item:hover,
+                .faq-item.expanded {
+                    border-color: var(--accent-primary);
+                    background: var(--card-hover-bg);
                 }
 
                 .faq-question-btn {
-                    width: 100%;
-                    padding: 20px;
-                    background: transparent;
-                    border: none;
-                    color: var(--text-primary);
-                    font-size: 1.1rem;
-                    font-weight: 600;
-                    cursor: pointer;
                     display: flex;
+                    width: 100%;
                     align-items: center;
                     justify-content: space-between;
-                    gap: 15px;
-                    transition: all 0.3s ease;
+                    gap: 18px;
+                    padding: 18px 20px;
+                    border: 0;
+                    background: transparent;
+                    color: var(--text-primary);
+                    font: inherit;
+                    font-size: 1rem;
+                    font-weight: 600;
                     text-align: left;
+                    cursor: pointer;
                 }
 
-                .faq-question-btn:hover {
-                    color: var(--accent-primary);
-                }
-
+                .faq-question-btn:hover,
                 .faq-item.expanded .faq-question-btn {
                     color: var(--accent-primary);
                 }
 
+                .faq-question-btn:focus-visible {
+                    outline: 2px solid var(--accent-primary);
+                    outline-offset: -3px;
+                }
+
                 .faq-icon {
-                    font-size: 1.3rem;
-                    transition: transform 0.3s ease;
-                    flex-shrink: 0;
+                    flex: 0 0 auto;
+                    color: var(--text-tertiary);
+                    font-size: 0.9rem;
+                    transition: transform 0.2s ease, color 0.2s ease;
                 }
 
                 .faq-item.expanded .faq-icon {
                     transform: rotate(180deg);
+                    color: var(--accent-primary);
                 }
 
                 .faq-answer {
-                    max-height: 0;
-                    overflow: hidden;
-                    transition: max-height 0.3s ease;
+                    display: grid;
+                    grid-template-rows: 0fr;
+                    transition: grid-template-rows 0.25s ease;
                 }
 
                 .faq-item.expanded .faq-answer {
-                    max-height: 500px;
+                    grid-template-rows: 1fr;
+                }
+
+                .faq-answer-inner {
+                    overflow: hidden;
                 }
 
                 .faq-answer-content {
-                    padding: 0 20px 20px;
-                    font-size: 1rem;
-                    color: var(--text-secondary);
-                    line-height: 1.6;
                     margin: 0;
-                }
-
-                .faq-answer-content a {
-                    color: var(--accent-primary);
-                    text-decoration: none;
-                    transition: all 0.2s ease;
-                }
-
-                .faq-answer-content a:hover {
-                    text-decoration: underline;
-                    opacity: 0.8;
-                }
-
-                /* Responsive */
-                @media (max-width: 900px) {
-                    .faq-page {
-                        padding: 60px 5%;
-                    }
-
-                    .faq-header h1 {
-                        font-size: 2.5rem;
-                    }
-
-                    .category-title {
-                        font-size: 1.5rem;
-                    }
-
-                    .faq-question-btn {
-                        font-size: 1rem;
-                        padding: 18px;
-                    }
+                    padding: 0 20px 20px;
+                    color: var(--text-secondary);
+                    font-size: 0.95rem;
+                    line-height: 1.75;
                 }
 
                 @media (max-width: 600px) {
                     .faq-page {
-                        padding: 50px 5%;
+                        padding: 48px 16px;
                     }
 
-                    .faq-header h1 {
-                        font-size: 2rem;
+                    .faq-header {
+                        margin-bottom: 40px;
                     }
 
-                    .faq-header p {
-                        font-size: 1rem;
-                    }
-
-                    .category-title {
-                        font-size: 1.3rem;
+                    .faq-category-title {
+                        font-size: 1.2rem;
                     }
 
                     .faq-question-btn {
+                        padding: 16px;
                         font-size: 0.95rem;
-                        padding: 15px;
                     }
 
                     .faq-answer-content {
-                        padding: 0 15px 15px;
+                        padding: 0 16px 16px;
                         font-size: 0.9rem;
                     }
+                }
 
-                    .faq-container {
-                        margin-bottom: 40px;
+                @media (prefers-reduced-motion: reduce) {
+                    .faq-page *,
+                    .faq-page *::before,
+                    .faq-page *::after {
+                        transition-duration: 0.01ms !important;
                     }
                 }
             `}</style>
 
             <main>
                 <section className="faq-page">
-                    {/* Header */}
-                    <div className="faq-header">
-                        <h1>Frequently Asked Questions</h1>
-                        <p>Find answers to all your questions about Freedom Loader. Click any question to reveal the answer.</p>
-                    </div>
+                    <header className="faq-header">
+                        <h1>Frequently asked questions</h1>
+                        <p>Answers about installing, using, and getting help with Freedom Loader.</p>
+                    </header>
 
-                    {/* FAQ Categories */}
                     <div className="faq-container">
-                        {Object.entries(faqData).map(([category, items]) => (
-                            <div key={category} className="faq-category">
-                                <h2 className="category-title">{category}</h2>
-                                {items.map((item, idx) => (
-                                    <div
-                                        key={idx}
-                                        className={`faq-item ${expanded === `${category}-${idx}` ? "expanded" : ""}`}
-                                    >
-                                        <button
-                                            className="faq-question-btn"
-                                            onClick={() => toggleExpand(category, idx)}
-                                        >
-                                            <span>{item.q}</span>
-                                            <i className="fas fa-chevron-down faq-icon"></i>
-                                        </button>
-                                        <div className="faq-answer">
-                                            <p className="faq-answer-content">{item.a}</p>
+                        {Object.entries(faqData).map(([category, items], categoryIndex) => (
+                            <section key={category} className="faq-category" aria-labelledby={`faq-category-${categoryIndex}`}>
+                                <h2 id={`faq-category-${categoryIndex}`} className="faq-category-title">{category}</h2>
+                                {items.map((item, index) => {
+                                    const key = `${category}-${index}`;
+                                    const isExpanded = expanded === key;
+                                    const answerId = `faq-answer-${categoryIndex}-${index}`;
+
+                                    return (
+                                        <div key={item.q} className={`faq-item ${isExpanded ? "expanded" : ""}`}>
+                                            <button
+                                                className="faq-question-btn"
+                                                id={`${answerId}-question`}
+                                                type="button"
+                                                aria-expanded={isExpanded}
+                                                aria-controls={answerId}
+                                                onClick={() => toggleExpand(category, index)}
+                                            >
+                                                <span>{item.q}</span>
+                                                <i className="fas fa-chevron-down faq-icon" aria-hidden="true"></i>
+                                            </button>
+                                            <div
+                                                className="faq-answer"
+                                                id={answerId}
+                                                role="region"
+                                                aria-labelledby={`${answerId}-question`}
+                                                aria-hidden={!isExpanded}
+                                            >
+                                                <div className="faq-answer-inner">
+                                                    <p className="faq-answer-content">{item.a}</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                ))}
-                            </div>
+                                    );
+                                })}
+                            </section>
                         ))}
                     </div>
                 </section>
